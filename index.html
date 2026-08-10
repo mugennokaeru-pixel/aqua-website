@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aqua - 千葉市稲毛区の鍼灸・整体・マッサージ治療院</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+            color: #2C2C2C;
+            line-height: 1.6;
+        }
+
+        /* ナビゲーション */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 60px;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #39BCC2;
+            letter-spacing: 1px;
+        }
+
+        nav .menu {
+            display: flex;
+            gap: 40px;
+            font-size: 15px;
+        }
+
+        nav .menu a, nav .menu button {
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-size: 15px;
+            transition: color 0.2s;
+        }
+
+        nav .menu a:hover, nav .menu button:hover {
+            color: #39BCC2;
+        }
+
+        .reserve-btn {
+            background: #39BCC2;
+            color: white;
+            padding: 12px 32px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s;
+        }
+
+        .reserve-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        /* ファーストビュー */
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 600px;
+            background: #F8F7F5;
+        }
+
+        .hero-left {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 80px 60px;
+            background: linear-gradient(135deg, #39BCC2 0%, #2D9BA6 100%);
+            color: white;
+        }
+
+        .hero-left h1 {
+            font-size: 56px;
+            font-weight: bold;
+            margin-bottom: 24px;
+            line-height: 1.2;
+            letter-spacing: 1px;
+        }
+
+        .hero-left h2 {
+            font-size: 48px;
+            font-weight: 300;
+            margin-bottom: 32px;
+            opacity: 0.95;
+        }
+
+        .hero-left p {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+
+        .hero-right {
+            background: linear-gradient(135deg, #D4A57B 0%, #E8C9B0 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-right::after {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            right: -50px;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+        }
+
+        /* こだわりセクション */
+        .features {
+            padding: 80px 60px;
+            background: white;
+        }
+
+        .section-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 44px;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+
+        .section-title .line {
+            width: 80px;
+            height: 4px;
+            background: #39BCC2;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .feature-card {
+            padding: 32px;
+            background: #F8F7F5;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .feature-card .icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+
+        .feature-card h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .feature-card p {
+            font-size: 15px;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        /* スタッフ紹介セクション */
+        .staff-section {
+            padding: 80px 60px;
+            background: #F8F7F5;
+        }
+
+        .staff-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 32px;
+        }
+
+        .staff-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+        }
+
+        .staff-card:hover {
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+            transform: translateY(-12px);
+        }
+
+        .staff-image {
+            width: 100%;
+            height: 340px;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .staff-info {
+            padding: 32px;
+        }
+
+        .staff-info h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .staff-info .specialty {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .staff-info .description {
+            font-size: 15px;
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 24px;
+        }
+
+        .detail-btn {
+            width: 100%;
+            padding: 12px;
+            background: #39BCC2;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .detail-btn:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
+
+        /* アクセスセクション */
+        .access-section {
+            padding: 80px 60px;
+            background: white;
+        }
+
+        .access-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .access-info h3 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        .access-info p {
+            font-size: 15px;
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+
+        .access-info strong {
+            color: #39BCC2;
+            font-weight: 600;
+        }
+
+        .access-info a {
+            color: #39BCC2;
+            text-decoration: none;
+        }
+
+        .access-info a:hover {
+            text-decoration: underline;
+        }
+
+        .access-time-section {
+            margin-bottom: 48px;
+        }
+
+        .access-time-section p {
+            color: #D4A57B;
+            font-weight: 600;
+        }
+
+        .access-transport {
+            margin-bottom: 24px;
+        }
+
+        .transport-tabs {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .transport-tabs button {
+            padding: 10px 16px;
+            border: none;
+            border-radius: 6px;
+            background: #F8F7F5;
+            color: #2C2C2C;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+
+        .transport-tabs button.active {
+            background: #39BCC2;
+            color: white;
+        }
+
+        .transport-content {
+            font-size: 14px;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .transport-content p {
+            margin-bottom: 8px;
+        }
+
+        /* フッター */
+        footer {
+            padding: 60px;
+            background: #2C2C2C;
+            color: white;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+
+        .footer-content h4 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #39BCC2;
+        }
+
+        .footer-content p {
+            font-size: 14px;
+            line-height: 1.8;
+            opacity: 0.8;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 40px;
+            text-align: center;
+            font-size: 13px;
+            opacity: 0.6;
+        }
+
+        /* レスポンシブ */
+        @media (max-width: 768px) {
+            nav {
+                padding: 16px 20px;
+                flex-wrap: wrap;
+            }
+
+            nav .menu {
+                gap: 20px;
+                font-size: 13px;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-left {
+                padding: 40px 20px;
+            }
+
+            .hero-left h1 {
+                font-size: 32px;
+            }
+
+            .hero-left h2 {
+                font-size: 24px;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .staff-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .access-content {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+            .features {
+                padding: 40px 20px;
+            }
+
+            .staff-section {
+                padding: 40px 20px;
+            }
+
+            .access-section {
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ナビゲーション -->
+    <nav>
+        <div class="logo">aqua</div>
+        <div class="menu">
+            <a href="/service">施術内容</a>
+            <button onclick="document.getElementById('staff').scrollIntoView({behavior: 'smooth'})">施術者紹介</button>
+            <a href="/faq">よくある質問</a>
+            <button onclick="document.getElementById('access').scrollIntoView({behavior: 'smooth'})">アクセス</button>
+        </div>
+        <a href="tel:04320799800" class="reserve-btn">📞 予約はこちら</a>
+    </nav>
+
+    <!-- ファーストビュー -->
+    <section class="hero">
+        <div class="hero-left">
+            <h1>水と大地の<br>エネルギーで</h1>
+            <h2>からだを整える</h2>
+            <p>鍼灸・整体・マッサージを通じて、自然治癒力を引き出す治療院です。6人の施術者がそれぞれの手技で、あなたの心身をサポートします。</p>
+            <a href="tel:04320799800" class="reserve-btn" style="width: fit-content;">電話で予約する →</a>
+        </div>
+        <div class="hero-right">
+            <p style="color: rgba(255, 255, 255, 0.3);">院内風景や施術風景の写真</p>
+        </div>
+    </section>
+
+    <!-- こだわり -->
+    <section class="features">
+        <div class="section-container">
+            <div class="section-title">
+                <h2>aqua のこだわり</h2>
+                <div class="line"></div>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="icon">💧</div>
+                    <h3>自然由来の施術</h3>
+                    <p>からだの自然治癒力を引き出す鍼灸・整体・マッサージ。薬に頼らない根本治療を目指します。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🌿</div>
+                    <h3>6人の専門家</h3>
+                    <p>それぞれ異なる得意分野を持つ施術者が、あなたの悩みに寄り添い最適な手技を提供します。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">✨</div>
+                    <h3>個別対応</h3>
+                    <p>カウンセリングを大切にし、一人ひとりの体質や症状に合わせたオーダーメイド施術を心がけています。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- スタッフ紹介 -->
+    <section class="staff-section" id="staff">
+        <div class="section-container">
+            <div class="section-title">
+                <h2>施術者紹介</h2>
+                <div class="line"></div>
+                <p style="font-size: 16px; color: #666; margin-top: 20px;">それぞれ異なる得意分野を持つ6人の施術者が、あなたの悩みに寄り添います</p>
+            </div>
+            <div class="staff-grid">
+                <!-- 伊藤盛敬 -->
+                <div class="staff-card">
+                    <img src="/images/img_0309.jpg" alt="伊藤盛敬" class="staff-image">
+                    <div class="staff-info">
+                        <h3>伊藤盛敬</h3>
+                        <p class="specialty" style="color: #39BCC2;">筋膜リリース・トリガーポイント鍼灸</p>
+                        <p class="description">筋膜へのアプローチで、凝り固まった身体をほぐします。スポーツ障害や慢性的な痛みに対応。</p>
+                        <button class="detail-btn" style="background: #39BCC2;">詳しく見る →</button>
+                    </div>
+                </div>
+
+                <!-- 砂生明久 -->
+                <div class="staff-card">
+                    <img src="/images/img_0322.jpg" alt="砂生明久" class="staff-image">
+                    <div class="staff-info">
+                        <h3>砂生明久</h3>
+                        <p class="specialty" style="color: #39BCC2;">自律神経にやさしい鍼施術</p>
+                        <p class="description">自律神経のバランスを整える優しい鍼。ストレスや緊張感の緩和を得意としています。</p>
+                        <button class="detail-btn" style="background: #39BCC2;">詳しく見る →</button>
+                    </div>
+                </div>
+
+                <!-- 杉山伸 -->
+                <div class="staff-card">
+                    <img src="/images/img_0271.jpg" alt="杉山伸" class="staff-image">
+                    <div class="staff-info">
+                        <h3>杉山伸</h3>
+                        <p class="specialty" style="color: #D4A57B;">全身整体・慢性痛治療</p>
+                        <p class="description">Ken Yamamoto先生の最新テクニックを学び、根本的な改善を目指します。</p>
+                        <button class="detail-btn" style="background: #D4A57B;">詳しく見る →</button>
+                    </div>
+                </div>
+
+                <!-- 村田医啓 -->
+                <div class="staff-card">
+                    <img src="/images/img_0295.jpg" alt="村田医啓" class="staff-image">
+                    <div class="staff-info">
+                        <h3>村田医啓</h3>
+                        <p class="specialty" style="color: #D4A57B;">姿勢矯正整体・局所鍼</p>
+                        <p class="description">正しい姿勢で、見た目も若々しく健康に。首こりや肩こりなどの部分的な痛みに対応。</p>
+                        <button class="detail-btn" style="background: #D4A57B;">詳しく見る →</button>
+                    </div>
+                </div>
+
+                <!-- 笹本容子 -->
+                <div class="staff-card">
+                    <img src="/images/img_0331.jpg" alt="笹本容子" class="staff-image">
+                    <div class="staff-info">
+                        <h3>笹本容子</h3>
+                        <p class="specialty" style="color: #39BCC2;"></p>
+                        <p class="description"></p>
+                        <button class="detail-btn" style="background: #39BCC2;">詳しく見る →</button>
+                    </div>
+                </div>
+
+                <!-- 矢島実 -->
+                <div class="staff-card">
+                    <img src="/images/img_0282.jpg" alt="矢島実" class="staff-image">
+                    <div class="staff-info">
+                        <h3>矢島実</h3>
+                        <p class="specialty" style="color: #39BCC2;">総合治療・カウンセリング</p>
+                        <p class="description">多くの資格を持ち、カウンセリングを中心に必要に応じて施術も行います。</p>
+                        <button class="detail-btn" style="background: #39BCC2;">詳しく見る →</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- アクセス -->
+    <section class="access-section" id="access">
+        <div class="section-container">
+            <div class="section-title">
+                <h2>アクセス</h2>
+                <div class="line"></div>
+            </div>
+            <div class="access-content">
+                <!-- 地図 -->
+                <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);">
+                    <iframe width="100%" height="500" frameborder="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.2345678901234!2d140.2234567!3d35.6123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60228f1234567%3A0x1234567890abcdef!2z5qGD5bqD5biC5a6H5pil577yIFaqaGE!5e0!3m2!1sja!2sjp!4v1234567890123" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+                <!-- 情報 -->
+                <div>
+                    <div class="access-info">
+                        <h3>基本情報</h3>
+                        <p><strong>住所</strong><br>千葉市稲毛区園生町873-4</p>
+                        <p><strong>電話</strong><br><a href="tel:04320799800">043-207-9800</a></p>
+                        <p><strong>駐車場</strong><br>院の前に4台分、第2駐車場に4台分（計8台）</p>
+                    </div>
+
+                    <div class="access-time-section">
+                        <h3>営業時間</h3>
+                        <p>平日：10:00 - 20:00</p>
+                        <p>土日：10:00 - 18:00</p>
+                        <p>定休日：火曜日・祝日</p>
+                    </div>
+
+                    <div class="access-transport">
+                        <h3>行き方</h3>
+                        <div class="transport-tabs">
+                            <button class="active" onclick="switchTransport('car')">🚗 お車</button>
+                            <button onclick="switchTransport('train')">🚆 電車</button>
+                            <button onclick="switchTransport('bus')">🚌 バス</button>
+                        </div>
+                        <div class="transport-content" id="transport-content">
+                            <p><strong>下記住所をナビに入れてください</strong></p>
+                            <p>千葉市稲毛区園生町873-4</p>
+                            <p style="margin-top: 12px;"><strong>ランドマーク</strong></p>
+                            <p>穴川交差点より花見川方面へ。園生交差点から80m先の信号を右折、約500m先の右側</p>
+                            <p style="color: #999; margin-top: 8px;">（旧出井金物店さんのところです）</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h4>aqua</h4>
+                <p>鍼灸・整体・マッサージを通じて、自然治癒力を引き出す治療院です。</p>
+            </div>
+            <div>
+                <h4>営業時間</h4>
+                <p>平日：10:00 - 20:00<br>土日：10:00 - 18:00<br><br>定休日：火曜日・祝日</p>
+            </div>
+            <div>
+                <h4>アクセス</h4>
+                <p>千葉市稲毛区園生町873-4<br><br>📞 <a href="tel:04320799800" style="color: #39BCC2; text-decoration: none;">043-207-9800</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 aqua. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function switchTransport(type) {
+            const content = document.getElementById('transport-content');
+            const buttons = document.querySelectorAll('.transport-tabs button');
+            
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            const transportData = {
+                car: `<p><strong>下記住所をナビに入れてください</strong></p>
+                      <p>千葉市稲毛区園生町873-4</p>
+                      <p style="margin-top: 12px;"><strong>ランドマーク</strong></p>
+                      <p>穴川交差点より花見川方面へ。園生交差点から80m先の信号を右折、約500m先の右側</p>
+                      <p style="color: #999; margin-top: 8px;">（旧出井金物店さんのところです）</p>`,
+                train: `<p><strong>最寄駅</strong></p>
+                        <p>JR総武線「稲毛駅」下車<br>東出口より徒歩10分程度</p>`,
+                bus: `<p><strong>JR総武線「稲毛駅」より</strong></p>
+                      <p style="margin-top: 12px;"><strong>行き方①</strong></p>
+                      <p>バス乗り場：ファミールハイツ行き又は草野車庫行き<br>
+                      <span style="font-size: 13px; color: #999;">（ミスタードーナツの前の停留所）</span><br>
+                      下車場所：第二あやめ入口<br>
+                      ウエルシア薬局と鮎澤商店の間の道に行き、川沿いを左方向に直進（徒歩5分）</p>
+                      <p style="margin-top: 12px;"><strong>行き方②</strong></p>
+                      <p>バス乗り場：さつきが丘団地行き<br>
+                      <span style="font-size: 13px; color: #999;">（稲毛駅 東口を出て目の前）</span><br>
+                      下車場所：園生<br>
+                      幸楽苑を左に曲がり、川と団地の間の道をまっすぐ直進（徒歩5分）</p>`
+            };
+
+            content.innerHTML = transportData[type];
+        }
+    </script>
+</body>
+</html>
