@@ -77,7 +77,7 @@
         /* ファーストビュー */
         .hero {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 35% 65%;
             min-height: 600px;
             background: #F8F7F5;
         }
@@ -86,13 +86,13 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            padding: 80px 60px;
+           padding: 70px 45px;
             background: linear-gradient(135deg, #39BCC2 0%, #2D9BA6 100%);
             color: white;
         }
 
         .hero-left h1 {
-            font-size: 56px;
+           font-size: 42px;
             font-weight: bold;
             margin-bottom: 24px;
             line-height: 1.2;
@@ -100,7 +100,7 @@
         }
 
         .hero-left h2 {
-            font-size: 48px;
+          font-size: 30px;
             font-weight: 300;
             margin-bottom: 32px;
             opacity: 0.95;
@@ -461,7 +461,7 @@
     height: 100%;
     object-fit: cover;
     opacity: 0;
-    transition: opacity 1s ease;
+    transition: opacity 1.8s ease;
 }
 
 .hero-slide.active {
@@ -716,7 +716,7 @@
         slides[currentSlide].classList.remove('active');
         currentSlide = (currentSlide + 1) % slides.length;
         slides[currentSlide].classList.add('active');
-    }, 5000);
+    }, 6500);
 </script>
 </body>
 </html>
