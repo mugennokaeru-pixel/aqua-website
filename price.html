@@ -1,1 +1,354 @@
+<!DOCTYPE html>
+<html lang="ja">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>料金 | aqua</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+      color: #2C2C2C;
+      line-height: 1.7;
+      background: #F8F7F5;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background: white;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 36px;
+      font-weight: bold;
+      color: #5fc7a3;
+      text-decoration: none;
+    }
+
+    nav .menu {
+      display: flex;
+      gap: 40px;
+      font-size: 15px;
+    }
+
+    nav .menu a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    nav .menu a:hover {
+      color: #5fc7a3;
+    }
+
+    .reserve-btn {
+      background: #5fc7a3;
+      color: white;
+      padding: 12px 32px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .price-page {
+      padding: 60px 20px 80px;
+    }
+
+    .section-container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .section-title h1 {
+      font-size: 44px;
+      margin-bottom: 16px;
+    }
+
+    .line {
+      width: 80px;
+      height: 4px;
+      background: #5fc7a3;
+      margin: 0 auto;
+    }
+
+    .lead {
+      text-align: center;
+      color: #555;
+      margin-bottom: 40px;
+      font-size: 17px;
+    }
+
+    .price-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .price-card {
+      background: white;
+      padding: 30px;
+      border-radius: 14px;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+    }
+
+    .price-card h2 {
+      font-size: 25px;
+      color: #5fc7a3;
+      margin-bottom: 5px;
+    }
+
+    .specialty {
+      color: #666;
+      margin-bottom: 22px;
+      font-weight: bold;
+    }
+
+    .price-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 14px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .price-row:last-child {
+      border-bottom: none;
+    }
+
+    .price-row strong {
+      white-space: nowrap;
+      font-size: 18px;
+    }
+
+    .price-note {
+      margin-top: 15px;
+      color: #777;
+      font-size: 14px;
+    }
+
+    .yajima-card {
+      grid-column: 1 / -1;
+    }
+
+    .bottom-note {
+      background: white;
+      margin-top: 35px;
+      padding: 28px;
+      border-radius: 14px;
+      text-align: center;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.05);
+    }
+
+    .bottom-note p {
+      margin-bottom: 8px;
+    }
+
+    .reservation-link {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 14px 34px;
+      background: #5fc7a3;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        padding: 16px 20px;
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+
+      .logo {
+        font-size: 30px;
+      }
+
+      nav .menu {
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+
+      .reserve-btn {
+        padding: 10px 18px;
+      }
+
+      .price-page {
+        padding: 40px 16px 60px;
+      }
+
+      .section-title h1 {
+        font-size: 32px;
+      }
+
+      .price-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .yajima-card {
+        grid-column: auto;
+      }
+
+      .price-row {
+        flex-direction: column;
+        gap: 4px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a href="/#top" class="logo">aqua</a>
+
+    <div class="menu">
+      <a href="/#services">施術内容</a>
+      <a href="/#staff">施術者紹介</a>
+      <a href="/faq.html">よくある質問</a>
+      <a href="/#access">アクセス</a>
+      <a href="/price.html">料金</a>
+    </div>
+
+    <a href="/reservation.html" class="reserve-btn">
+      📞 予約はこちら
+    </a>
+  </nav>
+
+  <main class="price-page">
+    <div class="section-container">
+
+      <div class="section-title">
+        <h1>施術料金</h1>
+        <div class="line"></div>
+      </div>
+
+      <p class="lead">
+        各施術者の得意分野に合わせた施術メニューをご用意しています。
+      </p>
+
+      <div class="price-grid">
+
+        <div class="price-card">
+          <h2>伊藤 盛敬</h2>
+          <p class="specialty">
+            筋膜リリース・トリガーポイント鍼灸
+          </p>
+
+          <div class="price-row">
+            <span>60分</span>
+            <strong>7,150円</strong>
+          </div>
+
+          <div class="price-row">
+            <span>定期メンテナンス 80分</span>
+            <strong>9,350円</strong>
+          </div>
+
+          <p class="price-note">
+            初回の方は初診料込み。
+          </p>
+        </div>
+
+        <div class="price-card">
+          <h2>杉山 伸</h2>
+          <p class="specialty">
+            全身整体
+          </p>
+
+          <div class="price-row">
+            <span>初診</span>
+            <strong>11,220円</strong>
+          </div>
+
+          <div class="price-row">
+            <span>2回目以降</span>
+            <strong>7,920円</strong>
+          </div>
+        </div>
+
+        <div class="price-card">
+          <h2>砂生 明久</h2>
+          <p class="specialty">
+            自律神経にやさしい鍼施術
+          </p>
+
+          <div class="price-row">
+            <span>鍼灸＋マッサージ</span>
+            <strong>7,150円</strong>
+          </div>
+        </div>
+
+        <div class="price-card">
+          <h2>村田 医啓</h2>
+          <p class="specialty">
+            神経整体＋鍼灸
+          </p>
+
+          <div class="price-row">
+            <span>50分</span>
+            <strong>6,050円</strong>
+          </div>
+
+          <p class="price-note">
+            ※ 初診料として別途1,650円かかります。
+          </p>
+        </div>
+
+        <div class="price-card yajima-card">
+          <h2>矢島 実</h2>
+          <p class="specialty">
+            トータルサポート
+          </p>
+
+          <div class="price-row">
+            <span>初回：初診料・問診・治療 3時間</span>
+            <strong>55,000円</strong>
+          </div>
+
+          <p class="price-note">
+            2回目以降はサポート内容により異なります。
+            矢島の予約は電話受付となります。
+          </p>
+        </div>
+
+      </div>
+
+      <div class="bottom-note">
+        <p>
+          施術時間や施術の組み合わせなど、お気軽にご相談ください。
+        </p>
+        <p>
+          症状やご希望に合わせて調整いたします。
+        </p>
+
+        <a href="/reservation.html" class="reservation-link">
+          ご予約・お問い合わせはこちら
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+</body>
+</html>
