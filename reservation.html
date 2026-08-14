@@ -1,9 +1,264 @@
-<a href="https://page.line.me/fle6522n?openQrModal=true"
-   class="line-btn"
-   target="_blank"
-   rel="noopener">
-    LINEで予約・お問い合わせ
-</a>
-<a href="/faq.html#contact" class="contact-btn">
-    お問い合わせフォームはこちら
-</a>
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ご予約・お問い合わせ | aqua</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+      color: #2C2C2C;
+      line-height: 1.7;
+      background: #F8F7F5;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background: white;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 36px;
+      font-weight: bold;
+      color: #5fc7a3;
+      text-decoration: none;
+    }
+
+    nav .menu {
+      display: flex;
+      gap: 40px;
+      font-size: 15px;
+    }
+
+    nav .menu a {
+      text-decoration: none;
+      color: inherit;
+      font-size: 15px;
+      transition: color 0.2s;
+    }
+
+    nav .menu a:hover {
+      color: #5fc7a3;
+    }
+
+    .reservation-page {
+      padding: 60px 20px 80px;
+    }
+
+    .section-container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title h1 {
+      font-size: 44px;
+      margin-bottom: 16px;
+    }
+
+    .line {
+      width: 80px;
+      height: 4px;
+      background: #5fc7a3;
+      margin: 0 auto;
+    }
+
+    .lead {
+      text-align: center;
+      color: #555;
+      margin-bottom: 45px;
+      font-size: 17px;
+    }
+
+    .reservation-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .reservation-card {
+      background: white;
+      padding: 36px 28px;
+      border-radius: 14px;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+      text-align: center;
+    }
+
+    .reservation-card h2 {
+      font-size: 24px;
+      margin-bottom: 14px;
+      color: #5fc7a3;
+    }
+
+    .reservation-card p {
+      margin-bottom: 22px;
+      color: #555;
+    }
+
+    .phone-number {
+      display: inline-block;
+      font-size: 28px;
+      font-weight: bold;
+      color: #5fc7a3;
+      text-decoration: none;
+      margin-bottom: 12px;
+    }
+
+    .line-btn,
+    .contact-btn {
+      display: inline-block;
+      width: 100%;
+      padding: 14px 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: opacity 0.2s;
+    }
+
+    .line-btn {
+      background: #5fc7a3;
+      color: white;
+    }
+
+    .contact-btn {
+      background: #2C2C2C;
+      color: white;
+    }
+
+    .line-btn:hover,
+    .contact-btn:hover {
+      opacity: 0.85;
+    }
+
+    .note {
+      margin-top: 42px;
+      text-align: center;
+      color: #666;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        padding: 16px 20px;
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+
+      .logo {
+        font-size: 30px;
+      }
+
+      nav .menu {
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+
+      .reservation-page {
+        padding: 40px 16px 60px;
+      }
+
+      .section-title h1 {
+        font-size: 32px;
+      }
+
+      .reservation-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a href="/#top" class="logo">aqua</a>
+
+    <div class="menu">
+      <a href="/#services">施術内容</a>
+      <a href="/#staff">施術者紹介</a>
+      <a href="/faq.html">よくある質問</a>
+      <a href="/#access">アクセス</a>
+    </div>
+  </nav>
+
+  <main class="reservation-page">
+    <div class="section-container">
+
+      <div class="section-title">
+        <h1>ご予約・お問い合わせ</h1>
+        <div class="line"></div>
+      </div>
+
+      <p class="lead">
+        ご予約やご相談は、お電話・LINE・お問い合わせフォームより承っております。
+      </p>
+
+      <div class="reservation-grid">
+
+        <div class="reservation-card">
+          <h2>電話で予約</h2>
+          <p>
+            お急ぎの方や、直接相談しながら予約したい方はこちら。
+          </p>
+
+          <a href="tel:0432079800" class="phone-number">
+            043-207-9800
+          </a>
+        </div>
+
+        <div class="reservation-card">
+          <h2>LINEで予約</h2>
+          <p>
+            LINEから気軽にご予約・お問い合わせいただけます。
+          </p>
+
+          <a
+            href="https://page.line.me/fle6522n?openQrModal=true"
+            class="line-btn"
+            target="_blank"
+            rel="noopener">
+            LINEで予約・お問い合わせ
+          </a>
+        </div>
+
+        <div class="reservation-card">
+          <h2>お問い合わせフォーム</h2>
+          <p>
+            ご質問やご相談はこちらのフォームをご利用ください。
+          </p>
+
+          <a href="/faq.html#contact" class="contact-btn">
+            お問い合わせフォームはこちら
+          </a>
+        </div>
+
+      </div>
+
+      <p class="note">
+        施術中など、お電話に出られない場合がございます。
+      </p>
+
+    </div>
+  </main>
+
+</body>
+</html>
