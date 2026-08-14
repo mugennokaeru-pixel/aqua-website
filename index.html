@@ -22,21 +22,27 @@
 
         /* ナビゲーション */
         nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 60px;
-            background: white;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 60px;
+
+    background: transparent;
+    box-shadow: none;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    z-index: 100;
+}
 
        .logo {
     font-size: 36px;
     font-weight: bold;
-    color: #5fc7a3;
+    color: white;
     letter-spacing: 1px;
     text-decoration: none;
 }
@@ -58,7 +64,7 @@
         }
 
         nav .menu a:hover, nav .menu button:hover {
-            color: #5fc7a3;
+            color: white;
         }
 
         .reserve-btn {
