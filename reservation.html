@@ -177,6 +177,62 @@
         grid-template-columns: 1fr;
       }
     }
+    .hours-section {
+  margin-top: 55px;
+}
+
+.hours-box {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 36px 40px;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+}
+
+.hours-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.hours-title h2 {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.hours-info {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.hours-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 17px;
+}
+
+.hours-row span {
+  color: #555;
+}
+
+.reservation-note {
+  text-align: center;
+  margin-top: 22px;
+  font-weight: bold;
+  color: #5fc7a3;
+}
+
+.hours-phone {
+  display: block;
+  text-align: center;
+  margin-top: 18px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #5fc7a3;
+  text-decoration: none;
+}
   </style>
 </head>
 
@@ -251,7 +307,41 @@
       </p>
 
     </div>
+<section class="hours-section">
+  <div class="hours-box">
+
+    <div class="hours-title">
+      <h2>診療時間</h2>
+      <div class="line"></div>
+    </div>
+
+    <div class="hours-info">
+      <div class="hours-row">
+        <span>平日</span>
+        <strong>9:00〜19:00</strong>
+      </div>
+
+      <div class="hours-row">
+        <span>土曜</span>
+        <strong>13:00〜19:00</strong>
+      </div>
+
+      <div class="hours-row">
+        <span>休診日</span>
+        <strong>日曜・祝日</strong>
+      </div>
+    </div>
+
+    <p class="reservation-note">※ 完全予約制</p>
+
+    <a href="tel:0432079800" class="hours-phone">
+      ☎ 043-207-9800
+    </a>
+
+  </div>
+</section>
   </main>
 
 </body>
 </html>
+
