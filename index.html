@@ -621,6 +621,129 @@
     text-align: center;
   }
 }
+   /* ===== 新ファーストビュー ===== */
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 650px;
+    overflow: hidden;
+}
+
+/* 背景写真 */
+.hero-slider {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.hero-slide.active {
+    opacity: 1;
+}
+
+/* 左側の緑パネル */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+
+    width: 38%;
+    min-width: 430px;
+    height: 100%;
+
+    padding: 95px 65px;
+
+    background: rgba(95, 199, 163, 0.88);
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* 斜めの境界 */
+.hero-overlay::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -110px;
+
+    width: 180px;
+    height: 100%;
+
+    background: rgba(95, 199, 163, 0.88);
+
+    transform: skewX(-10deg);
+    transform-origin: top;
+    z-index: -1;
+}
+
+.hero-overlay h1 {
+    font-size: 52px;
+    line-height: 1.25;
+    margin-bottom: 42px;
+    color: white;
+}
+
+.hero-overlay h2 {
+    font-size: 34px;
+    font-weight: 400;
+    margin-bottom: 42px;
+    color: white;
+}
+
+.hero-overlay p {
+    font-size: 17px;
+    line-height: 2;
+    color: white;
+}
+
+
+/* スマホ */
+@media (max-width: 768px) {
+
+    .hero {
+        height: 620px;
+    }
+
+    .hero-overlay {
+        width: 58%;
+        min-width: 0;
+        padding: 50px 24px;
+    }
+
+    .hero-overlay::after {
+        right: -60px;
+        width: 110px;
+    }
+
+    .hero-overlay h1 {
+        font-size: 34px;
+        margin-bottom: 28px;
+    }
+
+    .hero-overlay h2 {
+        font-size: 23px;
+        margin-bottom: 28px;
+    }
+
+    .hero-overlay p {
+        font-size: 13px;
+        line-height: 1.8;
+    }
+}
     </style>
 </head>
 <body>
@@ -640,20 +763,47 @@
 
     <!-- ファーストビュー -->
     <section class="hero">
-        <div class="hero-left">
-            <h1>水と大地の<br>エネルギーで</h1>
-            <h2>からだを整える</h2>
-            <p>鍼灸・整体・マッサージを通じて、自然治癒力を引き出す治療院です。6人の施術者がそれぞれの手技で、あなたの心身をサポートします。</p>
-        </div>
-        <div class="hero-right">
+
+    <!-- 背景スライダー -->
     <div class="hero-slider">
-        <img src="/public/images/soto.jpg" class="hero-slide active" alt="aqua外観">
-        <img src="/public/images/aqua.JPG" class="hero-slide" alt="aqua">
-        <img src="/public/images/naisou.JPG" class="hero-slide" alt="院内風景">
-        <img src="/public/images/massage1.jpg" class="hero-slide" alt="施術風景">
-        <img src="/public/images/massage2.jpg" class="hero-slide" alt="施術風景">
+        <img src="/public/images/soto.jpg"
+             class="hero-slide active"
+             alt="aqua外観">
+
+        <img src="/public/images/aqua.JPG"
+             class="hero-slide"
+             alt="aqua">
+
+        <img src="/public/images/naisou.JPG"
+             class="hero-slide"
+             alt="院内風景">
+
+        <img src="/public/images/massage1.jpg"
+             class="hero-slide"
+             alt="施術風景">
+
+        <img src="/public/images/massage2.jpg"
+             class="hero-slide"
+             alt="施術風景">
     </div>
-</div>
+
+    <!-- 左側の文字 -->
+    <div class="hero-overlay">
+        <h1>
+            水と大地の<br>
+            エネルギーで
+        </h1>
+
+        <h2>からだを整える</h2>
+
+        <p>
+            鍼灸・整体・マッサージを通じて、<br>
+            自然治癒力を引き出す治療院です。<br>
+            6人の施術者がそれぞれの手技で、<br>
+            あなたの心身をサポートします。
+        </p>
+    </div>
+
 </section>
 
 <div class="symptoms-block">
