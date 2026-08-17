@@ -43,7 +43,6 @@
     font-size: 36px;
     font-weight: bold;
     color: white;
-    letter-spacing: 1px;
     text-decoration: none;
 }
 
@@ -740,23 +739,100 @@
 nav a:hover {
     color: #5fc7a3 !important;
 }
+.menu-toggle {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 120;
+}
+
+.menu-icon {
+    font-size: 30px;
+    line-height: 1;
+    color: white;
+}
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: -360px;
+    width: 340px;
+    height: 100vh;
+    background: rgba(255,255,255,0.97);
+    z-index: 999;
+    padding: 90px 40px 40px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+
+    transition: right 0.35s ease;
+    box-shadow: -8px 0 30px rgba(0,0,0,0.12);
+}
+
+.side-menu.open {
+    right: 0;
+}
+
+.side-menu a {
+    color: #2c2c2c !important;
+    text-decoration: none;
+    font-size: 18px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.side-menu a:hover {
+    color: #5fc7a3 !important;
+}
+
+.side-menu-close {
+    position: absolute;
+    top: 24px;
+    right: 28px;
+    border: none;
+    background: none;
+    font-size: 36px;
+    cursor: pointer;
+    color: #2c2c2c;
+}
     </style>
 </head>
 <body>
     <div id="top"></div>
     <!-- ナビゲーション -->
     <nav>
-        <a href="#top" class="logo">aqua</a>
-        <div class="menu">
+    <a href="#top" class="logo">aqua</a>
+
+    <div class="menu">
+        <a href="/#services">施術内容</a>
+        <a href="/#staff">施術者紹介</a>
+        <a href="/faq.html">よくある質問</a>
+        <a href="/#access">アクセス</a>
+        <a href="/price.html">料金について</a>
+    </div>
+
+    <button class="menu-toggle" onclick="toggleSideMenu()">
+        <span class="menu-text">menu →</span>
+        <span class="menu-icon">☰</span>
+    </button>
+</nav>
+<div class="side-menu" id="sideMenu">
+    <button class="side-menu-close" onclick="toggleSideMenu()">×</button>
+
+    <a href="/#top">トップ</a>
     <a href="/#services">施術内容</a>
     <a href="/#staff">施術者紹介</a>
     <a href="/faq.html">よくある質問</a>
     <a href="/#access">アクセス</a>
     <a href="/price.html">料金について</a>
+    <a href="/reservation.html">ご予約・お問い合わせ</a>
 </div>
-       <a href="/reservation.html" class="reserve-btn">📞 予約はこちら</a>
-    </nav>
-
     <!-- ファーストビュー -->
     <section class="hero">
 
@@ -1089,5 +1165,10 @@ nav a:hover {
     © aqua All Rights Reserved.
   </div>
 </footer>
+<script>
+function toggleSideMenu() {
+    document.getElementById("sideMenu").classList.toggle("open");
+}
+</script>
 </body>
 </html>
