@@ -900,12 +900,13 @@ nav a:hover {
 }
 
 .treatment-row {
-    display: flex;
-    align-items: center;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
 }
 
 .treatment-row.reverse {
-    flex-direction: row-reverse;
+    flex-direction: row-reverse !important;
 }
 
 .treatment-image,
@@ -1192,21 +1193,25 @@ nav a:hover {
 
     <h3>慢性痛に特化した安心「整体」</h3>
 
-   <div class="treatment-image">
-    <a href="/seitai.html">
-        <img src="/public/images/massage1.jpg" alt="整体施術">
-        <span class="learn-more">Learn more</span>
-    </a>
-</div>
-        <div class="treatment-text">
-            <p>
-                腰痛・肩こり・ぎっくり腰などの慢性的な不調に。
-                問診と身体の状態を確認しながら、姿勢や動きのバランスを整えていきます。
-            </p>
-            <p class="treatment-name">Ken Yamamotoテクニック</p>
-        </div>
+<div class="treatment-row">
+
+    <div class="treatment-image">
+        <a href="/seitai.html" class="treatment-link">
+            <img src="/public/images/massage1.jpg" alt="整体施術">
+            <span class="learn-more">Learn more</span>
+        </a>
     </div>
 
+    <div class="treatment-text">
+        <p>
+            腰痛・肩こり・ぎっくり腰などの慢性的な不調に。
+            問診と身体の状態を確認しながら、姿勢や動きのバランスを整えていきます。
+        </p>
+
+        <p class="treatment-name">Ken Yamamotoテクニック</p>
+    </div>
+
+</div>
     <div class="treatment-row reverse">
        <div class="treatment-image">
     <a href="/seitai.html" class="treatment-link">
