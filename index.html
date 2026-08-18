@@ -1035,7 +1035,28 @@ nav a:hover {
     flex-direction: column;
     justify-content: center;
 }    
+.treatment-block h3 {
+    font-size: 32px;
+    font-weight: 600;
+    margin: 0 0 18px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #5fc7a3;
+    position: relative;
+    line-height: 1.4;
+}
 
+/* 右端の斜め線 */
+.treatment-block h3::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -1px;
+    width: 24px;
+    height: 1px;
+    background: #5fc7a3;
+    transform: rotate(45deg);
+    transform-origin: right center;
+}
 </style>
 </head>
 <body>
