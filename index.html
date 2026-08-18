@@ -1103,39 +1103,57 @@ nav a:hover {
 }
 
 .treatment-row {
-    display: grid !important;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    position: relative;
+    display: flex !important;
+    align-items: stretch !important;
     overflow: visible;
 }
 
-/* 上段：左の写真を画面左まで張り出す */
-.treatment-row:not(.reverse) .treatment-image {
-    width: calc(50vw - 20px);
+.treatment-row.reverse {
+    flex-direction: row-reverse !important;
+}
+
+.treatment-image,
+.treatment-text {
+    width: 50% !important;
+}
+
+/* 写真の親箱は50%のまま */
+.treatment-image {
+    overflow: visible !important;
+}
+
+/* 写真リンク自体を外側に伸ばす */
+.treatment-link {
+    display: block;
+    position: relative;
+    height: 260px;
+    overflow: hidden;
+}
+
+/* 上段：左端まで写真を伸ばす */
+.treatment-row:not(.reverse) .treatment-link {
+    width: calc(100% + (100vw - 980px) / 2);
     margin-left: calc((980px - 100vw) / 2);
 }
 
-/* 下段：右の写真を画面右まで張り出す */
-.treatment-row.reverse .treatment-image {
-    width: calc(50vw - 20px);
+/* 下段：右端まで写真を伸ばす */
+.treatment-row.reverse .treatment-link {
+    width: calc(100% + (100vw - 980px) / 2);
     margin-right: calc((980px - 100vw) / 2);
 }
 
-/* 画像は箱いっぱい */
 .treatment-image img {
     width: 100% !important;
-    height: 260px !important;
+    height: 100% !important;
     object-fit: cover !important;
-    display: block;
 }
 
-/* 文章は中央側に置く */
 .treatment-text {
-    width: 100%;
     padding: 30px 40px !important;
-}
-    </style>
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}    </style>
 </head>
 <body>
     <div id="top"></div>
