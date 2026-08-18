@@ -1148,7 +1148,101 @@ nav a:hover {
     padding: 7px 12px !important;
     font-size: 12px !important;
 }
+.treatment-block {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto 70px;
+}
 
+.treatment-block h3 {
+    font-size: 30px;
+    font-weight: 600;
+    margin: 0;
+    padding: 0 0 10px;
+    border-bottom: 1px solid #5fc7a3;
+    position: relative;
+}
+
+/* 右端の斜め線 */
+.treatment-block h3::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 7px;
+    width: 28px;
+    height: 1px;
+    background: #5fc7a3;
+    transform: rotate(45deg);
+    transform-origin: right center;
+}
+
+/* ★ここがイラレ版の肝 */
+.treatment-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 285px 285px;
+    gap: 0;
+}
+
+.treatment-image,
+.treatment-text {
+    width: 100%;
+    height: 100%;
+}
+
+/* 写真はセルいっぱい */
+.treatment-image {
+    overflow: hidden;
+}
+
+.treatment-link {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+}
+
+.treatment-image img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block;
+    transition: 0.3s ease;
+}
+
+/* 文章も写真と同じ箱の大きさ */
+.treatment-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 45px !important;
+    font-size: 15px !important;
+    line-height: 1.7 !important;
+    background: white;
+}
+
+/* Learn more */
+.learn-more {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 8px 14px;
+    background: rgba(255,255,255,0.5);
+    color: white;
+    font-size: 13px;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.treatment-link:hover .learn-more {
+    opacity: 1;
+}
+
+.treatment-link:hover img {
+    opacity: 0.82;
+    transform: scale(1.02);
+}
     </style>
 </head>
 <body>
@@ -1260,44 +1354,46 @@ nav a:hover {
             <div class="line"></div>
         </div>
 
-       <div class="treatment-block">
+      <div class="treatment-block">
 
     <h3>慢性痛に特化した安心「整体」</h3>
 
-<div class="treatment-row">
+    <div class="treatment-grid">
 
-    <div class="treatment-image">
-        <a href="/seitai.html" class="treatment-link">
-            <img src="/public/images/massage1.jpg" alt="整体施術">
-            <span class="learn-more">Learn more</span>
-        </a>
-    </div>
+        <!-- 左上：写真 -->
+        <div class="treatment-image">
+            <a href="/seitai.html" class="treatment-link">
+                <img src="/public/images/massage1.jpg" alt="整体施術">
+                <span class="learn-more">Learn more</span>
+            </a>
+        </div>
 
-    <div class="treatment-text">
-        <p>
-            腰痛・肩こり・ぎっくり腰などの慢性的な不調に。
-            問診と身体の状態を確認しながら、姿勢や動きのバランスを整えていきます。
-        </p>
-
-        <p class="treatment-name">Ken Yamamotoテクニック</p>
-    </div>
-
-</div>
-    <div class="treatment-row reverse">
-       <div class="treatment-image">
-    <a href="/seitai.html" class="treatment-link">
-        <img src="/public/images/massage1.jpg" alt="整体施術">
-        <span class="learn-more">Learn more</span>
-    </a>
-</div>
-
+        <!-- 右上：文章 -->
         <div class="treatment-text">
             <p>
-                トリガーポイントや筋膜へのアプローチ、
-                自律神経に配慮した鍼灸施術など、
-                お身体の状態やお悩みに合わせて施術を行います。
+                ぎっくり腰、腰痛や肩こりなどの慢性痛、
+                頸関節など、自律神経症状に強い整体
+            </p>
+            <p>Ken Yamamotoテクニック</p>
+        </div>
+
+        <!-- 左下：文章 -->
+        <div class="treatment-text">
+            <p>
+                ストレートネック神経整体<br>
+                ＆<br>
+                ピンポイント鍼施術
             </p>
         </div>
+
+        <!-- 右下：写真 -->
+        <div class="treatment-image">
+            <a href="/seitai.html" class="treatment-link">
+                <img src="/public/images/massage2.jpg" alt="整体施術">
+                <span class="learn-more">Learn more</span>
+            </a>
+        </div>
+
     </div>
 
 </div>
