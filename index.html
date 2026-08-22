@@ -1125,14 +1125,18 @@ nav a:hover {
 .second-treatment {
     margin-top: 90px;
 }
-.second-treatment .treatment-row.reverse .treatment-text {
-    align-items: flex-end !important;
-    padding: 30px 40px !important;
+.second-treatment .treatment-row.reverse {
+    position: relative;
 }
 
-.second-treatment .treatment-row.reverse .treatment-text p {
-    width: 260px;
-    text-align: left;
+.second-treatment .treatment-row.reverse .treatment-text {
+    position: absolute;
+    left: 34%;
+    width: 16% !important;
+    padding: 0 !important;
+    top: 50%;
+    transform: translateY(-50%) !important;
+    align-items: flex-start !important;
 }
 
 </style>
