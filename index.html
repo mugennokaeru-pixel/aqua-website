@@ -1138,6 +1138,99 @@ nav a:hover {
     transform: translateY(-50%) !important;
     align-items: flex-start !important;
 }
+/* ===== 施術者紹介 イラレ寄せ ===== */
+
+.staff-section {
+    background: #fff !important;
+    padding: 90px 0 120px !important;
+}
+
+.staff-section .section-container {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.staff-section .section-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    margin-bottom: 55px;
+}
+
+.staff-section .section-title::before,
+.staff-section .section-title::after {
+    content: "";
+    width: 150px;
+    height: 1px;
+    background: #5fc7a3;
+}
+
+.staff-section .section-title h2 {
+    font-size: 28px;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.staff-section .section-title .line,
+.staff-section .section-title p {
+    display: none;
+}
+
+.staff-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 55px 35px !important;
+}
+
+.staff-card {
+    background: transparent !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+    position: relative;
+}
+
+.staff-card:hover {
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+.staff-image {
+    width: 100% !important;
+    height: 260px !important;
+    object-fit: cover !important;
+    object-position: center top !important;
+    display: block;
+}
+
+.staff-info {
+    padding: 14px 0 0 !important;
+}
+
+.staff-info h3 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.staff-info .specialty {
+    color: #5fc7a3 !important;
+    font-size: 14px;
+    line-height: 1.45;
+    margin-bottom: 10px;
+}
+
+.staff-info .description {
+    font-size: 12px;
+    line-height: 1.6;
+    color: #2c2c2c;
+    margin: 0;
+}
+
+.detail-btn {
+    display: none !important;
+}
 
 </style>
 </head>
