@@ -1061,7 +1061,20 @@ nav a:hover {
 .treatment-row.reverse .treatment-image {
     margin-top: 40px;
 }
+.treatment-block h3 {
+    position: relative;
+}
 
+/* 左側へ画面端まで線を伸ばす */
+.treatment-block h3::before {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    right: 100%;
+    width: calc((100vw - 980px) / 2);
+    height: 1px;
+    background: #5fc7a3;
+}
 
 </style>
 </head>
