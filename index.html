@@ -1235,18 +1235,20 @@ nav a:hover {
 
        <div class="treatment-block">
 
-    <h3>慢性痛に特化した安心「整体」</h3>
+   <h3 class="reveal reveal-left">
+    慢性痛に特化した安心「整体」
+</h3>
 
 <div class="treatment-row">
 
-    <div class="treatment-image">
+  <div class="treatment-image reveal reveal-left reveal-delay-1">
         <a href="/seitai.html" class="treatment-link">
             <img src="/public/images/massage1.jpg" alt="整体施術">
             <span class="learn-more">Learn more</span>
         </a>
     </div>
 
-    <div class="treatment-text">
+   <div class="treatment-text reveal reveal-right reveal-delay-2">
         <p>
             腰痛・肩こり・ぎっくり腰などの慢性的な不調に。
             問診と身体の状態を確認しながら、姿勢や動きのバランスを整えていきます。
@@ -1257,14 +1259,13 @@ nav a:hover {
 
 </div>
     <div class="treatment-row reverse">
-       <div class="treatment-image">
-    <a href="/seitai.html" class="treatment-link">
+<div class="treatment-image reveal reveal-right reveal-delay-1">    <a href="/seitai.html" class="treatment-link">
         <img src="/public/images/massage1.jpg" alt="整体施術">
         <span class="learn-more">Learn more</span>
     </a>
 </div>
 
-        <div class="treatment-text">
+       <div class="treatment-text reveal reveal-left reveal-delay-2">
             <p>
                 トリガーポイントや筋膜へのアプローチ、
                 自律神経に配慮した鍼灸施術など、
@@ -1514,6 +1515,24 @@ nav a:hover {
     © aqua All Rights Reserved.
   </div>
 </footer>
+<script>
+const revealElements = document.querySelectorAll('.reveal');
+
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+            revealObserver.unobserve(entry.target);
+        }
+    });
+}, {
+    threshold: 0.15
+});
+
+revealElements.forEach(element => {
+    revealObserver.observe(element);
+});
+</script>
 
 </body>
 </html>
