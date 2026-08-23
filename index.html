@@ -1311,12 +1311,8 @@ nav a:hover {
 
 /* 下段3人だけ少し右へずらす */
 .staff-card:nth-child(n+4) {
-    transform: translateX(70px);
-}
-
-/* hoverで位置が戻らないように */
-.staff-card:nth-child(n+4):hover {
-    transform: translateX(45px) !important;
+    position: relative;
+    left: 45px;
 }
 
 </style>
