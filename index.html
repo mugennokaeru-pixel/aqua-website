@@ -1328,6 +1328,30 @@ nav a:hover {
     left: 130px;
 }
 
+/* ===== 下段スタッフだけイラレ風 ===== */
+
+/* 下段3人 */
+.staff-card:nth-child(n+4) {
+    position: relative;
+}
+
+/* 名前を写真の右側へ */
+.staff-card:nth-child(n+4) .staff-info h3 {
+    left: auto !important;
+    right: -28px !important;
+    top: 0;
+}
+
+/* 下段の文字を右揃え */
+.staff-card:nth-child(n+4) .staff-info {
+    text-align: right;
+}
+
+.staff-card:nth-child(n+4) .specialty,
+.staff-card:nth-child(n+4) .description {
+    text-align: right;
+}
+
 </style>
 </head>
 <body>
