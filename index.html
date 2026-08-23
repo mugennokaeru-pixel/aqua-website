@@ -1767,6 +1767,90 @@ body {
     }
 }
 
+/* ===== 右上 MENUボタン ===== */
+
+.menu-toggle {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+
+    padding: 0;
+    border: none;
+    background: none;
+
+    cursor: pointer;
+
+    position: relative;
+    z-index: 200;
+}
+
+/* 左：menu */
+.menu-label {
+    width: 54px;
+    height: 54px;
+
+    background: #5fc7a3;
+
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 12px;
+    line-height: 1.1;
+    letter-spacing: 0.08em;
+
+    transition: background 0.3s ease;
+}
+
+.menu-arrow {
+    margin-top: 3px;
+    font-size: 12px;
+}
+
+/* 右：三本線 */
+.menu-hamburger {
+    width: 54px;
+    height: 54px;
+
+    background: #2c2c2c;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 7px;
+}
+
+.menu-hamburger i {
+    display: block;
+
+    width: 27px;
+    height: 2px;
+
+    background: #5fc7a3;
+
+    transition:
+        transform 0.3s ease,
+        width 0.3s ease;
+}
+
+/* hover */
+.menu-toggle:hover .menu-label {
+    background: #49b993;
+}
+
+.menu-toggle:hover .menu-hamburger i:nth-child(1) {
+    transform: translateX(4px);
+}
+
+.menu-toggle:hover .menu-hamburger i:nth-child(3) {
+    transform: translateX(-4px);
+}
+
 </style>
 </head>
 <body>
@@ -1775,10 +1859,20 @@ body {
     <nav>
     <a href="#top" class="logo">aqua</a>
 
-    <button class="menu-toggle" onclick="toggleSideMenu()">
-        <span class="menu-text">menu →</span>
-        <span class="menu-icon">☰</span>
-    </button>
+    <button class="menu-toggle" onclick="toggleSideMenu()" aria-label="メニューを開く">
+
+    <span class="menu-label">
+        <span>menu</span>
+        <span class="menu-arrow">→</span>
+    </span>
+
+    <span class="menu-hamburger">
+        <i></i>
+        <i></i>
+        <i></i>
+    </span>
+
+</button>
 </nav>
 <div class="side-menu" id="sideMenu">
 
