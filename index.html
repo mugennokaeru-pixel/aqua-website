@@ -948,29 +948,44 @@ nav a:hover {
         transform: translateY(8px) rotate(45deg);
     }
 }
+/* ===== スライドの小さいインジケーター ===== */
+
 .hero-indicator {
-    position: absolute;
-       bottom: 80px;
-    z-index: 20;
-    display: flex;
-    gap: 14px;
+    position: absolute !important;
+    left: 50% !important;
+    bottom: 20px !important;
+    transform: translateX(-50%) !important;
+
+    display: flex !important;
+    gap: 10px !important;
+
+    z-index: 30 !important;
 }
 
 .hero-indicator span {
     display: block;
-    width: 72px;
-    height: 2px;
-    background: rgba(255,255,255,0.55);
+    width: 28px !important;
+    height: 2px !important;
+
+    background: rgba(255,255,255,0.45) !important;
+
+    cursor: pointer;
+    transition:
+        width 0.35s ease,
+        background 0.35s ease,
+        opacity 0.35s ease;
 }
 
+/* 現在の写真 */
 .hero-indicator span.active {
-    background: white;
-}
-.treatment-block {
-    max-width: 1200px;
-    margin: 0 auto;
+    width: 42px !important;
+    background: #fff !important;
 }
 
+/* ホバー */
+.hero-indicator span:hover {
+    background: rgba(255,255,255,0.9) !important;
+}
 .symptoms-block {
     background: #fff;
     text-align: center;
@@ -2065,14 +2080,50 @@ nav a:hover {
         }
     </script>
 <script>
-    const slides = document.querySelectorAll('.hero-slide');
-    let currentSlide = 0;
+    <script>
+const slides = document.querySelectorAll('.hero-slide');
+const indicators = document.querySelectorAll('.hero-indicator span');
 
-    setInterval(() => {
-        slides[currentSlide].classList.remove('active');
-        currentSlide = (currentSlide + 1) % slides.length;
-        slides[currentSlide].classList.add('active');
-    }, 6500);
+let currentSlide = 0;
+let slideTimer;
+
+function showSlide(index) {
+
+    slides[currentSlide].classList.remove('active');
+    indicators[currentSlide].classList.remove('active');
+
+    currentSlide = index;
+
+    slides[currentSlide].classList.add('active');
+    indicators[currentSlide].classList.add('active');
+}
+
+function nextSlide() {
+    const next = (currentSlide + 1) % slides.length;
+    showSlide(next);
+}
+
+function startSlider() {
+    slideTimer = setInterval(nextSlide, 6500);
+}
+
+function resetSlider() {
+    clearInterval(slideTimer);
+    startSlider();
+}
+
+/* 線をクリックしたらその写真へ */
+indicators.forEach((indicator, index) => {
+
+    indicator.addEventListener('click', () => {
+        showSlide(index);
+        resetSlider();
+    });
+
+});
+
+startSlider();
+</script>
 </script>
 <footer class="site-footer">
   <div class="footer-inner">
