@@ -1352,6 +1352,75 @@ nav a:hover {
     text-align: right;
 }
 
+/* ===== 施術者紹介 文字サイズ・タイトル線調整 ===== */
+
+/* タイトル全体を画面幅いっぱいに */
+.staff-section .section-title {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    margin-bottom: 65px;
+}
+
+/* 左右の緑線を両端まで */
+.staff-section .section-title::before,
+.staff-section .section-title::after {
+    content: "";
+    height: 1px;
+    background: #5fc7a3;
+    flex: 1;
+    width: auto;
+}
+
+/* 「施術者紹介」 */
+.staff-section .section-title h2 {
+    font-size: 34px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+}
+
+
+/* ===== 先生の縦名前 ===== */
+
+.staff-info h3 {
+    font-size: 22px !important;
+    font-weight: 600 !important;
+    line-height: 1.25;
+    letter-spacing: 0.08em;
+}
+
+
+/* ===== 緑の得意分野 ===== */
+
+.staff-info .specialty {
+    font-size: 20px !important;
+    font-weight: 600 !important;
+    line-height: 1.4 !important;
+    margin-top: 14px;
+    margin-bottom: 12px;
+}
+
+
+/* ===== 説明文 ===== */
+
+.staff-info .description {
+    font-size: 14px !important;
+    line-height: 1.8 !important;
+    letter-spacing: 0.02em;
+    color: #222 !important;
+}
+
+
+/* 下段は右揃えのまま */
+.staff-card:nth-child(n+4) .staff-info,
+.staff-card:nth-child(n+4) .specialty,
+.staff-card:nth-child(n+4) .description {
+    text-align: right;
+}
+
 </style>
 </head>
 <body>
