@@ -234,28 +234,33 @@
             object-position: center 10%;
         }
 
-        .staff-info {
-            padding: 32px;
-        }
+       .staff-info {
+    padding: 10px 0 0 !important;
+}
 
-        .staff-info h3 {
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
+.staff-info h3 {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.4;
+    margin: 0 0 6px;
+    letter-spacing: 0.03em;
+}
 
-        .staff-info .specialty {
-            font-size: 14px;
-            font-weight: 600;
-            margin-bottom: 16px;
-        }
+.staff-info .specialty {
+    font-size: 18px !important;
+    font-weight: 500 !important;
+    line-height: 1.35;
+    color: #5fc7a3 !important;
+    margin: 0 0 10px;
+}
 
-        .staff-info .description {
-            font-size: 15px;
-            color: #555;
-            line-height: 1.7;
-            margin-bottom: 24px;
-        }
+.staff-info .description {
+    font-size: 12px !important;
+    line-height: 1.65;
+    color: #222 !important;
+    margin: 0;
+    letter-spacing: 0.01em;
+}
 
         .detail-btn {
             width: 100%;
@@ -1233,6 +1238,47 @@ nav a:hover {
     display: none !important;
 }
 
+/* ===== スタッフ写真リンク ===== */
+
+.staff-link {
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.staff-link .staff-image {
+    transition:
+        transform 0.35s ease,
+        opacity 0.35s ease;
+}
+
+.staff-learn-more {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    padding: 10px 18px;
+
+    background: rgba(255,255,255,0.55);
+    color: white;
+
+    font-size: 14px;
+    text-decoration: none;
+
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.staff-link:hover .staff-learn-more {
+    opacity: 1;
+}
+
+.staff-link:hover .staff-image {
+    opacity: 0.82;
+    transform: scale(1.02);
+}
+
 </style>
 </head>
 <body>
@@ -1448,12 +1494,34 @@ nav a:hover {
                 <div class="staff-card">
                     <img src="/public/images/img_0309.jpg" alt="伊藤盛敬" class="staff-image">
                     <div class="staff-info">
-                        <h3>伊藤盛敬</h3>
-                        <p class="specialty" style="color: #5fc7a3;">筋膜リリース・トリガーポイント鍼灸</p>
-                        <p class="description">筋膜へのアプローチで、凝り固まった身体をほぐします。スポーツ障害や慢性的な痛みに対応。</p>
-                        <button class="detail-btn" style="background: #5fc7a3;">詳しく見る →</button>
-                    </div>
-                </div>
+                       <div class="staff-card">
+
+    <a href="/ito.html" class="staff-link">
+        <img src="/public/images/img_0309.jpg"
+             alt="伊藤盛敬"
+             class="staff-image">
+
+        <span class="staff-learn-more">
+            Learn more
+        </span>
+    </a>
+
+    <div class="staff-info">
+        <h3>伊藤盛敬</h3>
+
+        <p class="specialty">
+            筋膜リリース・<br>
+            トリガーポイント鍼灸
+        </p>
+
+        <p class="description">
+            筋膜へのアプローチで、
+            凝り固まった身体をほぐします。
+            スポーツ障害や慢性的な痛みに対応。
+        </p>
+    </div>
+
+</div>
 
                 <!-- 砂生明久 -->
                 <div class="staff-card">
