@@ -1297,6 +1297,28 @@ nav a:hover {
     margin: 0;
 }
 
+/* 写真を少し細く */
+.staff-card {
+    max-width: 285px;
+}
+
+/* グリッド全体の間隔を少し広げる */
+.staff-grid {
+    column-gap: 55px !important;
+    row-gap: 70px !important;
+    justify-content: center;
+}
+
+/* 下段3人だけ少し右へずらす */
+.staff-card:nth-child(n+4) {
+    transform: translateX(45px);
+}
+
+/* hoverで位置が戻らないように */
+.staff-card:nth-child(n+4):hover {
+    transform: translateX(45px) !important;
+}
+
 </style>
 </head>
 <body>
