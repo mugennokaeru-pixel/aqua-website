@@ -1979,6 +1979,231 @@ body {
 
     .voice-card img { height: 200px; }
 }
+
+/* ==================================================
+   スマホ版：施術内容・施術者紹介を1個ずつ縦並び
+================================================== */
+
+@media (max-width: 768px) {
+
+    /* 横スクロール防止 */
+    html,
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+
+    /* =====================
+       施術内容
+    ===================== */
+
+    .services {
+        padding: 60px 0 !important;
+    }
+
+    .treatment-block,
+    .second-treatment {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 20px !important;
+        overflow: hidden !important;
+    }
+
+    .second-treatment {
+        margin-top: 70px !important;
+    }
+
+    /* タイトル */
+    .treatment-block h3 {
+        transform: none !important;
+
+        width: 100% !important;
+        margin: 0 0 30px !important;
+        padding: 0 0 12px !important;
+
+        font-size: 25px !important;
+        line-height: 1.5 !important;
+    }
+
+    .treatment-block h3::before {
+        display: none !important;
+    }
+
+    /* 1段ずつ縦並び */
+    .treatment-row,
+    .treatment-row.reverse {
+        display: flex !important;
+        flex-direction: column !important;
+
+        width: 100% !important;
+        margin: 0 0 55px !important;
+
+        overflow: visible !important;
+    }
+
+    /* 写真 */
+    .treatment-image {
+        width: 100% !important;
+        margin: 0 !important;
+        overflow: hidden !important;
+    }
+
+    .treatment-link,
+    .treatment-row:not(.reverse) .treatment-link,
+    .treatment-row.reverse .treatment-link {
+        width: 100% !important;
+        height: 260px !important;
+
+        margin: 0 !important;
+    }
+
+    .treatment-image img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+    }
+
+    /* 文章 */
+    .treatment-text,
+    .treatment-row:not(.reverse) .treatment-text,
+    .treatment-row.reverse .treatment-text,
+    .second-treatment .treatment-row.reverse .treatment-text {
+        position: static !important;
+
+        width: 100% !important;
+
+        margin: 0 !important;
+        padding: 24px 5px 0 !important;
+
+        transform: none !important;
+
+        display: block !important;
+        text-align: left !important;
+
+        font-size: 16px !important;
+        line-height: 1.9 !important;
+    }
+
+    .treatment-text p {
+        margin: 0 0 10px !important;
+    }
+
+
+    /* =====================
+       施術者紹介
+    ===================== */
+
+    .staff-section {
+        padding: 65px 20px 80px !important;
+        overflow: hidden !important;
+    }
+
+    .staff-section .section-container {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .staff-section .section-title {
+        width: 100% !important;
+        margin: 0 0 45px !important;
+        gap: 15px !important;
+    }
+
+    .staff-section .section-title h2 {
+        font-size: 28px !important;
+    }
+
+    /* 6人を1列に */
+    .staff-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+
+        width: 100% !important;
+
+        gap: 70px !important;
+    }
+
+    /* PCの左右ズラしを全部解除 */
+    .staff-card,
+    .staff-card:nth-child(-n+3),
+    .staff-card:nth-child(n+4) {
+        position: relative !important;
+
+        left: auto !important;
+        right: auto !important;
+
+        width: 100% !important;
+        max-width: 360px !important;
+
+        margin: 0 auto !important;
+        padding: 0 !important;
+
+        transform: none !important;
+    }
+
+    /* 写真を普通の横幅に */
+    .staff-link {
+        width: 100% !important;
+        overflow: hidden !important;
+    }
+
+    .staff-image {
+        width: 100% !important;
+        height: 420px !important;
+
+        object-fit: cover !important;
+        object-position: center top !important;
+    }
+
+    .staff-info {
+        position: static !important;
+
+        width: 100% !important;
+        padding: 20px 0 0 !important;
+
+        text-align: left !important;
+    }
+
+    /* 名前：縦書きをやめる */
+    .staff-info h3,
+    .staff-card:nth-child(n+4) .staff-info h3 {
+        position: static !important;
+
+        writing-mode: horizontal-tb !important;
+        text-orientation: mixed !important;
+
+        font-size: 22px !important;
+        font-weight: 600 !important;
+
+        margin: 0 0 12px !important;
+
+        text-align: left !important;
+    }
+
+    /* 緑の得意分野 */
+    .staff-info .specialty,
+    .staff-card:nth-child(n+4) .specialty {
+        font-size: 20px !important;
+        line-height: 1.5 !important;
+
+        margin: 0 0 12px !important;
+
+        text-align: left !important;
+    }
+
+    /* 説明文 */
+    .staff-info .description,
+    .staff-card:nth-child(n+4) .description {
+        font-size: 15px !important;
+        line-height: 1.9 !important;
+
+        text-align: left !important;
+    }
+
+}
+
 </style>
 </head>
 <body>
