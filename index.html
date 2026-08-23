@@ -652,33 +652,65 @@
 
 /* 左側の緑パネル */
 .hero-overlay {
-    width: 320px;
-    padding: 180px 0 40px 38px;
-    justify-content: flex-start;
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100% !important;
+    padding: 0 !important;
+
+    text-align: center;
+    pointer-events: none;
 }
 
+/* タイトル */
 .hero-overlay h1 {
-    color: #222;
-    font-size: 48px;
-    font-weight: 700;
-    line-height: 1.08;
-    letter-spacing: -0.03em;
-    margin-bottom: 8px;
+    color: white !important;
+    font-size: 44px !important;
+    font-weight: 400 !important;
+    letter-spacing: 0.18em;
+    line-height: 1.4;
+    margin: 0 0 14px !important;
 }
 
-.hero-overlay h2 {
-    color: #222;
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 1.15;
-    margin-bottom: 58px;
-}
-
+/* 短い説明 */
 .hero-overlay p {
+    color: white !important;
+    font-size: 14px !important;
+    line-height: 1.8 !important;
+    margin: 0 0 28px !important;
+    width: auto !important;
+}
+
+/* LEARN MORE */
+.hero-learn-more {
+    pointer-events: auto;
+
+    display: inline-block;
+    padding: 11px 28px;
+
+    border: 1px solid rgba(255,255,255,0.9);
+    color: white;
+    text-decoration: none;
+
+    font-size: 12px;
+    letter-spacing: 0.18em;
+
+    background: rgba(255,255,255,0.05);
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+.hero-learn-more:hover {
+    background: white;
     color: #222;
-    font-size: 20px;
-    line-height: 1.9;
-    width: 280px;
 }
 
 /* スマホ */
@@ -1684,21 +1716,18 @@ nav a:hover {
     </div>
 
     <!-- 左側の文字 -->
-    <div class="hero-overlay">
-        <h1>
-            水と大地の<br>
-            エネルギーで
-        </h1>
+    <<div class="hero-overlay">
+    <h1>水と大地のエネルギーで</h1>
 
-        <h2>からだを整える</h2>
+    <p>
+        鍼灸・整体・マッサージを通じて、<br>
+        自然治癒力を引き出す治療院です。
+    </p>
 
-        <p>
-            鍼灸・整体・マッサージを通じて、
-            自然治癒力を引き出す治療院です。
-            6人の施術者がそれぞれの手技で、
-            あなたの心身をサポートします。
-        </p>
-    </div>
+    <a href="#services" class="hero-learn-more">
+        LEARN MORE
+    </a>
+</div>
 
 <a href="#symptoms" class="scroll-guide">
     <span>SCROLL</span>
