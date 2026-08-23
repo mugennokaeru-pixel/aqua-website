@@ -2077,6 +2077,11 @@ revealElements.forEach(element => {
     revealObserver.observe(element);
 });
 </script>
-
+<script>
+function toggleSideMenu() {
+    const sideMenu = document.getElementById('sideMenu');
+    sideMenu.classList.toggle('open');
+}
+</script>
 </body>
 </html>
