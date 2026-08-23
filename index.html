@@ -489,10 +489,6 @@
     transform: scale(1.08);
 }  
 
-.hero-slide:not(.active) {
-    transform: scale(1);
-}
-
 .services {
     padding: 90px 0;
     background: #F8F7F5;
@@ -1593,6 +1589,30 @@ nav a:hover {
 .side-menu {
     overflow-y: auto;
 }
+/* ===== ヒーロー画像：ゆっくりズーム ===== */
+
+.hero-slide {
+    opacity: 0 !important;
+    transform: scale(1.08);
+    transition: opacity 1.5s ease !important;
+    will-change: transform, opacity;
+}
+
+.hero-slide.active {
+    opacity: 1 !important;
+    animation: heroZoom 7s linear forwards;
+}
+
+@keyframes heroZoom {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.08);
+    }
+}
+
 </style>
 </head>
 <body>
