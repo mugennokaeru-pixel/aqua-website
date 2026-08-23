@@ -1979,6 +1979,284 @@ body {
 
     .voice-card img { height: 200px; }
 }
+
+/* =========================================================
+   MOBILE FINAL FIX
+   施術内容・施術者紹介をスマホでは必ず1列にする
+========================================================= */
+@media (max-width: 768px) {
+
+    html,
+    body {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+
+    /* ---------- 施術内容 ---------- */
+    .services {
+        padding: 58px 0 70px !important;
+        overflow: hidden !important;
+    }
+
+    .services .section-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
+
+    .treatment-block,
+    .treatment-block.second-treatment {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 18px !important;
+        overflow: hidden !important;
+    }
+
+    .treatment-block.second-treatment {
+        margin-top: 68px !important;
+    }
+
+    .treatment-block h3 {
+        width: 100% !important;
+        max-width: 100% !important;
+        transform: none !important;
+        margin: 0 0 26px !important;
+        padding: 0 0 12px !important;
+        font-size: 25px !important;
+        line-height: 1.5 !important;
+        text-align: left !important;
+    }
+
+    .treatment-block h3::before {
+        display: none !important;
+    }
+
+    .treatment-block h3::after {
+        right: 3px !important;
+    }
+
+    .treatment-row,
+    .treatment-row.reverse,
+    .second-treatment .treatment-row,
+    .second-treatment .treatment-row.reverse {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 0 48px !important;
+        padding: 0 !important;
+        overflow: visible !important;
+        position: static !important;
+    }
+
+    .treatment-image,
+    .treatment-row.reverse .treatment-image,
+    .second-treatment .treatment-image {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow: hidden !important;
+        position: static !important;
+    }
+
+    .treatment-link,
+    .treatment-row:not(.reverse) .treatment-link,
+    .treatment-row.reverse .treatment-link,
+    .second-treatment .treatment-link {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 245px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        position: relative !important;
+        left: auto !important;
+        right: auto !important;
+    }
+
+    .treatment-image img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        display: block !important;
+    }
+
+    .treatment-text,
+    .treatment-row:not(.reverse) .treatment-text,
+    .treatment-row.reverse .treatment-text,
+    .second-treatment .treatment-row.reverse .treatment-text {
+        position: static !important;
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-height: 0 !important;
+        margin: 0 !important;
+        padding: 22px 2px 0 !important;
+        transform: none !important;
+        display: block !important;
+        text-align: left !important;
+        align-items: initial !important;
+        justify-content: initial !important;
+        font-size: 16px !important;
+        line-height: 1.9 !important;
+    }
+
+    .treatment-text p,
+    .treatment-name {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 0 8px !important;
+        word-break: normal !important;
+        overflow-wrap: anywhere !important;
+    }
+
+    /* ---------- 施術者紹介 ---------- */
+    .staff-section {
+        padding: 64px 18px 82px !important;
+        overflow: hidden !important;
+    }
+
+    .staff-section .section-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        padding: 0 !important;
+    }
+
+    .staff-section .section-title {
+        width: calc(100% + 36px) !important;
+        margin-left: -18px !important;
+        margin-right: -18px !important;
+        margin-bottom: 25px !important;
+        gap: 14px !important;
+    }
+
+    .staff-section .section-title h2 {
+        font-size: 28px !important;
+    }
+
+    .staff-lead {
+        margin: 0 auto 42px !important;
+        padding: 0 12px !important;
+        font-size: 14px !important;
+        line-height: 1.8 !important;
+        text-align: center !important;
+    }
+
+    .staff-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        column-gap: 0 !important;
+        row-gap: 64px !important;
+        gap: 64px !important;
+        overflow: visible !important;
+        justify-items: center !important;
+    }
+
+    .staff-card,
+    .staff-card:nth-child(-n+3),
+    .staff-card:nth-child(n+4) {
+        position: relative !important;
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        width: 100% !important;
+        max-width: 360px !important;
+        margin: 0 auto !important;
+        padding: 0 !important;
+        transform: none !important;
+        text-align: left !important;
+    }
+
+    .staff-link {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow: hidden !important;
+    }
+
+    .staff-image {
+        width: 100% !important;
+        height: auto !important;
+        aspect-ratio: 4 / 5 !important;
+        object-fit: cover !important;
+        object-position: center top !important;
+        display: block !important;
+    }
+
+    .staff-info,
+    .staff-card:nth-child(n+4) .staff-info {
+        position: static !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 18px 0 0 !important;
+        margin: 0 !important;
+        text-align: left !important;
+    }
+
+    .staff-info h3,
+    .staff-card:nth-child(n+4) .staff-info h3 {
+        position: static !important;
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        writing-mode: horizontal-tb !important;
+        text-orientation: mixed !important;
+        font-size: 22px !important;
+        font-weight: 600 !important;
+        line-height: 1.4 !important;
+        letter-spacing: 0.05em !important;
+        margin: 0 0 10px !important;
+        text-align: left !important;
+    }
+
+    .staff-info .specialty,
+    .staff-card:nth-child(n+4) .specialty {
+        font-size: 19px !important;
+        line-height: 1.55 !important;
+        margin: 0 0 10px !important;
+        text-align: left !important;
+    }
+
+    .staff-info .description,
+    .staff-card:nth-child(n+4) .description {
+        font-size: 14px !important;
+        line-height: 1.85 !important;
+        margin: 0 !important;
+        text-align: left !important;
+    }
+
+    /* ---------- お客様の声 ---------- */
+    .voice-overlay {
+        padding: 48px 18px 58px !important;
+    }
+
+    .voice-cards {
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+    }
+
+    .voice-card,
+    .voice-card:nth-child(2),
+    .voice-card:nth-child(3) {
+        width: 100% !important;
+        max-width: 380px !important;
+        margin: 0 auto !important;
+    }
+
+    .voice-card img {
+        height: 220px !important;
+    }
+}
+
 </style>
 </head>
 <body>
@@ -2446,7 +2724,7 @@ body {
         <div class="voice-cards">
 
             <article class="voice-card reveal reveal-left">
-                <img src="/public/images/img_0261.jpg" alt="千葉市稲毛区・高校生のお客様の声">
+                <img src="/public/images/img_0261.jpg" data-fallbacks="/public/images/IMG_0261.jpg|/public/images/img_0261.JPG|/public/images/IMG_0261.JPG" alt="千葉市稲毛区・高校生のお客様の声">
 
                 <div class="voice-card-body">
                     <p class="voice-label">VOICE 01</p>
@@ -2466,7 +2744,7 @@ body {
 
 
             <article class="voice-card reveal reveal-right reveal-delay-1">
-                <img src="/public/images/img_0141.jpg" alt="千葉市在住・学生のお客様の声">
+                <img src="/public/images/img_0141.jpg" data-fallbacks="/public/images/IMG_0141.jpg|/public/images/img_0141.JPG|/public/images/IMG_0141.JPG" alt="千葉市在住・学生のお客様の声">
 
                 <div class="voice-card-body">
                     <p class="voice-label">VOICE 02</p>
@@ -2486,7 +2764,7 @@ body {
 
 
             <article class="voice-card reveal reveal-left reveal-delay-2">
-                <img src="/public/images/img_0194.jpg" alt="千葉市花見川区・女性のお客様の声">
+                <img src="/public/images/img_0194.jpg" data-fallbacks="/public/images/IMG_0194.jpg|/public/images/img_0194.JPG|/public/images/IMG_0194.JPG" alt="千葉市花見川区・女性のお客様の声">
 
                 <div class="voice-card-body">
                     <p class="voice-label">VOICE 03</p>
@@ -2698,5 +2976,21 @@ function toggleSideMenu() {
     sideMenu.classList.toggle('open');
 }
 </script>
+
+<script>
+(function () {
+    document.querySelectorAll('img[data-fallbacks]').forEach(function (img) {
+        var fallbacks = (img.dataset.fallbacks || '').split('|').filter(Boolean);
+        var index = 0;
+
+        img.addEventListener('error', function () {
+            if (index < fallbacks.length) {
+                img.src = fallbacks[index++];
+            }
+        });
+    });
+})();
+</script>
+
 </body>
 </html>
