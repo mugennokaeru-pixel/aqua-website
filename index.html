@@ -1513,7 +1513,60 @@ nav a:hover {
     margin: -30px 0 55px;
     line-height: 1.8;
 }
+/* ===== サイドメニュー見やすく整理 ===== */
 
+.side-menu {
+    width: 430px;
+    right: -450px;
+    padding: 90px 45px 45px;
+    gap: 0;
+}
+
+.side-menu.open {
+    right: 0;
+}
+
+.side-menu-title {
+    font-size: 24px;
+    margin-bottom: 24px;
+}
+
+/* 大項目 */
+.side-menu > a {
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 16px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+/* 小項目のまとまり */
+.side-submenu {
+    padding: 8px 0 14px 18px;
+    margin-bottom: 6px;
+}
+
+/* 小項目 */
+.side-submenu a {
+    display: block;
+    font-size: 13px !important;
+    line-height: 1.6;
+    padding: 6px 0;
+    color: #666 !important;
+    border-bottom: none !important;
+}
+
+/* 小項目の前に細い矢印 */
+.side-submenu a::before {
+    content: "→";
+    color: #5fc7a3;
+    margin-right: 7px;
+}
+
+/* スクロールしやすく */
+.side-menu {
+    overflow-y: auto;
+}
 </style>
 </head>
 <body>
