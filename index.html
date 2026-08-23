@@ -1309,10 +1309,23 @@ nav a:hover {
     justify-content: center;
 }
 
-/* 下段3人だけ少し右へずらす */
+/* ===== スタッフ配置を大胆に左右へ ===== */
+
+.staff-grid {
+    width: 100%;
+    overflow: visible !important;
+}
+
+/* 上段3人：左へ */
+.staff-card:nth-child(-n+3) {
+    position: relative;
+    left: -170px;
+}
+
+/* 下段3人：右へ */
 .staff-card:nth-child(n+4) {
     position: relative;
-    left: 30px;
+    left: 170px;
 }
 
 </style>
