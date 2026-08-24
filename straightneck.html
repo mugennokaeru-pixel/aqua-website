@@ -3,18 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Ken Yamamotoテクニック | 癒しと治療空間 aqua</title>
+<title>ストレートネック施術 | 癒しと治療空間 aqua</title>
 <style>
 *{box-sizing:border-box}html{scroll-behavior:smooth}
 body{margin:0;font-family:"Yu Gothic","Hiragino Sans","Noto Sans JP",sans-serif;color:#2c2c2c;background:#fff;line-height:1.9}
 img{max-width:100%;display:block}a{color:inherit}
 .header{position:fixed;top:0;left:0;right:0;height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 34px;background:rgba(255,255,255,.95);border-bottom:1px solid #eee;z-index:30;backdrop-filter:blur(10px)}
 .logo{font-size:34px;font-weight:700;color:#5fc7a3;text-decoration:none}.header a:last-child{text-decoration:none;font-size:12px;letter-spacing:.08em}
-.hero{padding-top:72px;display:grid;grid-template-columns:52% 48%;min-height:720px;background:#f4f2ee}
+.hero{padding-top:72px;display:grid;grid-template-columns:50% 50%;min-height:720px;background:#f4f2ee}
 .hero-media img{width:100%;height:648px;object-fit:cover;object-position:center}
 .hero-copy{display:flex;flex-direction:column;justify-content:center;padding:70px 7vw}
 .kicker{font-size:11px;letter-spacing:.22em;color:#5fc7a3}
-.hero h1{font-size:clamp(42px,5vw,70px);font-weight:500;line-height:1.18;margin:12px 0 8px;letter-spacing:.04em}
+.hero h1{font-size:clamp(42px,5vw,68px);font-weight:500;line-height:1.18;margin:12px 0 8px;letter-spacing:.04em}
 .hero .sub{font-size:23px;line-height:1.65;margin:22px 0;color:#333}.hero p{font-size:15px;color:#555}
 .btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-block;text-decoration:none;padding:13px 26px;border:1px solid #5fc7a3;font-size:12px;letter-spacing:.08em}.primary{background:#5fc7a3;color:#fff}
 .section{padding:92px 22px}.inner{max-width:1120px;margin:auto}.gray{background:#f6f5f2}.dark{background:#2f3b37;color:#fff}
@@ -23,14 +23,16 @@ img{max-width:100%;display:block}a{color:inherit}
 .dark .card{background:rgba(255,255,255,.07);border-top-color:#5fc7a3}.dark .card p{color:rgba(255,255,255,.8)}
 .story{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}.story h3{font-size:28px;font-weight:500;margin:0 0 18px}.story p{font-size:15px;color:#444}
 .story img{width:100%;aspect-ratio:4/3;object-fit:cover}
-.points{display:grid;grid-template-columns:1fr 1fr;gap:22px}.point{padding:26px 0;border-bottom:1px solid #ddd}.point h3{font-size:19px;font-weight:500;margin:0 0 8px}.point p{font-size:14px;color:#555;margin:0}
-.process{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.step{background:#fff;padding:24px;min-height:170px}.step b{display:block;color:#5fc7a3;font-size:11px;letter-spacing:.14em}.step h3{font-size:18px;font-weight:500}.step p{font-size:13px;color:#666}
-.note{font-size:13px;color:#666;max-width:900px;margin:22px auto 0;text-align:center}
-.cta{text-align:center}.cta-box{max-width:860px;margin:auto;padding:44px;border:1px solid #ddd}.cta-box h2{font-size:28px;font-weight:500}.cta-box p{font-size:14px;color:#555}
+.list{display:grid;grid-template-columns:1fr 1fr;gap:14px 30px;max-width:900px;margin:auto}
+.list div{padding:14px 0;border-bottom:1px solid #ddd;font-size:15px}
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.step{background:#fff;padding:24px;min-height:185px}.step b{display:block;color:#5fc7a3;font-size:11px;letter-spacing:.14em}.step h3{font-size:18px;font-weight:500}.step p{font-size:13px;color:#666}
+.price-table{width:100%;max-width:760px;margin:auto;border-collapse:collapse;background:#fff}.price-table th,.price-table td{padding:18px;border-bottom:1px solid #ddd}.price-table th{text-align:left;font-weight:500}.price-table td{text-align:right;color:#5fc7a3;font-size:17px}
+.profile{display:grid;grid-template-columns:38% 1fr;gap:60px;align-items:start}.profile img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center top}.profile h3{font-size:28px;font-weight:500;margin:18px 0 0}.profile small{color:#5fc7a3;letter-spacing:.18em}.block{border-bottom:1px solid #ddd;padding-bottom:26px;margin-bottom:26px}.block h4{font-size:20px;font-weight:500;margin-bottom:10px}.block ul{list-style:none;padding:0;margin:0;font-size:14px}.block li:before{content:"・";color:#5fc7a3}
+.note{font-size:12px;color:#777;max-width:760px;margin:12px auto 0}.cta{text-align:center}.cta-box{max-width:860px;margin:auto;padding:44px;border:1px solid #ddd}.cta-box h2{font-size:28px;font-weight:500}.cta-box p{font-size:14px;color:#555}
 .footer{background:#222;color:#aaa;text-align:center;padding:24px;font-size:11px}
 @media(max-width:820px){
 .header{height:64px;padding:0 18px}.logo{font-size:28px}.hero{padding-top:64px;display:block;min-height:0}.hero-media img{height:auto;aspect-ratio:4/5}.hero-copy{padding:44px 20px}.hero .sub{font-size:20px}
-.section{padding:70px 18px}.title h2{font-size:27px}.grid3,.story,.points,.process{grid-template-columns:1fr}.story{gap:34px}.step{min-height:0}
+.section{padding:70px 18px}.title h2{font-size:27px}.grid3,.story,.list,.flow,.profile{grid-template-columns:1fr}.story{gap:34px}.step{min-height:0}.profile{gap:36px}.price-table th,.price-table td{padding:14px 10px}
 }
 </style>
 </head>
@@ -43,85 +45,110 @@ img{max-width:100%;display:block}a{color:inherit}
 
 <section class="hero">
 <div class="hero-media">
-<img src="/public/images/img_0159.jpg" alt="整体施術">
+<img src="/public/images/img_0219.jpg" alt="首まわりへの施術">
 </div>
 <div class="hero-copy">
-<span class="kicker">WHOLE BODY TREATMENT</span>
-<h1>Ken Yamamoto<br>テクニック</h1>
-<div class="sub">慢性的な腰痛・肩こり・ぎっくり腰など、<br>身体全体のバランスをみながら整える整体</div>
-<p>解剖学・運動学・バイオメカニクスの考え方をもとに、問診・検査・評価を重視しながら施術を組み立てます。</p>
+<span class="kicker">STRAIGHT NECK CARE</span>
+<h1>ストレートネック施術</h1>
+<div class="sub">肩こり・首こり・頭痛などでお悩みの方へ</div>
+<p>パソコンやスマートフォンの使用、姿勢のクセなどによって首まわりに負担がかかっている方に、整体と鍼を組み合わせた施術を行います。</p>
 <div class="btns"><a class="btn primary" href="reservation.html">予約・ご相談</a><a class="btn" href="#about">詳しく見る</a></div>
 </div>
 </section>
 
-<section class="section gray">
-<div class="inner">
-<div class="title"><span>CONCERNS</span><h2>こんなお悩みの方へ</h2></div>
-<div class="grid3">
-<div class="card"><h3>腰痛・肩こりが続いている</h3><p>慢性的な痛みや張り、繰り返す不調が気になる方。</p></div>
-<div class="card"><h3>姿勢や身体の使い方が気になる</h3><p>立ち方・歩き方・スポーツ時の動きなど、全身バランスを見直したい方。</p></div>
-<div class="card"><h3>検査で大きな異常がないのに不調が続く</h3><p>痛む場所だけでなく、全身のつながりから状態を確認してほしい方。</p></div>
-</div>
-</div>
-</section>
-
-<section class="section" id="about">
+<section class="section gray" id="about">
 <div class="inner story">
 <div>
 <span class="kicker">ABOUT</span>
-<h3>痛む場所だけにフォーカスしない</h3>
-<p>現在のページでは、慢性痛の施術において「問診 → 検査 → テクニック → 評価」の流れを大切にしていると説明しています。筋肉や関節だけを見るのではなく、姿勢や身体の動き、結合組織なども含めて全身を確認します。</p>
-<p>Ken Yamamotoテクニックは、解剖学・機能解剖学・運動学を基礎とした考え方を取り入れた施術として紹介されています。</p>
+<h3>ストレートネックとは</h3>
+<p>本来ゆるやかに前方へカーブしている頚椎が、日常のパソコン作業やスマートフォン操作などにより前方へ傾き、首のカーブが少なくなった状態を指します。</p>
+<p>頭の位置が前に出ることで首や肩の筋肉に負担がかかり、首こり・肩こり・頭痛などの不調につながることがあります。</p>
 </div>
-<img src="/public/kenyama.webp" alt="Ken Yamamotoテクニックの施術イメージ">
-</div>
-</section>
-
-<section class="section dark">
-<div class="inner">
-<div class="title"><span>FEATURES</span><h2>施術で大切にしていること</h2></div>
-<div class="grid3">
-<div class="card"><h3>問診・検査を重視</h3><p>症状だけでなく、いつ・どんな動きで不調が出るかを確認します。</p></div>
-<div class="card"><h3>全身のつながりを見る</h3><p>姿勢、骨盤、胸郭、顎関節などを含め、身体全体のバランスを確認します。</p></div>
-<div class="card"><h3>負担の少ないアプローチ</h3><p>強い刺激を目的にせず、その方の状態に合わせた方法を選びます。</p></div>
-</div>
-</div>
-</section>
-
-<section class="section gray">
-<div class="inner">
-<div class="title"><span>POINTS</span><h2>身体をみるポイント</h2></div>
-<div class="points">
-<div class="point"><h3>姿勢・ゴールデンライン</h3><p>横から見たときの身体のランドマークや、重心・姿勢の傾向を確認します。</p></div>
-<div class="point"><h3>骨盤・胸郭</h3><p>骨盤や胸郭の位置関係、動きやすさなどを見ながら全身の状態を評価します。</p></div>
-<div class="point"><h3>顎関節と首</h3><p>首や肩の不調と顎関節の動きに関連がないかを確認する場合があります。</p></div>
-<div class="point"><h3>ファシア・結合組織</h3><p>筋肉だけでなく、身体をつなぐ結合組織の滑走性や動きも確認します。</p></div>
-</div>
+<img src="/public/images/img_0165.jpg" alt="首肩まわりの施術">
 </div>
 </section>
 
 <section class="section">
 <div class="inner">
-<div class="title"><span>FLOW</span><h2>施術の流れ</h2></div>
-<div class="process">
-<div class="step"><b>STEP 01</b><h3>問診</h3><p>現在のお悩みや生活・運動状況を伺います。</p></div>
-<div class="step"><b>STEP 02</b><h3>検査</h3><p>姿勢や動き、身体のバランスを確認します。</p></div>
-<div class="step"><b>STEP 03</b><h3>施術</h3><p>検査結果をもとに、その方に合わせて施術します。</p></div>
-<div class="step"><b>STEP 04</b><h3>再評価</h3><p>施術後の変化を確認し、必要に応じてセルフケアをお伝えします。</p></div>
+<div class="title"><span>CHECK</span><h2>ストレートネックになりやすい方</h2></div>
+<div class="list">
+<div>デスクワークが中心</div>
+<div>スマートフォンを長時間見る</div>
+<div>猫背など姿勢の悪さが気になる</div>
+<div>無意識に口が開いてしまう</div>
+<div>モニターを覗き込む姿勢が多い</div>
+<div>首を自分でポキポキ鳴らしてしまう</div>
+<div>交通事故などで首に衝撃を受けた経験がある</div>
+<div>仕事で腕〜指先をよく使う</div>
 </div>
-<p class="note">※施術による変化には個人差があります。症状や状態によっては医療機関の受診をご案内する場合があります。</p>
+</div>
+</section>
+
+<section class="section dark">
+<div class="inner">
+<div class="title"><span>SYMPTOMS</span><h2>こんな症状が気になる方へ</h2></div>
+<div class="grid3">
+<div class="card"><h3>首・肩まわり</h3><p>首こり、肩こり、肩甲骨まわりのこり、朝起きたときの首の痛みなど。</p></div>
+<div class="card"><h3>頭部・自律神経系</h3><p>頭痛、めまい、吐き気、耳鳴り、疲れが抜けにくいなど。</p></div>
+<div class="card"><h3>日常生活</h3><p>集中しづらい、寝違えやすい、首を上に向きづらいと感じるなど。</p></div>
+</div>
 </div>
 </section>
 
 <section class="section gray">
+<div class="inner">
+<div class="title"><span>FLOW</span><h2>施術の流れ</h2></div>
+<div class="flow">
+<div class="step"><b>STEP 01</b><h3>身体の検査</h3><p>足の長さ、肩の高さ、骨盤の位置、姿勢などを確認し、身体全体の状態を評価します。</p></div>
+<div class="step"><b>STEP 02</b><h3>神経整体</h3><p>首や肩だけでなく、全身のバランスや神経の動きを見ながら整体を行います。</p></div>
+<div class="step"><b>STEP 03</b><h3>鍼施術・自律神経へのアプローチ</h3><p>必要に応じて鍼を用い、深部の筋肉や自律神経に配慮した施術を行います。</p></div>
+<div class="step"><b>STEP 04</b><h3>セルフケア</h3><p>日常で続けやすいストレッチやエクササイズをご案内します。</p></div>
+</div>
+</div>
+</section>
+
+<section class="section">
 <div class="inner story">
 <div>
-<span class="kicker">CONTINUED LEARNING</span>
-<h3>学びを続け、施術の幅を広げる</h3>
-<p>現在の紹介ページでは、Ken Yamamotoテクニックに加えて、解剖学・バイオメカニクス・内臓や頭蓋に関する学びも継続していることが紹介されています。</p>
-<p>新しい知識を取り入れながら、より幅広い身体のお悩みに対応できるよう研鑽を重ねています。</p>
+<span class="kicker">WHOLE BODY CARE</span>
+<h3>首だけでなく、全身のバランスを見る</h3>
+<p>首や肩のつらさは、症状が出ている場所だけでなく、骨盤や姿勢、身体全体のアンバランスが関係していることがあります。</p>
+<p>そのため、首だけを局所的に見るのではなく、全身の状態を確認しながら施術を組み立てます。</p>
 </div>
-<img src="/public/images/img_0265.jpg" alt="整体施術">
+<img src="/public/images/img_0191.jpg" alt="鍼施術">
+</div>
+</section>
+
+<section class="section gray" id="price">
+<div class="inner">
+<div class="title"><span>PRICE</span><h2>料金</h2></div>
+<table class="price-table">
+<tr><th>初回　約70分（初診料含む）</th><td>7,700円（税込）</td></tr>
+<tr><th>再診　約50分</th><td>6,050円（税込）</td></tr>
+</table>
+<p class="note">※旧ページ掲載の料金を反映しています。現在の料金と異なる場合がありますので、ご予約前にご確認ください。</p>
+</div>
+</section>
+
+<section class="section">
+<div class="inner profile">
+<div>
+<img src="/public/images/img_0295.jpg" alt="村田医啓">
+<h3>村田 医啓</h3>
+<small>MURATA</small>
+</div>
+<div>
+<div class="block"><h4>プロフィール</h4><ul>
+<li>鍼灸あんまマッサージ師</li>
+<li>得意分野：神経整体での全身調整・鍼施術・エクササイズ</li>
+<li>出身：静岡県焼津市</li>
+<li>趣味・特技：ランニング・多肉植物・読書・楽しいおしゃべり</li>
+</ul></div>
+<div class="block"><h4>施術で大切にしていること</h4>
+<p>患者様の痛みやつらさに寄り添い、生活がより楽しく、より良いものになるような施術と関係づくりを大切にしています。</p>
+</div>
+<a class="btn" href="murata.html">村田医啓の紹介ページを見る →</a>
+</div>
 </div>
 </section>
 
@@ -129,8 +156,8 @@ img{max-width:100%;display:block}a{color:inherit}
 <div class="inner">
 <div class="cta-box">
 <span class="kicker">RESERVATION</span>
-<h2>慢性的な痛みや身体のお悩みを<br>まずはご相談ください</h2>
-<p>症状や身体の状態を確認したうえで、施術内容をご案内します。</p>
+<h2>首・肩こりや頭痛などでお悩みの方へ</h2>
+<p>現在の症状や身体の状態を確認しながら、施術内容をご案内します。</p>
 <div class="btns" style="justify-content:center">
 <a class="btn primary" href="reservation.html">施術を予約する</a>
 <a class="btn" href="index.html#access">アクセスを見る</a>
