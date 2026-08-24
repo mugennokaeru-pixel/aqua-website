@@ -18,6 +18,29 @@
   opacity:.72;
   transform:translateY(-3px);
 }
+.book-link{
+  text-decoration:none;
+  color:#333;
+  text-align:center;
+}
+
+.book-link img{
+  transition:opacity .3s ease, transform .3s ease;
+}
+
+.book-link:hover img{
+  opacity:.65;
+  transform:translateY(-4px);
+}
+
+.book-link span{
+  display:block;
+  margin-top:12px;
+  font-size:12px;
+  color:#666;
+  letter-spacing:.05em;
+}
+  
 </style>
 </head>
 <body>
@@ -77,8 +100,30 @@
 <figure><img src="/public/yajima_omoi.webp"><figcaption>人と生活に寄り添う活動</figcaption></figure>
 </div></div></section>
 
-<section class="section"><div class="inner"><div class="title"><span>BOOKS</span><h2>著書・発信</h2></div>
-<div class="books"><img src="/public/chosyo1.webp"><img src="/public/chosyo2.webp"><img src="/public/chosyo3.webp"></div></div></section>
+<div class="books">
+
+  <a href="https://www.amazon.co.jp/%E6%9C%80%E6%96%B0%E7%89%88-%E3%80%8C%E3%81%82%E3%82%8A%E3%81%8C%E3%81%A8%E3%81%86%E3%80%8D%E3%81%8C%E5%B9%B8%E9%81%8B%E3%82%92%E5%91%BC%E3%81%B6-%E7%9F%A2%E5%B3%B6-%E5%AE%9F/dp/434113227X"
+     target="_blank"
+     rel="noopener"
+     class="book-link">
+    <img src="/public/chosyo1.webp" alt="「ありがとう」が幸運を呼ぶ">
+    <span>Amazonで見る →</span>
+  </a>
+
+  <a href="https://www.amazon.co.jp/%E3%80%8C%E6%B6%99%E3%80%8D%E3%81%A8%E3%80%8C%E6%84%9F%E5%8B%95%E3%80%8D%E3%81%8C%E5%B9%B8%E9%81%8B%E3%82%92%E5%91%BC%E3%81%B6-%E7%9F%A2%E5%B3%B6-%E5%AE%9F/dp/4341084739"
+     target="_blank"
+     rel="noopener"
+     class="book-link">
+    <img src="/public/chosyo2.webp" alt="「涙」と「感動」が幸運を呼ぶ">
+    <span>Amazonで見る →</span>
+  </a>
+
+  <div class="book-link">
+    <img src="/public/chosyo3.webp" alt="矢島実 著書">
+    <span>著書</span>
+  </div>
+
+</div>
 
 <section class="section"><div class="inner profile">
 <div><img src="/public/img_0282.jpg"><h3>矢島 実</h3><small>MINORU YAJIMA</small></div>
