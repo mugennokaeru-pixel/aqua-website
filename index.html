@@ -2253,6 +2253,186 @@ body {
     }
 }
 
+/* =====================================
+   ACCESS 最終デザイン
+===================================== */
+
+.access-section {
+    position: relative;
+    padding: 120px 0 140px !important;
+    background: #f3f2ee !important;
+    overflow: hidden;
+}
+
+/* ACCESSの巨大な薄文字 */
+.access-section::before {
+    content: "ACCESS";
+    position: absolute;
+    top: 35px;
+    left: -15px;
+
+    font-size: clamp(90px, 15vw, 210px);
+    line-height: 1;
+    font-weight: 600;
+    letter-spacing: .04em;
+
+    color: rgba(95, 199, 163, .08);
+    pointer-events: none;
+}
+
+.access-section .section-container {
+    position: relative;
+    z-index: 2;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* タイトル */
+.access-section .section-title {
+    text-align: left;
+    margin-bottom: 55px;
+}
+
+.access-section .section-title h2 {
+    font-size: 38px !important;
+    font-weight: 500 !important;
+    letter-spacing: .08em;
+    margin: 0;
+}
+
+/* 昔の短い線を横長に */
+.access-section .section-title .line {
+    width: 100%;
+    height: 1px;
+    margin: 18px 0 0;
+    background: #5fc7a3;
+}
+
+/* 地図＋情報 */
+.access-content {
+    display: grid !important;
+    grid-template-columns: 1.25fr .75fr !important;
+    gap: 75px !important;
+    align-items: start;
+}
+
+/* 地図の白カード感を消す */
+.access-content > div:first-child {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    overflow: hidden;
+}
+
+.access-content iframe {
+    display: block;
+    width: 100%;
+    height: 520px;
+    filter: saturate(.72) contrast(.94);
+}
+
+/* 右側 */
+.access-info {
+    padding-top: 10px;
+}
+
+.access-info h3 {
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    letter-spacing: .18em;
+    color: #5fc7a3;
+    margin-bottom: 30px !important;
+}
+
+.access-info p {
+    font-size: 14px !important;
+    line-height: 1.9 !important;
+    padding: 0 0 22px;
+    margin: 0 0 22px !important;
+    border-bottom: 1px solid #d7d5d0;
+}
+
+.access-info strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #222 !important;
+    font-size: 11px;
+    font-weight: 500 !important;
+    letter-spacing: .12em;
+}
+
+/* 電話番号 */
+.access-info a[href^="tel:"] {
+    color: #222 !important;
+    font-size: 22px;
+    letter-spacing: .04em;
+    text-decoration: none !important;
+}
+
+/* 診療時間・行き方もすっきり */
+.access-time-section,
+.access-transport {
+    margin-top: 35px;
+}
+
+.transport-tabs {
+    gap: 8px !important;
+}
+
+.transport-tabs button {
+    border-radius: 0 !important;
+    background: transparent !important;
+    border: 1px solid #ccc !important;
+    font-size: 11px !important;
+    font-weight: 400 !important;
+    padding: 9px 16px !important;
+}
+
+.transport-tabs button.active {
+    background: #5fc7a3 !important;
+    border-color: #5fc7a3 !important;
+    color: white !important;
+}
+
+
+/* ===== スマホ ===== */
+@media (max-width: 768px) {
+
+    .access-section {
+        padding: 85px 0 90px !important;
+    }
+
+    .access-section::before {
+        top: 25px;
+        font-size: 90px;
+    }
+
+    .access-section .section-container {
+        padding: 0 18px;
+    }
+
+    .access-section .section-title {
+        margin-bottom: 35px;
+    }
+
+    .access-section .section-title h2 {
+        font-size: 30px !important;
+    }
+
+    .access-content {
+        grid-template-columns: 1fr !important;
+        gap: 40px !important;
+    }
+
+    .access-content iframe {
+        height: 360px;
+    }
+
+    .access-info {
+        padding-top: 0;
+    }
+}
+
 </style>
 </head>
 <body>
