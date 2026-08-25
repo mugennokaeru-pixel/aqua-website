@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>村田 匡啓 | 癒しと治療空間 aqua</title>
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{
+  margin:0;
+  font-family:"Yu Gothic","YuGothic","Hiragino Kaku Gothic ProN","Hiragino Sans","Noto Sans JP",sans-serif;
+  color:#2c2c2c;
+  background:#fff;
+  line-height:1.9;
+  overflow-x:hidden;
+}
+img{display:block;max-width:100%}
+a{color:inherit}
+
+.header{
+  position:fixed;
+  top:0;left:0;right:0;
+  height:72px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 34px;
+  background:rgba(255,255,255,.95);
+  border-bottom:1px solid #eee;
+  backdrop-filter:blur(10px);
+  z-index:50;
+}
+.logo{
+  font-size:34px;
+  font-weight:700;
+  color:#5fc7a3;
+  text-decoration:none;
+}
+.back-link{
+  font-size:12px;
+  letter-spacing:.08em;
+  text-decoration:none;
+  color:#555;
+}
+
+.hero{
+  padding-top:72px;
+  display:grid;
+  grid-template-columns:46% 54%;
+  min-height:720px;
+  background:#f4f2ee;
+}
+.hero-media{overflow:hidden}
+.hero-media img{
+  width:100%;
+  height:648px;
+  object-fit:cover;
+  object-position:center top;
+}
+.hero-copy{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:70px 8vw;
+}
+.kicker{
+  color:#5fc7a3;
+  font-size:11px;
+  letter-spacing:.22em;
+}
+.hero h1{
+  margin:12px 0 4px;
+  font-size:clamp(46px,5vw,72px);
+  line-height:1.15;
+  font-weight:500;
+  letter-spacing:.04em;
+}
+.roman{
+  color:#777;
+  font-size:11px;
+  letter-spacing:.22em;
+}
+.hero .lead{
+  margin:28px 0 12px;
+  font-size:23px;
+  line-height:1.7;
+}
+.hero p{
+  color:#555;
+  font-size:15px;
+}
+.btns{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:30px;
+}
+.btn{
+  display:inline-block;
+  padding:13px 26px;
+  border:1px solid #5fc7a3;
+  text-decoration:none;
+  font-size:12px;
+  letter-spacing:.08em;
+}
+.btn.primary{
+  background:#5fc7a3;
+  color:#fff;
+}
+
+.section{padding:92px 22px}
+.inner{max-width:1120px;margin:0 auto}
+.gray{background:#f6f5f2}
+.dark{background:#2f3b37;color:#fff}
+.title{text-align:center;margin-bottom:50px}
+.title span{
+  display:block;
+  color:#5fc7a3;
+  font-size:10px;
+  letter-spacing:.24em;
+}
+.title h2{
+  margin:8px 0;
+  font-size:32px;
+  font-weight:500;
+}
+
+.story{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:64px;
+  align-items:center;
+}
+.story h3{
+  margin:0 0 18px;
+  font-size:29px;
+  font-weight:500;
+  line-height:1.6;
+}
+.story p{
+  margin:0 0 16px;
+  color:#444;
+  font-size:15px;
+}
+.story img{
+  width:100%;
+  aspect-ratio:4/5;
+  object-fit:cover;
+  object-position:center top;
+}
+
+.grid3{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:20px;
+}
+.card{
+  padding:28px;
+  background:#fff;
+  border-top:2px solid #5fc7a3;
+}
+.card h3{
+  margin:0 0 10px;
+  font-size:19px;
+  font-weight:500;
+}
+.card p{
+  margin:0;
+  color:#555;
+  font-size:14px;
+}
+.dark .card{background:rgba(255,255,255,.07)}
+.dark .card p{color:rgba(255,255,255,.78)}
+
+.profile{
+  display:grid;
+  grid-template-columns:36% 1fr;
+  gap:64px;
+  align-items:start;
+}
+.profile-photo img{
+  width:100%;
+  aspect-ratio:4/5;
+  object-fit:cover;
+  object-position:center top;
+}
+.profile-photo h3{
+  margin:18px 0 0;
+  font-size:30px;
+  font-weight:500;
+}
+.profile-photo small{
+  color:#5fc7a3;
+  letter-spacing:.18em;
+}
+.block{
+  padding-bottom:26px;
+  margin-bottom:26px;
+  border-bottom:1px solid #ddd;
+}
+.block h4{
+  margin:0 0 12px;
+  font-size:20px;
+  font-weight:500;
+}
+.block p{
+  margin:0;
+  font-size:14px;
+}
+.block ul{
+  list-style:none;
+  padding:0;
+  margin:0;
+  font-size:14px;
+}
+.block li{margin:5px 0}
+.block li::before{
+  content:"・";
+  color:#5fc7a3;
+}
+
+.person-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:20px;
+}
+.person-card{
+  padding:28px;
+  background:#fff;
+  border-left:3px solid #5fc7a3;
+}
+.person-card h3{
+  margin:0 0 8px;
+  font-size:19px;
+  font-weight:500;
+}
+.person-card p{
+  margin:0;
+  color:#555;
+  font-size:14px;
+}
+
+.straightneck-box{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  align-items:center;
+}
+.straightneck-box h3{
+  font-size:30px;
+  font-weight:500;
+  margin:0 0 14px;
+}
+.straightneck-box p{
+  font-size:15px;
+  color:#444;
+}
+.straightneck-link{
+  display:inline-block;
+  margin-top:18px;
+  padding:13px 24px;
+  border:1px solid #5fc7a3;
+  color:#2c2c2c;
+  text-decoration:none;
+  font-size:12px;
+}
+.straightneck-visual{
+  background:#fff;
+  padding:22px;
+}
+.straightneck-visual img{
+  width:100%;
+  aspect-ratio:4/3;
+  object-fit:cover;
+}
+
+.cta{text-align:center}
+.cta-box{
+  max-width:860px;
+  margin:0 auto;
+  padding:44px;
+  border:1px solid #ddd;
+}
+.cta-box h2{
+  margin:8px 0 12px;
+  font-size:28px;
+  font-weight:500;
+}
+.cta-box p{
+  color:#555;
+  font-size:14px;
+}
+.footer{
+  padding:24px;
+  background:#222;
+  color:#aaa;
+  text-align:center;
+  font-size:11px;
+}
+
+@media(max-width:820px){
+  .header{height:64px;padding:0 18px}
+  .logo{font-size:28px}
+  .hero{
+    padding-top:64px;
+    display:block;
+    min-height:0;
+  }
+  .hero-media img{
+    height:auto;
+    aspect-ratio:4/5;
+  }
+  .hero-copy{padding:44px 20px}
+  .hero .lead{font-size:20px}
+  .section{padding:70px 18px}
+  .title h2{font-size:27px}
+  .story,.grid3,.profile,.person-grid,.straightneck-box{
+    grid-template-columns:1fr;
+  }
+  .story,.profile,.straightneck-box{gap:34px}
+  .cta-box{padding:30px 20px}
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <a class="logo" href="index.html">aqua</a>
+  <a class="back-link" href="index.html#staff">スタッフ一覧へ戻る →</a>
+</header>
+
+<section class="hero">
+  <div class="hero-media">
+    <img
+      src="/public/images/img_0290.jpg"
+      alt="村田匡啓"
+      onerror="this.onerror=null;this.src='/public/img_0290.jpg';"
+    >
+  </div>
+
+  <div class="hero-copy">
+    <span class="kicker">NEURAL BALANCE / ACUPUNCTURE</span>
+    <h1>村田 匡啓</h1>
+    <div class="roman">MASAHIRO MURATA</div>
+
+    <div class="lead">
+      神経整体・鍼施術・エクササイズで、<br>
+      全身のバランスを整える
+    </div>
+
+    <p>
+      首や肩など一部分だけを見るのではなく、身体全体のつながりを確認しながら施術します。
+      ストレートネックをはじめ、姿勢や動きのバランスが気になる方にも対応します。
+    </p>
+
+    <div class="btns">
+      <a class="btn primary" href="reservation.html">予約・ご相談</a>
+      <a class="btn" href="#profile">プロフィールを見る</a>
+    </div>
+  </div>
+</section>
+
+<section class="section gray">
+  <div class="inner story">
+    <div>
+      <span class="kicker">MESSAGE</span>
+      <h3>痛みや辛さに寄り添い、生活がより楽しくなる施術を</h3>
+
+      <p>
+        患者様の痛みや辛さに寄り添い、症状だけではなく、
+        日々の生活が少しでも楽しく、より良いものになることを大切にしています。
+      </p>
+
+      <p>
+        神経整体、鍼施術、エクササイズなどを組み合わせながら、
+        身体全体の状態を確認し、一人ひとりに合わせた施術を行います。
+      </p>
+    </div>
+
+    <img
+      src="/public/images/img_0290.jpg"
+      alt="村田匡啓 プロフィール写真"
+      onerror="this.onerror=null;this.src='/public/img_0290.jpg';"
+    >
+  </div>
+</section>
+
+<section class="section dark">
+  <div class="inner">
+    <div class="title">
+      <span>SPECIALTY</span>
+      <h2>得意分野</h2>
+    </div>
+
+    <div class="grid3">
+      <div class="card">
+        <h3>神経整体での全身調整</h3>
+        <p>
+          首・肩など局所だけでなく、身体全体のつながりや動きを見ながら調整します。
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>鍼施術</h3>
+        <p>
+          身体の状態に合わせて鍼を取り入れ、筋肉や神経の状態を確認しながら施術します。
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>エクササイズ</h3>
+        <p>
+          施術だけで終わらず、身体を動かすことで日常生活につながるケアも大切にしています。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="profile">
+  <div class="inner profile">
+
+    <div class="profile-photo">
+      <img
+        src="/public/images/img_0290.jpg"
+        alt="村田匡啓"
+        onerror="this.onerror=null;this.src='/public/img_0290.jpg';"
+      >
+      <h3>村田 匡啓</h3>
+      <small>MASAHIRO MURATA</small>
+    </div>
+
+    <div>
+      <div class="block">
+        <h4>資格</h4>
+        <ul>
+          <li>鍼灸あんまマッサージ師</li>
+        </ul>
+      </div>
+
+      <div class="block">
+        <h4>得意分野</h4>
+        <ul>
+          <li>神経整体での全身調整</li>
+          <li>鍼施術</li>
+          <li>エクササイズ</li>
+        </ul>
+      </div>
+
+      <div class="block">
+        <h4>出身</h4>
+        <p>静岡県焼津市</p>
+      </div>
+
+      <div class="block">
+        <h4>血液型</h4>
+        <p>A型</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section gray">
+  <div class="inner">
+    <div class="title">
+      <span>PERSONALITY</span>
+      <h2>村田先生について</h2>
+    </div>
+
+    <div class="person-grid">
+      <div class="person-card">
+        <h3>趣味・特技</h3>
+        <p>
+          ランニング・多肉植物・読書・楽しいおしゃべり。
+        </p>
+      </div>
+
+      <div class="person-card">
+        <h3>患者様と接する時に大切にしたいこと</h3>
+        <p>
+          患者様の痛みや辛さに寄り添い、
+          患者様の生活を楽しく、より良いものにする施術・関係性を作りたいと考えています。
+        </p>
+      </div>
+
+      <div class="person-card">
+        <h3>アクアでどんな存在になりたい？</h3>
+        <p>
+          ムードメーカー・親しみやすい存在。
+        </p>
+      </div>
+
+      <div class="person-card">
+        <h3>いじってほしいポイント</h3>
+        <p>
+          しゃべり出したら止まらなくなってしまいます。
+          「お調子者だね」と、いじって欲しいです。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="inner straightneck-box">
+    <div>
+      <span class="kicker">STRAIGHT NECK CARE</span>
+      <h3>ストレートネックの施術について</h3>
+
+      <p>
+        村田先生のページでは、ストレートネックについての考え方や、
+        首だけでなく全身のバランスを見る施術内容も詳しく紹介しています。
+      </p>
+
+      <a class="straightneck-link" href="straightneck.html">
+        ストレートネック施術を見る →
+      </a>
+    </div>
+
+    <div class="straightneck-visual">
+      <img
+        src="/public/straightneck.webp"
+        alt="ストレートネックの説明"
+      >
+    </div>
+  </div>
+</section>
+
+<section class="section cta gray">
+  <div class="inner">
+    <div class="cta-box">
+      <span class="kicker">RESERVATION</span>
+      <h2>首・肩・姿勢や身体のバランスでお悩みの方へ</h2>
+
+      <p>
+        現在のお悩みや身体の状態を伺いながら、
+        一人ひとりに合わせた施術をご案内します。
+      </p>
+
+      <div class="btns" style="justify-content:center">
+        <a class="btn primary" href="reservation.html">施術を予約する</a>
+        <a class="btn" href="index.html#access">アクセスを見る</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  © 癒しと治療空間 aqua
+</footer>
+
+</body>
+</html>
