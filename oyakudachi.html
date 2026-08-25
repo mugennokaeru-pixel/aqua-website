@@ -164,6 +164,86 @@ a{color:inherit}
   .video-grid{grid-template-columns:1fr}
   .section-title h2{font-size:26px}
 }
+
+.library-lead{
+  margin:10px auto 0;
+  max-width:720px;
+  color:#777;
+  font-size:13px;
+}
+.genre-section{
+  margin:0 0 96px;
+}
+.genre-section:last-of-type{
+  margin-bottom:50px;
+}
+.genre-heading{
+  max-width:820px;
+  margin:0 auto 34px;
+  text-align:center;
+}
+.genre-heading span{
+  color:#5fc7a3;
+  font-size:10px;
+  letter-spacing:.22em;
+}
+.genre-heading h2{
+  margin:8px 0 12px;
+  font-size:28px;
+  font-weight:500;
+  line-height:1.5;
+}
+.genre-heading p{
+  margin:0;
+  color:#666;
+  font-size:14px;
+  line-height:2;
+}
+.video-details{
+  margin-top:18px;
+  border-top:1px solid #ddd;
+  padding-top:14px;
+}
+.video-details summary{
+  cursor:pointer;
+  color:#5fc7a3;
+  font-size:12px;
+  letter-spacing:.06em;
+}
+.video-details p{
+  margin:14px 0 0;
+  color:#555;
+  font-size:13px;
+  line-height:2;
+}
+.legacy-note{
+  margin-top:20px;
+  padding:42px;
+  background:#f6f5f2;
+  border-left:3px solid #5fc7a3;
+}
+.legacy-note span{
+  color:#5fc7a3;
+  font-size:10px;
+  letter-spacing:.22em;
+}
+.legacy-note h3{
+  margin:8px 0 12px;
+  font-size:22px;
+  font-weight:500;
+}
+.legacy-note p{
+  margin:0;
+  color:#555;
+  font-size:13px;
+  line-height:2;
+}
+@media(max-width:820px){
+  .genre-section{margin-bottom:72px}
+  .genre-heading h2{font-size:24px}
+  .legacy-note{padding:28px 22px}
+}
+
 </style>
 </head>
 <body id="top">
@@ -182,189 +262,294 @@ a{color:inherit}
   </p>
 </section>
 
+
 <section class="section">
   <div class="inner">
     <div class="section-title">
       <span>VIDEO LIBRARY</span>
-      <h2>動画一覧</h2>
+      <h2>ジャンルから探す</h2>
+      <p class="library-lead">旧サイトのお役立ち動画を、内容ごとに整理して掲載しています。</p>
     </div>
 
-    <div class="video-grid">
-      
-      <article class="video-card">
-        <div class="video-frame">
-          <iframe
-            src="https://www.youtube.com/embed/kCWFDrrcrQI?start=2"
-            title="剛速球を投げる方法"
-            loading="lazy"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-          </iframe>
-        </div>
-        <div class="video-card-body">
-          <p class="video-cat">子どもの能力UP</p>
-          <h3>剛速球を投げる方法</h3>
-        </div>
-      </article>
     
-      <article class="video-card">
-        <div class="video-frame">
-          <iframe
-            src="https://www.youtube.com/embed/WilTpuWcagE"
-            title="稲妻シュートを蹴る秘密"
-            loading="lazy"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-          </iframe>
-        </div>
-        <div class="video-card-body">
-          <p class="video-cat">子どもの能力UP</p>
-          <h3>稲妻シュートを蹴る秘密</h3>
-        </div>
-      </article>
+    <section class="genre-section">
+      <div class="genre-heading">
+        <span>KIDS PERFORMANCE</span>
+        <h2>人気の「子どもの能力UP」シリーズ</h2>
+        <p>アクアとコンディショニングトレーナーによる、スポーツを頑張る子ども向けの実践動画。身体の使い方を少し変えることで、投球やキック動作の違いを体験できる内容です。</p>
+      </div>
+      <div class="video-grid">
+        
+        <article class="video-card">
+          <div class="video-frame">
+            <iframe
+              src="https://www.youtube.com/embed/kCWFDrrcrQI?start=2"
+              title="剛速球を投げる方法"
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="video-card-body">
+            <p class="video-cat">KIDS PERFORMANCE</p>
+            <h3>剛速球を投げる方法</h3>
+            <details class="video-details">
+              <summary>詳しい説明を見る</summary>
+              <p>投球動作のポイントを分かりやすく紹介。旧ページでは、球速アップを目指す子ども向けのトレーニングとして紹介されていました。無理に力だけで投げず、身体全体の使い方を確認しながら試してください。</p>
+            </details>
+          </div>
+        </article>
+        
+        <article class="video-card">
+          <div class="video-frame">
+            <iframe
+              src="https://www.youtube.com/embed/WilTpuWcagE"
+              title="稲妻シュートを蹴る秘密"
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="video-card-body">
+            <p class="video-cat">KIDS PERFORMANCE</p>
+            <h3>稲妻シュートを蹴る秘密</h3>
+            <details class="video-details">
+              <summary>詳しい説明を見る</summary>
+              <p>サッカーで強いシュートを蹴るための身体の使い方を紹介。旧ページでは、競技力向上を目指す子ども向けのコアトレーニングの一つとして掲載されていました。</p>
+            </details>
+          </div>
+        </article>
+        
+      </div>
+    </section>
     
-      <article class="video-card">
-        <div class="video-frame">
-          <iframe
-            src="https://www.youtube.com/embed/JRhEOxkoLLo"
-            title="肩こり・頭痛・首の痛み"
-            loading="lazy"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-          </iframe>
-        </div>
-        <div class="video-card-body">
-          <p class="video-cat">肩こり・首まわり</p>
-          <h3>肩こり・頭痛・首の痛み</h3>
-        </div>
-      </article>
+    <section class="genre-section">
+      <div class="genre-heading">
+        <span>HOME SELF CARE</span>
+        <h2>肩こり・腰痛の簡単セルフケア</h2>
+        <p>肩こりや腰痛は、姿勢・運動不足・身体の使い方など複数の要因が関係します。動画では、ご自宅で行いやすい体操やセルフケアを紹介しています。</p>
+      </div>
+      <div class="video-grid">
+        
+        <article class="video-card">
+          <div class="video-frame">
+            <iframe
+              src="https://www.youtube.com/embed/JRhEOxkoLLo"
+              title="肩こり・頭痛・首の痛み"
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="video-card-body">
+            <p class="video-cat">HOME SELF CARE</p>
+            <h3>肩こり・頭痛・首の痛み</h3>
+            <details class="video-details">
+              <summary>詳しい説明を見る</summary>
+              <p>猫背や頭が前に出る姿勢では、首や肩まわりに負担がかかりやすくなります。動画では姿勢を整えるための簡単な方法を紹介。強い痛みやしびれが続く場合は無理をせず、医療機関へ相談してください。</p>
+            </details>
+          </div>
+        </article>
+        
+        <article class="video-card">
+          <div class="video-frame">
+            <iframe
+              src="https://www.youtube.com/embed/LBsOob_IA4M"
+              title="腰痛や軽いぎっくり腰"
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="video-card-body">
+            <p class="video-cat">HOME SELF CARE</p>
+            <h3>腰痛や軽いぎっくり腰</h3>
+            <details class="video-details">
+              <summary>詳しい説明を見る</summary>
+              <p>腰痛は、前に倒した時・反った時・安静時など、痛みが出る状況によって対応が異なります。動画を見ながら無理のない範囲で行い、安静にしていても強く痛む場合や長引く場合は医療機関へ相談してください。</p>
+            </details>
+          </div>
+        </article>
+        
+      </div>
+    </section>
     
-      <article class="video-card">
-        <div class="video-frame">
-          <iframe
-            src="https://www.youtube.com/embed/LBsOob_IA4M"
-            title="腰痛や軽いぎっくり腰"
-            loading="lazy"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-          </iframe>
-        </div>
-        <div class="video-card-body">
-          <p class="video-cat">腰痛セルフケア</p>
-          <h3>腰痛や軽いぎっくり腰</h3>
-        </div>
-      </article>
+    <section class="genre-section">
+      <div class="genre-heading">
+        <span>TRADITIONAL HEALTH CARE</span>
+        <h2>中国秘伝の健康法</h2>
+        <p>旧ページで代表が特に力を入れて紹介していた健康法のコーナー。日常の中で身体を動かし、姿勢や血流、全身のバランスを意識することを目的とした内容です。</p>
+      </div>
+      <div class="video-grid">
+        
+        <article class="video-card">
+          <div class="video-frame">
+            <iframe
+              src="https://www.youtube.com/embed/yDPHKov7Hx8"
+              title="腕ふり健康法"
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="video-card-body">
+            <p class="video-cat">TRADITIONAL HEALTH CARE</p>
+            <h3>腕ふり健康法</h3>
+            <details class="video-details">
+              <summary>詳しい説明を見る</summary>
+              <p>腕を前後に振るシンプルな運動。旧ページでは、代表の著書でも紹介した健康習慣として掲載されていました。まずは無理のない回数から始め、肩などに痛みが出る場合は動きを小さくしてください。</p>
+            </details>
+          </div>
+        </article>
+        
+        <article class="video-card">
+          <div class="video-frame">
+            <iframe
+              src="https://www.youtube.com/embed/3l0ufp-Aymw?start=1"
+              title="美しい姿勢になるための方法"
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="video-card-body">
+            <p class="video-cat">TRADITIONAL HEALTH CARE</p>
+            <h3>美しい姿勢になるための方法</h3>
+            <details class="video-details">
+              <summary>詳しい説明を見る</summary>
+              <p>片脚立ちなどで身体のバランスを確認し、安定して立つために必要な筋肉を意識するエクササイズ。姿勢づくりや運動の基本として紹介されていた内容です。</p>
+            </details>
+          </div>
+        </article>
+        
+      </div>
+    </section>
     
-      <article class="video-card">
-        <div class="video-frame">
-          <iframe
-            src="https://www.youtube.com/embed/yDPHKov7Hx8"
-            title="腕ふり健康法"
-            loading="lazy"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-          </iframe>
-        </div>
-        <div class="video-card-body">
-          <p class="video-cat">健康法</p>
-          <h3>腕ふり健康法</h3>
-        </div>
-      </article>
+    <section class="genre-section">
+      <div class="genre-heading">
+        <span>BALANCE BAND</span>
+        <h2>バラコンバンドの使い方</h2>
+        <p>骨盤や身体の動きを意識するために使われてきたバラコンバンド。旧ページでは腰まわりだけでなく、肩や姿勢のセルフケアとしても紹介されていました。</p>
+      </div>
+      <div class="video-grid">
+        
+        <article class="video-card">
+          <div class="video-frame">
+            <iframe
+              src="https://www.youtube.com/embed/1YHfcYKE2tw"
+              title="基本の動き　腰痛の方向け"
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="video-card-body">
+            <p class="video-cat">BALANCE BAND</p>
+            <h3>基本の動き　腰痛の方向け</h3>
+            <details class="video-details">
+              <summary>詳しい説明を見る</summary>
+              <p>骨盤まわりにバンドを巻き、腰をゆっくり動かす基本の方法。痛みが出る角度まで無理に動かさず、できる範囲で行うのがポイントです。</p>
+            </details>
+          </div>
+        </article>
+        
+        <article class="video-card">
+          <div class="video-frame">
+            <iframe
+              src="https://www.youtube.com/embed/6SWWfLenT4g"
+              title="肩こり・猫背・頭痛の方向け"
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="video-card-body">
+            <p class="video-cat">BALANCE BAND</p>
+            <h3>肩こり・猫背・頭痛の方向け</h3>
+            <details class="video-details">
+              <summary>詳しい説明を見る</summary>
+              <p>肩まわりや姿勢を意識したバンドの使い方。最初は弱い力で巻き、苦しくない範囲で締め具合を調整してください。</p>
+            </details>
+          </div>
+        </article>
+        
+      </div>
+    </section>
     
-      <article class="video-card">
-        <div class="video-frame">
-          <iframe
-            src="https://www.youtube.com/embed/3l0ufp-Aymw?start=1"
-            title="美しい姿勢になるための方法"
-            loading="lazy"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-          </iframe>
-        </div>
-        <div class="video-card-body">
-          <p class="video-cat">姿勢ケア</p>
-          <h3>美しい姿勢になるための方法</h3>
-        </div>
-      </article>
+    <section class="genre-section">
+      <div class="genre-heading">
+        <span>KNEE / HEAD CARE</span>
+        <h2>膝痛や頭痛に対するバラコンバンド</h2>
+        <p>旧ページでは、膝や頭部など部位に合わせたバンドの使い方も紹介されていました。強い腫れや熱感、激しい症状がある場合はセルフケアだけで済ませず、専門家へご相談ください。</p>
+      </div>
+      <div class="video-grid">
+        
+        <article class="video-card">
+          <div class="video-frame">
+            <iframe
+              src="https://www.youtube.com/embed/1YHfcYKE2tw"
+              title="膝の痛みを取ろう！"
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="video-card-body">
+            <p class="video-cat">KNEE / HEAD CARE</p>
+            <h3>膝の痛みを取ろう！</h3>
+            <details class="video-details">
+              <summary>詳しい説明を見る</summary>
+              <p>階段や運動時に膝が気になる方向けの使い方として紹介されていた方法です。膝に強い腫れ・熱感がある時は行わず、症状が続く場合は医療機関へ相談してください。</p>
+            </details>
+          </div>
+        </article>
+        
+        <article class="video-card">
+          <div class="video-frame">
+            <iframe
+              src="https://www.youtube.com/embed/50-hYMx8cEM"
+              title="頭痛・耳鳴り改善"
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="video-card-body">
+            <p class="video-cat">KNEE / HEAD CARE</p>
+            <h3>頭痛・耳鳴り改善</h3>
+            <details class="video-details">
+              <summary>詳しい説明を見る</summary>
+              <p>頭部にバンドを巻く方法を紹介した動画。締めすぎないことが重要です。頭痛や耳鳴りが長く続く、急に強く出た、薬を常用している場合などは、セルフケアより先に医療機関へ相談してください。</p>
+            </details>
+          </div>
+        </article>
+        
+      </div>
+    </section>
     
-      <article class="video-card">
-        <div class="video-frame">
-          <iframe
-            src="https://www.youtube.com/embed/1YHfcYKE2tw"
-            title="基本の動き　腰痛の方向け"
-            loading="lazy"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-          </iframe>
-        </div>
-        <div class="video-card-body">
-          <p class="video-cat">バラコンバンド</p>
-          <h3>基本の動き　腰痛の方向け</h3>
-        </div>
-      </article>
-    
-      <article class="video-card">
-        <div class="video-frame">
-          <iframe
-            src="https://www.youtube.com/embed/6SWWfLenT4g"
-            title="肩こり・猫背・頭痛の方向け"
-            loading="lazy"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-          </iframe>
-        </div>
-        <div class="video-card-body">
-          <p class="video-cat">バラコンバンド</p>
-          <h3>肩こり・猫背・頭痛の方向け</h3>
-        </div>
-      </article>
-    
-      <article class="video-card">
-        <div class="video-frame">
-          <iframe
-            src="https://www.youtube.com/embed/1YHfcYKE2tw"
-            title="膝の痛みを取ろう！"
-            loading="lazy"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-          </iframe>
-        </div>
-        <div class="video-card-body">
-          <p class="video-cat">バラコンバンド</p>
-          <h3>膝の痛みを取ろう！</h3>
-        </div>
-      </article>
-    
-      <article class="video-card">
-        <div class="video-frame">
-          <iframe
-            src="https://www.youtube.com/embed/50-hYMx8cEM"
-            title="頭痛・耳鳴り改善"
-            loading="lazy"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-          </iframe>
-        </div>
-        <div class="video-card-body">
-          <p class="video-cat">バラコンバンド</p>
-          <h3>頭痛・耳鳴り改善</h3>
-        </div>
-      </article>
-    
+
+    <div class="legacy-note">
+      <span>ABOUT THIS ARCHIVE</span>
+      <h3>旧ページの考え方も残しています</h3>
+      <p>
+        以前のaquaサイトでは、各動画に院長・代表の考え方やセルフケアの注意点が長文で添えられていました。
+        今回はその雰囲気を残しながら、現在のサイトで読みやすいよう要点を整理しています。
+        セルフケアは無理のない範囲で行い、強い痛み・しびれ・腫れ・発熱などがある場合や症状が長引く場合は、
+        医療機関や専門家へご相談ください。
+      </p>
     </div>
   </div>
 </section>
-
 <section class="cta">
   <div class="cta-box">
     <span style="color:#5fc7a3;font-size:10px;letter-spacing:.22em">CONTACT</span>
