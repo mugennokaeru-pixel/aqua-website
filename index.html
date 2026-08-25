@@ -3234,6 +3234,68 @@ body {
     font-size:19px;
   }
 }
+/* ===== TOPへ戻るボタン ===== */
+.back-to-top{
+    position: fixed;
+    right: 28px;
+    bottom: 28px;
+
+    width: 46px;
+    height: 46px;
+
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.7);
+
+    background: rgba(210,210,210,0.65);
+
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity .3s ease,
+        transform .3s ease,
+        background .3s ease;
+}
+
+.back-to-top.show{
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover{
+    background: rgba(95,199,163,0.85);
+    transform: translateY(-3px);
+}
+
+/* 矢印 */
+.back-to-top::before{
+    content: "";
+    width: 16px;
+    height: 16px;
+
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+
+    transform: rotate(45deg) translate(3px,3px);
+}
+
+@media(max-width:768px){
+    .back-to-top{
+        right: 16px;
+        bottom: 18px;
+        width: 42px;
+        height: 42px;
+    }
+}
+
 </style>
 
 
@@ -3569,6 +3631,27 @@ function toggleSideMenu() {
     });
 })();
 </script>
+<a href="#top" class="back-to-top" id="backToTop" aria-label="ページ上部へ戻る"></a>
 
+<script>
+const backToTop = document.getElementById("backToTop");
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 500) {
+        backToTop.classList.add("show");
+    } else {
+        backToTop.classList.remove("show");
+    }
+});
+
+backToTop.addEventListener("click", function(e){
+    e.preventDefault();
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+</script>
 </body>
 </html>
