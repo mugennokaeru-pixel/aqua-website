@@ -2552,7 +2552,46 @@ body {
     aspect-ratio:4/3;
   }
 }
+/* ===== 施術内容：右側画像を画面端まで伸ばす ===== */
 
+.treatment-row{
+  width:100%;
+}
+
+.treatment-row.reverse .treatment-image{
+  width:calc(50% + (100vw - 980px) / 2);
+  margin-right:calc((980px - 100vw) / 2);
+  flex-shrink:0;
+}
+
+.treatment-row.reverse .treatment-image img{
+  width:100%;
+  display:block;
+  object-fit:cover;
+}
+
+/* 左側画像も同じ基準で画面端まで */
+.treatment-row:not(.reverse) .treatment-image{
+  width:calc(50% + (100vw - 980px) / 2);
+  margin-left:calc((980px - 100vw) / 2);
+  flex-shrink:0;
+}
+
+.treatment-row:not(.reverse) .treatment-image img{
+  width:100%;
+  display:block;
+  object-fit:cover;
+}
+
+/* スマホでは通常表示に戻す */
+@media(max-width:768px){
+  .treatment-row.reverse .treatment-image,
+  .treatment-row:not(.reverse) .treatment-image{
+    width:100%;
+    margin-left:0;
+    margin-right:0;
+  }
+}
 </style>
 </head>
 <body>
