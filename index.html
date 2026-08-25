@@ -3086,90 +3086,276 @@ body {
 
 </section>
 
-<!-- 専門職からの声 -->
-<section class="support-voice-section">
-  <div class="support-voice-inner">
+<!-- =========================
+     医療・介護の専門職からの声
+========================= -->
 
-    <div class="support-voice-title">
-      <span>PROFESSIONAL VOICE</span>
+<style>
+.professional-voice-section{
+  width:100%;
+  padding:90px 20px;
+  background:#fff;
+}
+
+.professional-voice-inner{
+  width:100%;
+  max-width:1200px;
+  margin:0 auto;
+}
+
+.professional-voice-title{
+  text-align:center;
+  margin-bottom:48px;
+}
+
+.professional-voice-title .en{
+  display:block;
+  color:#5fc7a3;
+  font-size:11px;
+  letter-spacing:.22em;
+  margin-bottom:8px;
+}
+
+.professional-voice-title h2{
+  margin:0 0 10px;
+  font-size:32px;
+  font-weight:500;
+  letter-spacing:.05em;
+}
+
+.professional-voice-title p{
+  margin:0;
+  color:#777;
+  font-size:13px;
+}
+
+.professional-voice-grid{
+  display:grid;
+  grid-template-columns:repeat(2, minmax(0,1fr));
+  gap:38px;
+  width:100%;
+}
+
+.professional-voice-card{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 180px;
+  gap:28px;
+  align-items:center;
+
+  background:#f6f5f2;
+  border-top:2px solid #5fc7a3;
+  padding:38px;
+  min-width:0;
+}
+
+.professional-voice-label{
+  margin:0 0 12px;
+  color:#777;
+  font-size:11px;
+  letter-spacing:.20em;
+}
+
+.professional-voice-card h3{
+  margin:0 0 22px;
+  font-size:21px;
+  font-weight:500;
+  line-height:1.65;
+}
+
+.professional-voice-name{
+  margin:0 0 24px;
+  font-size:13px;
+  line-height:1.9;
+  color:#555;
+}
+
+.professional-voice-name strong{
+  color:#333;
+  font-size:14px;
+}
+
+.professional-voice-text{
+  margin:0;
+  font-size:13px;
+  line-height:2;
+  color:#555;
+}
+
+.professional-voice-photo{
+  width:100%;
+}
+
+.professional-voice-photo img{
+  display:block;
+  width:100%;
+  aspect-ratio:4 / 5;
+  object-fit:cover;
+  object-position:center top;
+}
+
+/* スマホ */
+@media(max-width:820px){
+
+  .professional-voice-section{
+    padding:70px 18px;
+  }
+
+  .professional-voice-title{
+    margin-bottom:35px;
+  }
+
+  .professional-voice-title h2{
+    font-size:26px;
+  }
+
+  .professional-voice-grid{
+    grid-template-columns:1fr;
+    gap:24px;
+  }
+
+  .professional-voice-card{
+    grid-template-columns:1fr;
+    padding:24px;
+    gap:22px;
+  }
+
+  .professional-voice-photo{
+    order:-1;
+    max-width:280px;
+    margin:0 auto;
+  }
+
+  .professional-voice-photo img{
+    aspect-ratio:4 / 3;
+    object-fit:cover;
+  }
+
+  .professional-voice-card h3{
+    font-size:19px;
+  }
+}
+</style>
+
+
+<section class="professional-voice-section">
+
+  <div class="professional-voice-inner">
+
+    <div class="professional-voice-title">
+      <span class="en">PROFESSIONAL VOICE</span>
+
       <h2>医療・介護の専門職からの声</h2>
-      <p>地域で連携する先生・訪問看護の方からいただいたメッセージ</p>
+
+      <p>
+        地域で連携する先生・訪問看護の方からいただいたメッセージ
+      </p>
     </div>
 
-    <div class="support-voice-grid">
 
-      <!-- ゆうクリニック -->
-      <article class="support-voice-card">
-        <div class="support-voice-content">
-          <p class="support-label">DOCTOR'S VOICE</p>
+    <div class="professional-voice-grid">
 
-          <h3>治療院アクアを応援している先生</h3>
 
-          <p class="support-name">
+      <!-- =====================
+           ゆうクリニック
+      ====================== -->
+      <article class="professional-voice-card">
+
+        <div class="professional-voice-content">
+
+          <p class="professional-voice-label">
+            DOCTOR'S VOICE
+          </p>
+
+          <h3>
+            治療院アクアを応援している先生
+          </h3>
+
+          <p class="professional-voice-name">
             医療法人社団ゆう　ゆうクリニック<br>
             <strong>増田祐有子 院長</strong>（西千葉駅）
           </p>
 
-          <p>
+          <p class="professional-voice-text">
             治療院アクアさんには、当院の往診先に
             訪問リハビリマッサージに来ていただいております。
-          </p>
+            <br><br>
 
-          <p class="support-highlight">
-            治療院アクアさんに出会うと、元気な笑顔で
-            挨拶をしてくださるので、こちらもニッコリしてしまいます。
-          </p>
+            治療院アクアさんに出会うと、
+            元気な笑顔で挨拶をしてくださるので、
+            こちらもニッコリしてしまいます。
+            <br><br>
 
-          <p>
             これからも応援しています。
-            地域の為、患者さま一人一人の為に頑張ってください。
+            地域の為、患者さま一人一人の為に
+            頑張ってください。
           </p>
+
         </div>
 
-        <div class="support-voice-photo">
-  <img src="/public/yuuclinic.webp"
-     alt="ゆうクリニック 増田祐有子院長">
-</div>
+
+        <div class="professional-voice-photo">
+          <img
+            src="/public/yuuclinic.webp"
+            alt="ゆうクリニック 増田祐有子院長"
+          >
+        </div>
+
       </article>
 
 
-      <!-- ルミナス訪問看護 -->
-      <article class="support-voice-card">
-        <div class="support-voice-content">
-          <p class="support-label">NURSING VOICE</p>
+      <!-- =====================
+           ルミナス訪問看護
+      ====================== -->
+      <article class="professional-voice-card">
 
-          <h3>治療院アクアを応援している訪問看護</h3>
+        <div class="professional-voice-content">
 
-          <p class="support-name">
-            <strong>ルミナス訪問看護ステーション</strong>（稲毛駅）
+          <p class="professional-voice-label">
+            NURSING VOICE
           </p>
 
-          <p>
-            ルミナス訪問看護ステーションにて訪問させていただいている
-            お子様にも、治療院アクアさんにご協力をいただいたことがあります。
+          <h3>
+            治療院アクアを応援している訪問看護
+          </h3>
+
+          <p class="professional-voice-name">
+            <strong>ルミナス訪問看護ステーション</strong>
+            （稲毛駅）
           </p>
 
-          <p class="support-highlight">
+          <p class="professional-voice-text">
+            ルミナス訪問看護ステーションにて
+            訪問させていただいているお子様にも、
+            治療院アクアさんにご協力をいただいたことがあります。
+            <br><br>
+
             お子さんの体について詳しく説明してくれたり、
             お母様へのメンタル的なアドバイスなどをしていただき、
             親御さんも大変喜んでいらっしゃいました。
+            <br><br>
+
+            日ごろから安心して
+            連携させていただいております。
           </p>
 
-          <p>
-            日ごろから安心して連携させていただいております。
-          </p>
         </div>
 
-        <div class="support-voice-photo">
-  <img src="/public/ruminashu.webp"
-       alt="ルミナス訪問看護ステーション">
-</div>
+
+        <div class="professional-voice-photo">
+          <img
+            src="/public/ruminashu.webp"
+            alt="ルミナス訪問看護ステーション"
+          >
+        </div>
+
       </article>
 
-    </div>
-  </div>
-</section>
 
+    </div>
+
+  </div>
+
+</section>
     <!-- アクセス -->
     <section class="access-section" id="access">
         <div class="section-container">
