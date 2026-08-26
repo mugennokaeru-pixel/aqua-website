@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>アクアの訪問マッサージ・おすすめ介護施設 | 癒しと治療空間 aqua</title>
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{
+  margin:0;
+  font-family:"Yu Gothic","YuGothic","Hiragino Kaku Gothic ProN","Hiragino Sans","Noto Sans JP",sans-serif;
+  color:#2c2c2c;
+  background:#fff;
+  line-height:1.8;
+  overflow-x:hidden;
+}
+a{color:inherit}
+
+.header{
+  position:sticky;top:0;z-index:30;
+  height:72px;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 34px;
+  background:rgba(255,255,255,.96);
+  border-bottom:1px solid #eee;
+  backdrop-filter:blur(10px);
+}
+.logo{font-size:34px;font-weight:700;color:#5fc7a3;text-decoration:none}
+.back{font-size:12px;text-decoration:none;letter-spacing:.08em;color:#555}
+
+.hero{
+  padding:108px 24px 80px;
+  background:#f4f2ee;
+  text-align:center;
+}
+.kicker{color:#5fc7a3;font-size:10px;letter-spacing:.24em}
+.hero h1{
+  margin:12px 0 10px;
+  font-size:clamp(38px,5vw,64px);
+  line-height:1.35;
+  font-weight:500;
+  letter-spacing:.04em;
+}
+.hero p{
+  max-width:780px;
+  margin:0 auto;
+  color:#666;
+  font-size:14px;
+  line-height:2;
+}
+
+.section{padding:84px 22px}
+.inner{max-width:1180px;margin:0 auto}
+.intro{
+  max-width:900px;
+  margin:0 auto 58px;
+  text-align:center;
+}
+.intro h2{
+  margin:8px 0 12px;
+  font-size:30px;
+  font-weight:500;
+}
+.intro p{
+  margin:0;
+  color:#666;
+  font-size:14px;
+  line-height:2;
+}
+
+.facility-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:20px;
+}
+.facility-card{
+  min-height:132px;
+  display:grid;
+  grid-template-columns:54px 1fr;
+  align-items:center;
+  gap:18px;
+  padding:24px 28px;
+  background:#f7f6f3;
+  border-top:2px solid #5fc7a3;
+  text-decoration:none;
+  transition:opacity .25s ease,transform .25s ease,background .25s ease;
+}
+.facility-card:hover{
+  opacity:.68;
+  transform:translateY(-2px);
+  background:#f2f0eb;
+}
+.facility-card.no-link:hover{
+  opacity:1;
+  transform:none;
+}
+.facility-arrow{
+  width:42px;height:42px;
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  background:#5fc7a3;
+  color:#fff;
+  font-size:20px;
+}
+.facility-label{
+  margin:0 0 4px;
+  color:#5fc7a3;
+  font-size:9px;
+  letter-spacing:.18em;
+}
+.facility-card h3{
+  margin:0;
+  font-size:20px;
+  font-weight:500;
+  line-height:1.5;
+}
+.facility-link{
+  margin:8px 0 0;
+  font-size:11px;
+  color:#777;
+}
+
+.note{
+  margin-top:40px;
+  padding:28px 30px;
+  border-left:3px solid #5fc7a3;
+  background:#f6f5f2;
+  color:#555;
+  font-size:13px;
+}
+
+.recruit{
+  padding:84px 22px;
+  background:#2f3b37;
+  color:#fff;
+  text-align:center;
+}
+.recruit-box{
+  max-width:900px;
+  margin:0 auto;
+  padding:52px 30px;
+  border:1px solid rgba(255,255,255,.25);
+}
+.recruit h2{
+  margin:10px 0 14px;
+  font-size:32px;
+  font-weight:500;
+}
+.recruit p{
+  margin:0 auto 28px;
+  max-width:720px;
+  color:rgba(255,255,255,.75);
+  font-size:14px;
+}
+.btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{
+  display:inline-block;
+  padding:13px 26px;
+  border:1px solid #5fc7a3;
+  text-decoration:none;
+  font-size:12px;
+}
+.btn.primary{background:#5fc7a3;color:#fff}
+.btn.white{border-color:rgba(255,255,255,.65);color:#fff}
+
+.footer{
+  padding:24px;
+  background:#222;
+  color:#aaa;
+  text-align:center;
+  font-size:11px;
+}
+
+.back-to-top{
+  position:fixed;
+  right:22px;
+  bottom:22px;
+  width:46px;height:46px;
+  border-radius:50%;
+  border:1px solid rgba(255,255,255,.8);
+  background:rgba(200,200,200,.72);
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;visibility:hidden;
+  transition:.25s ease;
+  z-index:40;
+}
+.back-to-top.show{opacity:1;visibility:visible}
+.back-to-top::before{
+  content:"";
+  width:15px;height:15px;
+  border-top:2px solid #fff;
+  border-left:2px solid #fff;
+  transform:rotate(45deg) translate(3px,3px);
+}
+
+@media(max-width:820px){
+  .header{height:64px;padding:0 18px}
+  .logo{font-size:28px}
+  .hero{padding:78px 18px 54px}
+  .section{padding:64px 18px}
+  .intro h2{font-size:26px}
+  .facility-grid{grid-template-columns:1fr}
+  .facility-card{padding:22px 20px;grid-template-columns:46px 1fr}
+  .facility-arrow{width:38px;height:38px}
+  .recruit{padding:64px 18px}
+  .recruit-box{padding:38px 22px}
+}
+
+/* ===== 訪問マッサージ説明 ===== */
+.visit-intro-section{
+  padding:84px 22px 24px;
+  background:#fff;
+}
+.visit-intro-inner{
+  max-width:1120px;
+  margin:0 auto;
+}
+.visit-block{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:56px;
+  align-items:start;
+  padding:54px 0;
+  border-bottom:1px solid #e5e5e5;
+}
+.visit-block:last-child{
+  border-bottom:none;
+}
+.visit-block.reverse .visit-copy{
+  order:2;
+}
+.visit-block.reverse .visit-side{
+  order:1;
+}
+.visit-copy .eyebrow{
+  color:#5fc7a3;
+  font-size:10px;
+  letter-spacing:.22em;
+}
+.visit-copy h2{
+  margin:8px 0 20px;
+  font-size:30px;
+  font-weight:500;
+  line-height:1.5;
+}
+.visit-copy h3{
+  margin:26px 0 8px;
+  font-size:18px;
+  font-weight:500;
+}
+.visit-copy p{
+  margin:0 0 14px;
+  color:#555;
+  font-size:14px;
+  line-height:2;
+}
+.visit-copy ul{
+  margin:12px 0 0;
+  padding:0;
+  list-style:none;
+}
+.visit-copy li{
+  position:relative;
+  padding-left:20px;
+  margin:7px 0;
+  color:#555;
+  font-size:14px;
+  line-height:1.8;
+}
+.visit-copy li::before{
+  content:"◆";
+  position:absolute;
+  left:0;
+  color:#5fc7a3;
+  font-size:10px;
+}
+.visit-side{
+  background:#f6f5f2;
+  padding:34px;
+}
+.visit-side h3{
+  margin:0 0 12px;
+  font-size:20px;
+  font-weight:500;
+}
+.visit-side p{
+  margin:0 0 12px;
+  color:#555;
+  font-size:13px;
+  line-height:2;
+}
+.visit-side .big{
+  font-size:22px;
+  line-height:1.7;
+  color:#2c2c2c;
+}
+.visit-highlight{
+  margin-top:18px;
+  padding:18px 20px;
+  background:#fff;
+  border-left:3px solid #5fc7a3;
+  font-size:13px;
+  line-height:1.9;
+  color:#555;
+}
+.area-box{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px;
+  margin-top:20px;
+}
+.area-item{
+  padding:16px 18px;
+  background:#fff;
+  border:1px solid #ddd;
+  font-size:13px;
+}
+@media(max-width:820px){
+  .visit-intro-section{padding:64px 18px 10px}
+  .visit-block,
+  .visit-block.reverse{
+    grid-template-columns:1fr;
+    gap:28px;
+    padding:40px 0;
+  }
+  .visit-block.reverse .visit-copy,
+  .visit-block.reverse .visit-side{
+    order:initial;
+  }
+  .visit-copy h2{font-size:25px}
+  .visit-side{padding:26px 22px}
+  .area-box{grid-template-columns:1fr}
+}
+
+
+.visit-hero{
+  padding:92px 24px 78px;
+}
+.visit-hero h1{
+  margin-bottom:30px;
+}
+.visit-hero-main{
+  max-width:900px !important;
+  font-size:clamp(22px,2.6vw,38px) !important;
+  line-height:1.55 !important;
+  color:#2f7b32 !important;
+  font-weight:500;
+  text-shadow:0 1px 0 rgba(255,255,255,.8);
+}
+.visit-hero-note{
+  margin-top:18px !important;
+  font-size:12px !important;
+  color:#777 !important;
+}
+.facility-intro{
+  margin-top:18px;
+  margin-bottom:46px;
+}
+.facility-intro h2{
+  font-size:32px;
+}
+@media(max-width:820px){
+  .visit-hero{
+    padding:66px 18px 52px;
+  }
+  .visit-hero-main{
+    font-size:22px !important;
+    line-height:1.65 !important;
+  }
+  .facility-intro h2{
+    font-size:26px;
+  }
+}
+
+</style>
+</head>
+<body id="top">
+
+<header class="header">
+  <a class="logo" href="index.html">aqua</a>
+  <a class="back" href="index.html">TOPへ戻る →</a>
+</header>
+
+
+<section class="hero visit-hero">
+  <span class="kicker">INSURANCE-COVERED VISITING MASSAGE</span>
+  <h1>アクアの保険が使える<br>訪問マッサージ</h1>
+  <p class="visit-hero-main">
+    歩けない・褥瘡・脳障害でお困りの方<br>
+    専門のマッサージ師や鍼灸師が<br>
+    ご自宅や施設に訪問します
+  </p>
+  <p class="visit-hero-note">医師の同意など、健康保険の適用条件があります。</p>
+</section>
+
+
+
+<section class="visit-intro-section">
+  <div class="visit-intro-inner">
+
+    <div class="visit-block">
+      <div class="visit-copy">
+        <span class="eyebrow">AQUA VISITING MASSAGE</span>
+        <h2>アクアの訪問マッサージ</h2>
+        <p>
+          aquaでは、歩行が難しい方や寝たきりの方、脳障害・褥瘡などでお困りの方を対象に、
+          国家資格を持つマッサージ師・鍼灸師がご自宅や施設へ訪問し、施術を行っています。
+        </p>
+        <p>
+          当院は平成16年の開院以来、地域の皆様に支えていただきながら活動を続けています。
+          「地域の中で必要とされる存在でありたい」という想いを大切に、
+          一人ひとりの生活に寄り添った訪問施術を心がけています。
+        </p>
+      </div>
+
+      <div class="visit-side">
+        <h3>訪問マッサージの対象となる方</h3>
+        <p class="big">歩けない・寝たきり・通院が難しい方へ</p>
+        <ul>
+          <li>歩行が困難で外出が難しい</li>
+          <li>脳梗塞などの後遺症がある</li>
+          <li>寝たきりや長期療養中</li>
+          <li>筋力低下や関節拘縮がある</li>
+          <li>ご自宅や施設での施術を希望している</li>
+        </ul>
+        <div class="visit-highlight">
+          健康保険の適用には医師の同意が必要です。
+          詳細はお身体の状態を伺ったうえでご案内します。
+        </div>
+      </div>
+    </div>
+
+    <div class="visit-block reverse">
+      <div class="visit-copy">
+        <span class="eyebrow">FEATURE</span>
+        <h2>アクアの訪問マッサージの特徴</h2>
+        <p>
+          ホームマッサージだけではなく、介護保険事業所や地域の施設とも連携しながら、
+          身体面と生活面の両方を見ていくことを大切にしています。
+        </p>
+
+        <h3>ご相談いただきやすいケース</h3>
+        <ul>
+          <li>歩行や立ち上がりが不安定になってきた</li>
+          <li>関節が硬くなり、動かしにくい</li>
+          <li>筋力低下や寝たきりによる身体機能の低下が心配</li>
+          <li>退院後の生活で継続的なケアが必要</li>
+          <li>ご家族だけでの介助やケアに不安がある</li>
+        </ul>
+      </div>
+
+      <div class="visit-side">
+        <h3>「世の中の役に立ちたい」</h3>
+        <p>
+          すべての人に愛と夢と笑顔を。
+          それがaquaの訪問マッサージの根底にある考え方です。
+        </p>
+        <p>
+          ご本人だけでなく、ご家族や介護に関わる方々とも情報を共有しながら、
+          安心して生活を続けられるようサポートしていきます。
+        </p>
+      </div>
+    </div>
+
+    <div class="visit-block">
+      <div class="visit-copy">
+        <span class="eyebrow">WHAT IS VISITING MASSAGE?</span>
+        <h2>訪問マッサージとは？</h2>
+        <p>
+          国家資格を持つ「あん摩マッサージ指圧師」などが、
+          ご自宅や施設へ訪問して行うマッサージ・機能訓練です。
+        </p>
+        <p>
+          通院が困難な方を対象に、筋肉の緊張を和らげること、
+          関節の動きを保つこと、日常生活での身体機能を維持することなどを目的に行います。
+        </p>
+
+        <h3>ご相談の多い症状・状態</h3>
+        <ul>
+          <li>脳血管障害などによる麻痺</li>
+          <li>パーキンソン病などによる身体機能の低下</li>
+          <li>関節拘縮・リウマチなどによる動きづらさ</li>
+          <li>寝たきり・筋力低下・廃用症候群</li>
+          <li>その他、通院が難しい慢性的な身体のお悩み</li>
+        </ul>
+      </div>
+
+      <div class="visit-side">
+        <h3>保険治療について</h3>
+        <p>
+          医師の同意書があり、通院が困難と認められる場合には、
+          健康保険を利用した訪問マッサージを受けられる場合があります。
+        </p>
+        <p>
+          保険適用の可否や料金は状態・負担割合・訪問距離などにより異なります。
+          まずはお気軽にご相談ください。
+        </p>
+      </div>
+    </div>
+
+    <div class="visit-block reverse">
+      <div class="visit-copy">
+        <span class="eyebrow">VISITING AREA</span>
+        <h2>どんなところに来てくれるのか？</h2>
+        <p>
+          千葉市内を中心に、ご自宅・有料老人ホーム・グループホーム・介護施設などへ訪問しています。
+          稲毛区周辺はもちろん、地域や距離によって訪問可能な場合があります。
+        </p>
+        <p>
+          ご自宅で生活されている方だけでなく、
+          施設へ入居されている方への訪問にも対応しています。
+        </p>
+
+        <div class="area-box">
+          <div class="area-item">ご自宅</div>
+          <div class="area-item">有料老人ホーム</div>
+          <div class="area-item">グループホーム</div>
+          <div class="area-item">介護・福祉施設</div>
+        </div>
+      </div>
+
+      <div class="visit-side">
+        <h3>訪問エリアについて</h3>
+        <p>
+          旧サイトでは、千葉市を中心におおむね一定距離内を訪問エリアとして案内していました。
+          現在の訪問可否は、住所やスタッフの訪問状況によって異なります。
+        </p>
+        <div class="visit-highlight">
+          「自宅まで来てもらえる？」「施設でも大丈夫？」など、
+          まずは住所と現在のお身体の状態をお知らせください。
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="inner">
+
+    <div class="intro facility-intro">
+      <span class="kicker">PARTNER FACILITIES</span>
+      <h2>アクアがおすすめする介護施設様</h2>
+      <p>
+        掲載のご承諾をいただいた施設様をご紹介しています。
+        日頃よりaquaがお世話になっている介護・福祉施設の皆様です。
+        介護や生活支援についてお困りの際に、選択肢のひとつとしてご覧ください。
+        掲載順に優劣はありません。
+      </p>
+    </div>
+
+    <div class="facility-grid">
+      
+        <a class="facility-card" href="https://kaigo.benesse-style-care.co.jp/area_chiba/chiba/home_b-chiba?utm_source=yahoo&utm_medium=cpc&utm_campaign=%5B%E5%AE%9A%E5%B8%B8%5D%E6%A4%9C%E7%B4%A2_%E6%8C%87%E5%90%8D&utm_content=%E3%83%9B%E3%83%BC%E3%83%A0%E5%90%8D%EF%BC%9A%E3%83%A1%E3%83%87%E3%82%A3%E3%82%AB%E3%83%AB%E3%83%BB%E3%83%AA%E3%83%8F%E3%83%93%E3%83%AA%E3%83%9B%E3%83%BC%E3%83%A0%E3%83%9C%E3%83%B3%E3%82%BB%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E5%8D%83%E8%91%89&waad=nOWlGQ3X&ugad=nOWlGQ3X&prefix=a71145400nh&yclid=YSS.1000399934.EAIaIQobChMInYHS4MWbiAMVuQ57Bx3XAR7REAAYASAAEgLSBvD_BwE" target="_blank" rel="noopener noreferrer">
+          <div class="facility-arrow">→</div>
+          <div>
+            <p class="facility-label">PARTNER FACILITY</p>
+            <h3>ボンセジュール千葉様</h3>
+            <p class="facility-link">公式サイトを見る</p>
+          </div>
+        </a>
+        
+        <a class="facility-card" href="https://www.sompocare.com/service/home/kaigo/H000027/" target="_blank" rel="noopener noreferrer">
+          <div class="facility-arrow">→</div>
+          <div>
+            <p class="facility-label">PARTNER FACILITY</p>
+            <h3>SOMPOケア ラヴィーレみつわ台様</h3>
+            <p class="facility-link">公式サイトを見る</p>
+          </div>
+        </a>
+        
+        <a class="facility-card" href="https://www.tanoshii-ie.jp/single030/" target="_blank" rel="noopener noreferrer">
+          <div class="facility-arrow">→</div>
+          <div>
+            <p class="facility-label">PARTNER FACILITY</p>
+            <h3>プレザンメゾン習志野実籾様</h3>
+            <p class="facility-link">公式サイトを見る</p>
+          </div>
+        </a>
+        
+        <a class="facility-card" href="https://e-nursingcare.com/facility/2c393b83-5b29-4f8b-b1f0-f405cf323075?utm_source=yahoo&utm_medium=cpc&utm_campaign=detail_a&utm_term=%E3%81%9D%E3%82%93%E3%81%BD%E3%81%AE%E5%AE%B6%E6%9C%9D%E6%97%A5%E3%83%B6%E4%B8%98&yclid=YSS.1001134060.EAIaIQobChMInbmej9WbiAMV_w97Bx1yNSKXEAAYAiAAEgJ16_D_BwE" target="_blank" rel="noopener noreferrer">
+          <div class="facility-arrow">→</div>
+          <div>
+            <p class="facility-label">PARTNER FACILITY</p>
+            <h3>そんぽの家 朝日ヶ丘様</h3>
+            <p class="facility-link">公式サイトを見る</p>
+          </div>
+        </a>
+        
+        <a class="facility-card" href="https://ishinkan.amvis.com/hospices/ishinkan_chibaekimae/" target="_blank" rel="noopener noreferrer">
+          <div class="facility-arrow">→</div>
+          <div>
+            <p class="facility-label">PARTNER FACILITY</p>
+            <h3>医心館 千葉駅前様</h3>
+            <p class="facility-link">公式サイトを見る</p>
+          </div>
+        </a>
+        
+        <div class="facility-card no-link">
+          <div class="facility-arrow">•</div>
+          <div>
+            <p class="facility-label">PARTNER FACILITY</p>
+            <h3>ニチイケアセンター稲毛の園様</h3>
+            <p class="facility-link">掲載施設</p>
+          </div>
+        </div>
+        
+        <div class="facility-card no-link">
+          <div class="facility-arrow">•</div>
+          <div>
+            <p class="facility-label">PARTNER FACILITY</p>
+            <h3>新千葉一倫荘様</h3>
+            <p class="facility-link">掲載施設</p>
+          </div>
+        </div>
+        
+    </div>
+
+    <div class="note">
+      ※施設のサービス内容・空室状況・費用等については、各施設へ直接お問い合わせください。
+      aquaでは訪問マッサージを通じ、地域の医療・介護・福祉との連携を大切にしています。
+    </div>
+
+  </div>
+</section>
+
+<section class="recruit">
+  <div class="recruit-box">
+    <span class="kicker">PARTNER WANTED</span>
+    <h2>パートナー施設 随時募集中</h2>
+    <p>
+      訪問マッサージ・機能訓練・地域連携など、
+      aquaと一緒に利用者様の生活を支えていただける介護施設・福祉施設様を募集しています。
+      まずはお気軽にお問い合わせください。
+    </p>
+
+    <div class="btns">
+      <a class="btn primary" href="reservation.html">お問い合わせ</a>
+      <a class="btn white" href="index.html#access">aquaについて</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">© 癒しと治療空間 aqua</footer>
+
+<a href="#top" class="back-to-top" id="backToTop" aria-label="ページ上部へ戻る"></a>
+
+<script>
+const backToTop = document.getElementById("backToTop");
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 500) backToTop.classList.add("show");
+  else backToTop.classList.remove("show");
+});
+</script>
+
+</body>
+</html>
