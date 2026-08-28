@@ -255,6 +255,124 @@ a{color:inherit}
   .after{margin-top:50px;padding:30px 22px}
   .cta{padding:60px 18px}
 }
+
+/* ===== 訪問マッサージ料金 ===== */
+.price-section{
+  padding:84px 22px;
+  background:#fff;
+  scroll-margin-top:90px;
+}
+.price-inner{
+  max-width:960px;
+  margin:0 auto;
+}
+.price-heading{
+  text-align:center;
+  margin-bottom:44px;
+}
+.price-heading span{
+  color:#5fc7a3;
+  font-size:10px;
+  letter-spacing:.24em;
+}
+.price-heading h2{
+  margin:8px 0 12px;
+  font-size:32px;
+  font-weight:500;
+}
+.price-heading p{
+  margin:0;
+  color:#666;
+  font-size:14px;
+}
+.price-card{
+  max-width:760px;
+  margin:0 auto;
+  padding:42px;
+  background:#f7f3e8;
+  border-top:2px solid #5fc7a3;
+}
+.price-card h3{
+  margin:0 0 22px;
+  text-align:center;
+  font-size:25px;
+  font-weight:500;
+}
+.price-emphasis{
+  margin:0 0 24px;
+  text-align:center;
+  color:#d56555;
+  font-size:14px;
+  font-weight:600;
+}
+.price-card p{
+  margin:0 0 14px;
+  color:#444;
+  font-size:14px;
+  line-height:2;
+}
+.price-example{
+  margin:26px 0;
+  padding:24px;
+  background:#fff;
+}
+.price-row{
+  display:flex;
+  justify-content:space-between;
+  gap:24px;
+  padding:9px 0;
+  border-bottom:1px solid #e5e5e5;
+  font-size:14px;
+}
+.price-row:last-child{
+  border-bottom:none;
+}
+.price-row strong{
+  white-space:nowrap;
+  font-weight:600;
+}
+.price-total{
+  margin-top:18px;
+  padding-top:18px;
+  border-top:1px dashed #777;
+  font-size:16px;
+}
+.price-big{
+  margin:20px 0 8px;
+  text-align:center;
+  font-size:30px;
+  font-weight:500;
+  color:#5fc7a3;
+}
+.price-month{
+  text-align:center;
+  font-size:14px;
+}
+.price-notes{
+  margin-top:30px;
+  display:grid;
+  gap:14px;
+}
+.price-note{
+  padding:18px 20px;
+  background:#fff;
+  border-left:3px solid #5fc7a3;
+  color:#555;
+  font-size:13px;
+  line-height:1.9;
+}
+@media(max-width:760px){
+  .price-section{padding:62px 18px}
+  .price-card{padding:28px 20px}
+  .price-heading h2{font-size:26px}
+  .price-row{display:block}
+  .price-row strong{
+    display:block;
+    margin-top:4px;
+    white-space:normal;
+  }
+}
+
 </style>
 </head>
 <body id="top">
@@ -318,7 +436,7 @@ a{color:inherit}
           <div class="notice">
             1回の施術時間や訪問頻度は、お身体の状態や医師の同意内容などに応じてご案内します。
           </div>
-          <a class="price-link" href="price.html">訪問マッサージの料金を見る →</a>
+          <a class="price-link" href="#price">訪問マッサージの料金を見る →</a>
         </div>
       </div>
 
@@ -368,6 +486,73 @@ a{color:inherit}
       </p>
     </div>
 
+  </div>
+</section>
+
+
+<section class="price-section" id="price">
+  <div class="price-inner">
+
+    <div class="price-heading">
+      <span>PRICE</span>
+      <h2>訪問マッサージ施術料金</h2>
+      <p>健康保険が適用される場合は、所定の自己負担分でご利用いただけます。</p>
+    </div>
+
+    <div class="price-card">
+      <h3>保険適用時の料金例</h3>
+      <p class="price-emphasis">健康保険に加入なら、費用は自己負担分のみ</p>
+
+      <p>
+        旧ページでは、1回の訪問治療につきおおよそ400〜600円程度の自己負担例をご案内していました。
+        下記は健康保険の自己負担割合が1割の場合の一例です。
+      </p>
+
+      <div class="price-example">
+        <div class="price-row">
+          <span>1回の施術料</span>
+          <strong>350円 × 5局所 ＝ 1,750円</strong>
+        </div>
+
+        <div class="price-row">
+          <span>1回の往診料</span>
+          <strong>2,300円<br>（4km以上は2,700円）</strong>
+        </div>
+
+        <div class="price-row price-total">
+          <span>合計</span>
+          <strong>4,050円</strong>
+        </div>
+      </div>
+
+      <p style="text-align:center;margin-bottom:6px;">
+        健康保険の自己負担割合が1割の場合
+      </p>
+
+      <div class="price-big">1回 405円</div>
+
+      <p class="price-month">
+        週2回訪問の場合：405円 × 週2回 × 4週 ＝ <strong>3,240円／月</strong>
+      </p>
+
+      <div class="price-notes">
+        <div class="price-note">
+          上記は健康保険1割負担の場合の一例です。実際の自己負担額は、
+          保険の負担割合・施術部位・訪問距離・医師の同意内容などによって異なります。
+        </div>
+
+        <div class="price-note">
+          はり・きゅうをご希望の場合は、鍼灸の健康保険を利用できる場合があります。
+          別途、はり・きゅうについての医師の同意書が必要です。
+        </div>
+
+        <div class="price-note">
+          障害者手帳などをお持ちの方は、自治体や制度により医療費助成の対象となる場合があります。
+          詳細はお住まいの自治体や当院へお問い合わせください。
+        </div>
+      </div>
+
+    </div>
   </div>
 </section>
 
