@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>施設様での機能訓練 | 癒しと治療空間 aqua</title>
+<style>
+*{box-sizing:border-box}html{scroll-behavior:smooth;overflow-x:hidden}body{margin:0;font-family:"Yu Gothic","YuGothic","Hiragino Kaku Gothic ProN","Hiragino Sans","Noto Sans JP",sans-serif;color:#2c2c2c;background:#fff;line-height:1.9;overflow-x:hidden}a{color:inherit}img{display:block;max-width:100%}
+.header{position:sticky;top:0;z-index:30;height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 34px;background:rgba(255,255,255,.96);border-bottom:1px solid #eee;backdrop-filter:blur(10px)}.logo{font-size:34px;line-height:1;font-weight:700;color:#5fc7a3;text-decoration:none}.back{font-size:12px;letter-spacing:.08em;color:#555;text-decoration:none}
+.hero{
+  background:#f4f2ee;
+}
+.hero-photo{
+  position:relative;
+  width:100%;
+  height:430px;
+  overflow:hidden;
+  background:#ddd;
+}
+.hero-photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+}
+.hero-caption{
+  position:absolute;
+  left:28px;
+  bottom:22px;
+  padding:8px 14px;
+  background:rgba(255,255,255,.88);
+  color:#444;
+  font-size:12px;
+  letter-spacing:.04em;
+  backdrop-filter:blur(4px);
+}
+.hero-copy{
+  max-width:1160px;
+  margin:0 auto;
+  padding:68px 22px 74px;
+  text-align:center;
+}
+.kicker{
+  color:#5fc7a3;
+  font-size:10px;
+  letter-spacing:.24em;
+}
+.hero h1{
+  margin:14px 0 20px;
+  font-size:clamp(42px,5vw,68px);
+  font-weight:500;
+  line-height:1.32;
+  letter-spacing:.03em;
+}
+.hero-lead{
+  margin:0 auto;
+  max-width:760px;
+  font-size:17px;
+  line-height:2;
+}
+.hero-note{
+  margin:20px auto 0;
+  max-width:620px;
+  color:#666;
+  font-size:13px;
+}
+.section{padding:96px 22px}.inner{max-width:1160px;margin:0 auto}.section-title{margin-bottom:46px}.section-title.center{text-align:center}.section-title span{display:block;color:#5fc7a3;font-size:10px;letter-spacing:.22em}.section-title h2{margin:8px 0 12px;font-size:32px;font-weight:500;line-height:1.5}.section-title p{margin:0;color:#666;font-size:14px;line-height:2}
+.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:center}.about-copy h3{margin:0 0 18px;font-size:28px;font-weight:500;line-height:1.6}.about-copy p{margin:0 0 16px;color:#555;font-size:14px;line-height:2.1}.about-side{padding:38px;background:#f6f5f2;border-top:2px solid #5fc7a3}.about-side .big{margin:8px 0 18px;font-size:24px;line-height:1.65}.about-side p{margin:0;color:#555;font-size:13px;line-height:2}
+.staff-section{background:#f7f6f3}.staff-grid{display:grid;grid-template-columns:360px 1fr;gap:72px;align-items:center}.staff-photo{background:#eee;overflow:hidden}.staff-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center top}.staff-copy .role{margin:0 0 7px;color:#5fc7a3;font-size:10px;letter-spacing:.2em}.staff-copy h2{margin:0 0 4px;font-size:38px;font-weight:500}.staff-copy .roman{margin:0 0 26px;color:#8a8a8a;font-size:10px;letter-spacing:.22em}.staff-copy p{margin:0 0 16px;color:#555;font-size:14px;line-height:2.1}.profile-link{display:inline-block;margin-top:16px;padding:12px 24px;border:1px solid #5fc7a3;color:#3d9475;text-decoration:none;font-size:12px;transition:.2s ease}.profile-link:hover{background:#5fc7a3;color:#fff}.highlight{margin:24px 0;padding:24px 28px;background:#fff;border-left:3px solid #5fc7a3;font-size:15px;line-height:2}
+.training-section{padding-bottom:110px}.training-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}.training-card{background:#f7f6f3}.training-card img{width:100%;aspect-ratio:4/3;object-fit:cover}.training-caption{padding:22px 24px 25px}.training-caption span{color:#5fc7a3;font-size:9px;letter-spacing:.2em}.training-caption h3{margin:6px 0 0;font-size:20px;font-weight:500}.training-info{margin:44px auto 0;max-width:760px;text-align:center;padding:32px;border-top:2px solid #5fc7a3;background:#f6f5f2}.training-info span{color:#5fc7a3;font-size:10px;letter-spacing:.2em}.training-info h3{margin:8px 0 8px;font-size:26px;font-weight:500}.training-info p{margin:0;color:#666;font-size:13px}
+.cta{padding:84px 22px;background:#2f3b37;color:#fff;text-align:center}.cta-box{max-width:850px;margin:0 auto;padding:50px 30px;border:1px solid rgba(255,255,255,.25)}.cta h2{margin:9px 0 14px;font-size:31px;font-weight:500}.cta p{max-width:680px;margin:0 auto 26px;color:rgba(255,255,255,.75);font-size:14px}.btns{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}.btn{display:inline-block;padding:13px 25px;border:1px solid #5fc7a3;text-decoration:none;font-size:12px}.btn.primary{background:#5fc7a3;color:#fff}.btn.white{color:#fff;border-color:rgba(255,255,255,.6)}.footer{padding:24px;background:#222;color:#aaa;text-align:center;font-size:11px}
+.back-to-top{position:fixed;right:22px;bottom:22px;width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.9);background:rgba(190,190,190,.74);opacity:0;visibility:hidden;transition:.25s ease;z-index:40}.back-to-top.show{opacity:1;visibility:visible}.back-to-top::before{content:"";position:absolute;left:14px;top:16px;width:15px;height:15px;border-top:2px solid #fff;border-left:2px solid #fff;transform:rotate(45deg)}
+@media(max-width:820px){.header{height:64px;padding:0 18px}.logo{font-size:28px}.hero-photo{height:240px}.hero-caption{left:14px;bottom:12px;font-size:10px;padding:6px 10px}.hero-copy{padding:52px 18px 54px}.hero h1{font-size:39px}.hero-lead{font-size:16px}.section{padding:68px 18px}.section-title h2{font-size:27px}.about-grid,.staff-grid{grid-template-columns:1fr;gap:34px}.staff-photo{max-width:360px;margin:0 auto}.staff-copy h2{font-size:32px}.about-side{padding:28px 22px}.training-grid{grid-template-columns:1fr}.training-info{padding:28px 20px}.cta{padding:64px 18px}.cta-box{padding:38px 22px}}
+</style>
+</head>
+<body id="top">
+<header class="header"><a href="index.html" class="logo">aqua</a><a href="houmonmassage.html" class="back">訪問マッサージへ戻る →</a></header>
+<section class="hero">
+  <div class="hero-photo">
+    <img
+      src="/public/miyagino.webp"
+      alt="特別養護老人ホーム みやのぎ荘様"
+      onerror="if(!this.dataset.fallback){this.dataset.fallback='1';this.src='/public/images/miyagino.webp';}">
+    <div class="hero-caption">特別養護老人ホーム　みやのぎ荘様</div>
+  </div>
+
+  <div class="hero-copy">
+    <span class="kicker">FUNCTIONAL TRAINING</span>
+    <h1>施設様での<br>機能訓練</h1>
+    <p class="hero-lead">
+      楽しく身体を動かすことを大切に。<br>
+      施設で生活される皆様の毎日に寄り添いながら、無理のない集団訓練を行っています。
+    </p>
+    <p class="hero-note">
+      施設様からのご依頼に応じて、定期的な機能訓練を担当しています。
+    </p>
+  </div>
+</section>
+<section class="section"><div class="inner"><div class="about-grid">
+  <div class="about-copy"><span class="kicker">ABOUT</span><h3>施設様からのご依頼で<br>機能訓練にも伺っています</h3><p>aquaでは、介護・福祉施設様からのご依頼を受け、施設を利用されている皆様に向けた機能訓練を行っています。</p><p>生活の場である施設の中で、無理なく続けられる運動を取り入れながら、身体を動かす時間そのものを楽しんでいただけることを大切にしています。</p><p>現在のお身体の状態や施設様のご希望に合わせて、集団での運動内容を組み立てています。</p></div>
+  <div class="about-side"><span class="kicker">AQUA STYLE</span><p class="big">「できること」を<br>楽しく続ける。</p><p>筋力だけを見るのではなく、姿勢・移動・日々の活動など、生活全体につながる身体づくりを目指しています。</p></div>
+</div></div></section>
+<section class="section staff-section"><div class="inner"><div class="staff-grid">
+  <div class="staff-photo"><img src="/public/img_0269.jpg" alt="機能訓練担当 杉山伸" onerror="if(!this.dataset.fallback){this.dataset.fallback='1';this.src='/public/images/img_0269.jpg';}"></div>
+  <div class="staff-copy"><p class="role">TRAINER / ACUPUNCTURIST</p><h2>杉山 伸</h2><p class="roman">SHIN SUGIYAMA</p><p>私は、楽しく身体を動かしていただくことを一番大切にしています。</p><p>認知症の方にも取り組んでいただきやすい簡単な運動を中心に、童謡や歌謡曲などを皆さんで声に出して歌いながら身体を動かすなど、楽しく参加していただける工夫をしています。</p><p>身体を動かすことで、姿勢を保つ力や移動する力を維持し、毎日の生活が少しでも生き生きとしたものになることを目指しています。</p><div class="highlight">姿勢が崩れて背中が丸くなると、呼吸が浅くなりやすくなります。機能訓練では「背骨をしっかり立てる」ことを意識しながら、体幹を使う運動も取り入れています。</div><p>これからも様々な工夫をしながら、皆様にとって楽しい時間となるよう取り組んでいきます。</p><a href="/sugiyama.htm" class="profile-link">杉山先生のプロフィールを見る →</a></div>
+</div></div></section>
+<section class="section training-section"><div class="inner"><div class="section-title center"><span>TRAINING SCENE</span><h2>機能訓練の様子</h2><p>皆さんで身体を動かしながら、楽しく継続できる時間をつくっています。</p></div>
+<div class="training-grid">
+  <article class="training-card"><img src="/public/kunren1.webp" alt="施設での集団機能訓練の様子" onerror="if(!this.dataset.fallback){this.dataset.fallback='1';this.src='/public/images/kunren1.webp';}"><div class="training-caption"><span>SCENE 01</span><h3>みんなで取り組む集団訓練</h3></div></article>
+  <article class="training-card"><img src="/public/kunren2.webp" alt="椅子に座って行う機能訓練の様子" onerror="if(!this.dataset.fallback){this.dataset.fallback='1';this.src='/public/images/kunren2.webp';}"><div class="training-caption"><span>SCENE 02</span><h3>状態に合わせた無理のない運動</h3></div></article>
+</div>
+<div class="training-info"><span>TRAINING TIME</span><h3>集団訓練　約50分</h3><p>内容や時間は、施設様のご希望や参加される方々の状態に応じて調整します。</p></div></div></section>
+<section class="cta"><div class="cta-box"><span class="kicker">FOR FACILITIES</span><h2>施設様からのご相談も承っています</h2><p>機能訓練・訪問マッサージ・地域連携について、施設様からのご相談もお気軽にお問い合わせください。</p><div class="btns"><a href="reservation.html" class="btn primary">お問い合わせ・ご相談</a><a href="houmonmassage.html" class="btn white">訪問マッサージについて</a></div></div></section>
+<footer class="footer">© 癒しと治療空間 aqua</footer>
+<a href="#top" class="back-to-top" id="backToTop" aria-label="ページ上部へ戻る"></a>
+<script>const backToTop=document.getElementById("backToTop");window.addEventListener("scroll",()=>{if(window.scrollY>500)backToTop.classList.add("show");else backToTop.classList.remove("show");});</script>
+</body>
+</html>
