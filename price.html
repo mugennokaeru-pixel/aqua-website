@@ -1,354 +1,523 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>料金 | aqua</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>施術料金 | 癒しと治療空間 aqua</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{
+  margin:0;
+  font-family:"Yu Gothic","YuGothic","Hiragino Kaku Gothic ProN","Hiragino Sans","Noto Sans JP",sans-serif;
+  color:#2c2c2c;
+  background:#fff;
+  line-height:1.9;
+}
+a{color:inherit}
+img{display:block;max-width:100%}
 
-    body {
-      font-family: "Segoe UI", "Helvetica Neue", sans-serif;
-      color: #2C2C2C;
-      line-height: 1.7;
-      background: #F8F7F5;
-    }
+.header{
+  position:sticky;top:0;z-index:30;
+  height:72px;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 34px;
+  background:rgba(255,255,255,.96);
+  border-bottom:1px solid #eee;
+  backdrop-filter:blur(10px);
+}
+.logo{
+  font-size:34px;
+  line-height:1;
+  font-weight:700;
+  color:#5fc7a3;
+  text-decoration:none;
+}
+.nav{
+  display:flex;
+  align-items:center;
+  gap:30px;
+}
+.nav a{
+  font-size:12px;
+  text-decoration:none;
+  color:#444;
+  letter-spacing:.04em;
+}
+.reserve{
+  padding:12px 20px;
+  background:#5fc7a3;
+  color:#fff!important;
+  border-radius:3px;
+  font-weight:600;
+}
 
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 60px;
-      background: white;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
+.hero{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  min-height:480px;
+  background:#f4f2ee;
+}
+.hero-copy{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:70px 7vw;
+}
+.kicker{
+  color:#5fc7a3;
+  font-size:10px;
+  letter-spacing:.24em;
+}
+.hero h1{
+  margin:12px 0 18px;
+  font-size:clamp(44px,5vw,68px);
+  font-weight:500;
+  line-height:1.3;
+}
+.hero p{
+  max-width:600px;
+  margin:0;
+  color:#666;
+  font-size:14px;
+  line-height:2;
+}
+.hero-photo{
+  position:relative;
+  min-height:480px;
+  overflow:hidden;
+}
+.hero-photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+}
+.hero-caption{
+  position:absolute;
+  right:18px;
+  bottom:16px;
+  padding:7px 11px;
+  background:rgba(255,255,255,.86);
+  color:#666;
+  font-size:10px;
+  letter-spacing:.04em;
+}
 
-    .logo {
-      font-size: 36px;
-      font-weight: bold;
-      color: #5fc7a3;
-      text-decoration: none;
-    }
+.section{
+  padding:86px 22px;
+}
+.inner{
+  max-width:1180px;
+  margin:0 auto;
+}
+.section-title{
+  text-align:center;
+  margin-bottom:46px;
+}
+.section-title span{
+  color:#5fc7a3;
+  font-size:10px;
+  letter-spacing:.22em;
+}
+.section-title h2{
+  margin:8px 0 10px;
+  font-size:32px;
+  font-weight:500;
+}
+.section-title p{
+  margin:0;
+  color:#777;
+  font-size:13px;
+}
 
-    nav .menu {
-      display: flex;
-      gap: 40px;
-      font-size: 15px;
-    }
+.price-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:26px;
+}
+.price-card{
+  padding:38px 34px 32px;
+  background:#f7f6f3;
+  border-top:2px solid #5fc7a3;
+}
+.staff-name{
+  margin:0;
+  color:#5fc7a3;
+  font-size:28px;
+  font-weight:600;
+}
+.staff-menu{
+  margin:4px 0 28px;
+  font-size:16px;
+  font-weight:600;
+  color:#444;
+}
+.price-line{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:24px;
+  padding:17px 0;
+  border-bottom:1px solid #ddd;
+}
+.price-line:last-of-type{
+  border-bottom:none;
+}
+.price-line span{
+  font-size:15px;
+}
+.price-line strong{
+  white-space:nowrap;
+  font-size:21px;
+  font-weight:600;
+}
+.price-note{
+  margin:22px 0 0;
+  color:#777;
+  font-size:12px;
+  line-height:1.9;
+}
 
-    nav .menu a {
-      color: inherit;
-      text-decoration: none;
-      transition: color 0.2s;
-    }
+.payment-section{
+  padding:84px 22px;
+  background:#f6f5f2;
+}
+.payment-grid{
+  max-width:1100px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:52px;
+  align-items:center;
+}
+.payment-copy h2{
+  margin:8px 0 14px;
+  font-size:31px;
+  font-weight:500;
+}
+.payment-copy p{
+  margin:0 0 14px;
+  color:#666;
+  font-size:14px;
+  line-height:2;
+}
+.payment-photo{
+  overflow:hidden;
+  background:#ddd;
+}
+.payment-photo img{
+  width:100%;
+  aspect-ratio:4/3;
+  object-fit:cover;
+}
+.payment-methods{
+  margin-top:26px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:9px;
+}
+.payment-chip{
+  padding:8px 12px;
+  border:1px solid #d8d8d8;
+  background:#fff;
+  color:#555;
+  font-size:11px;
+}
+.payment-note{
+  margin-top:20px;
+  padding:18px 20px;
+  background:#fff;
+  border-left:3px solid #5fc7a3;
+  color:#555;
+  font-size:13px;
+  line-height:1.9;
+}
 
-    nav .menu a:hover {
-      color: #5fc7a3;
-    }
+.guide{
+  padding:76px 22px;
+}
+.guide-box{
+  max-width:900px;
+  margin:0 auto;
+  padding:42px 34px;
+  background:#2f3b37;
+  color:#fff;
+  text-align:center;
+}
+.guide-box h2{
+  margin:8px 0 12px;
+  font-size:29px;
+  font-weight:500;
+}
+.guide-box p{
+  margin:0 auto 24px;
+  max-width:700px;
+  color:rgba(255,255,255,.75);
+  font-size:14px;
+}
+.btns{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+}
+.btn{
+  display:inline-block;
+  padding:13px 24px;
+  border:1px solid #5fc7a3;
+  text-decoration:none;
+  font-size:12px;
+}
+.btn.primary{
+  background:#5fc7a3;
+  color:#fff;
+}
+.btn.white{
+  color:#fff;
+  border-color:rgba(255,255,255,.6);
+}
 
-    .reserve-btn {
-      background: #5fc7a3;
-      color: white;
-      padding: 12px 32px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
-    }
+.footer{
+  padding:24px;
+  background:#222;
+  color:#aaa;
+  text-align:center;
+  font-size:11px;
+}
 
-    .price-page {
-      padding: 60px 20px 80px;
-    }
+.back-to-top{
+  position:fixed;
+  right:22px;bottom:22px;
+  width:46px;height:46px;
+  border-radius:50%;
+  border:1px solid rgba(255,255,255,.85);
+  background:rgba(190,190,190,.72);
+  opacity:0;visibility:hidden;
+  transition:.25s ease;
+  z-index:40;
+}
+.back-to-top.show{opacity:1;visibility:visible}
+.back-to-top::before{
+  content:"";
+  position:absolute;
+  left:14px;top:16px;
+  width:15px;height:15px;
+  border-top:2px solid #fff;
+  border-left:2px solid #fff;
+  transform:rotate(45deg);
+}
 
-    .section-container {
-      max-width: 1100px;
-      margin: 0 auto;
-    }
+@media(max-width:900px){
+  .nav a:not(.reserve){display:none}
+  .hero{
+    grid-template-columns:1fr;
+  }
+  .hero-copy{
+    padding:68px 22px 48px;
+  }
+  .hero-photo{
+    min-height:0;
+    height:320px;
+  }
+  .price-grid{
+    grid-template-columns:1fr;
+  }
+  .payment-grid{
+    grid-template-columns:1fr;
+    gap:30px;
+  }
+}
 
-    .section-title {
-      text-align: center;
-      margin-bottom: 25px;
-    }
-
-    .section-title h1 {
-      font-size: 44px;
-      margin-bottom: 16px;
-    }
-
-    .line {
-      width: 80px;
-      height: 4px;
-      background: #5fc7a3;
-      margin: 0 auto;
-    }
-
-    .lead {
-      text-align: center;
-      color: #555;
-      margin-bottom: 40px;
-      font-size: 17px;
-    }
-
-    .price-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
-    }
-
-    .price-card {
-      background: white;
-      padding: 30px;
-      border-radius: 14px;
-      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
-    }
-
-    .price-card h2 {
-      font-size: 25px;
-      color: #5fc7a3;
-      margin-bottom: 5px;
-    }
-
-    .specialty {
-      color: #666;
-      margin-bottom: 22px;
-      font-weight: bold;
-    }
-
-    .price-row {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      padding: 14px 0;
-      border-bottom: 1px solid #eee;
-    }
-
-    .price-row:last-child {
-      border-bottom: none;
-    }
-
-    .price-row strong {
-      white-space: nowrap;
-      font-size: 18px;
-    }
-
-    .price-note {
-      margin-top: 15px;
-      color: #777;
-      font-size: 14px;
-    }
-
-    .yajima-card {
-      grid-column: 1 / -1;
-    }
-
-    .bottom-note {
-      background: white;
-      margin-top: 35px;
-      padding: 28px;
-      border-radius: 14px;
-      text-align: center;
-      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.05);
-    }
-
-    .bottom-note p {
-      margin-bottom: 8px;
-    }
-
-    .reservation-link {
-      display: inline-block;
-      margin-top: 18px;
-      padding: 14px 34px;
-      background: #5fc7a3;
-      color: white;
-      font-weight: bold;
-      text-decoration: none;
-      border-radius: 8px;
-    }
-
-    @media (max-width: 768px) {
-      nav {
-        padding: 16px 20px;
-        flex-wrap: wrap;
-        gap: 14px;
-      }
-
-      .logo {
-        font-size: 30px;
-      }
-
-      nav .menu {
-        gap: 16px;
-        flex-wrap: wrap;
-      }
-
-      .reserve-btn {
-        padding: 10px 18px;
-      }
-
-      .price-page {
-        padding: 40px 16px 60px;
-      }
-
-      .section-title h1 {
-        font-size: 32px;
-      }
-
-      .price-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .yajima-card {
-        grid-column: auto;
-      }
-
-      .price-row {
-        flex-direction: column;
-        gap: 4px;
-      }
-    }
-  </style>
+@media(max-width:620px){
+  .header{
+    height:64px;
+    padding:0 18px;
+  }
+  .logo{font-size:28px}
+  .reserve{padding:10px 14px}
+  .section{padding:64px 18px}
+  .price-card{padding:30px 22px}
+  .price-line{
+    display:block;
+  }
+  .price-line strong{
+    display:block;
+    margin-top:4px;
+  }
+  .payment-section{
+    padding:62px 18px;
+  }
+  .guide{
+    padding:62px 18px;
+  }
+  .guide-box{
+    padding:34px 22px;
+  }
+}
+</style>
 </head>
 
-<body>
+<body id="top">
 
-  <nav>
-    <a href="/#top" class="logo">aqua</a>
+<header class="header">
+  <a href="index.html" class="logo">aqua</a>
 
-    <div class="menu">
-      <a href="/#services">施術内容</a>
-      <a href="/#staff">施術者紹介</a>
-      <a href="/faq.html">よくある質問</a>
-      <a href="/#access">アクセス</a>
-      <a href="/price.html">料金について</a>
+  <nav class="nav">
+    <a href="index.html#treatment">施術内容</a>
+    <a href="index.html#staff">施術者紹介</a>
+    <a href="faq.html">よくある質問</a>
+    <a href="index.html#access">アクセス</a>
+    <a href="price.html">料金について</a>
+    <a href="reservation.html" class="reserve">予約はこちら</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-copy">
+    <span class="kicker">TREATMENT PRICE</span>
+    <h1>施術料金</h1>
+    <p>
+      施術者それぞれの得意分野に合わせたメニューをご用意しています。
+      お身体の状態やご希望に合わせてお選びください。
+    </p>
+  </div>
+
+  <div class="hero-photo">
+    <img
+      src="/public/IMG_1999.jpg"
+      alt="aqua レジカウンター"
+      onerror="if(!this.dataset.fallback){this.dataset.fallback='1';this.src='/public/images/IMG_1999.jpg';}">
+    <div class="hero-caption">aqua reception</div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="inner">
+
+    <div class="section-title">
+      <span>PRICE LIST</span>
+      <h2>施術メニュー</h2>
+      <p>料金は施術者・施術内容によって異なります。</p>
     </div>
 
-    <a href="/reservation.html" class="reserve-btn">
-      📞 予約はこちら
-    </a>
-  </nav>
+    <div class="price-grid">
 
-  <main class="price-page">
-    <div class="section-container">
+      <article class="price-card">
+        <h3 class="staff-name">伊藤 盛敬</h3>
+        <p class="staff-menu">筋膜リリース・トリガーポイント鍼灸</p>
 
-      <div class="section-title">
-        <h1>施術料金</h1>
-        <div class="line"></div>
-      </div>
+        <div class="price-line">
+          <span>60分</span>
+          <strong>7,150円</strong>
+        </div>
 
-      <p class="lead">
-        各施術者の得意分野に合わせた施術メニューをご用意しています。
+        <div class="price-line">
+          <span>定期メンテナンス 80分</span>
+          <strong>9,350円</strong>
+        </div>
+
+        <p class="price-note">初回の方は初診料込み。</p>
+      </article>
+
+      <article class="price-card">
+        <h3 class="staff-name">杉山 伸</h3>
+        <p class="staff-menu">全身整体</p>
+
+        <div class="price-line">
+          <span>初診</span>
+          <strong>11,220円</strong>
+        </div>
+
+        <div class="price-line">
+          <span>2回目以降</span>
+          <strong>7,920円</strong>
+        </div>
+
+        <p class="price-note">
+          お身体の状態を確認しながら、施術内容をご案内します。
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="payment-section">
+  <div class="payment-grid">
+
+    <div class="payment-copy">
+      <span class="kicker">PAYMENT</span>
+      <h2>各種キャッシュレス決済に対応</h2>
+
+      <p>
+        クレジットカード・電子マネー・QRコード決済など、
+        各種キャッシュレス決済をご利用いただけます。
       </p>
 
-      <div class="price-grid">
-
-        <div class="price-card">
-          <h2>伊藤 盛敬</h2>
-          <p class="specialty">
-            筋膜リリース・トリガーポイント鍼灸
-          </p>
-
-          <div class="price-row">
-            <span>60分</span>
-            <strong>7,150円</strong>
-          </div>
-
-          <div class="price-row">
-            <span>定期メンテナンス 80分</span>
-            <strong>9,350円</strong>
-          </div>
-
-          <p class="price-note">
-            初回の方は初診料込み。
-          </p>
-        </div>
-
-        <div class="price-card">
-          <h2>杉山 伸</h2>
-          <p class="specialty">
-            全身整体
-          </p>
-
-          <div class="price-row">
-            <span>初診</span>
-            <strong>11,220円</strong>
-          </div>
-
-          <div class="price-row">
-            <span>2回目以降</span>
-            <strong>7,920円</strong>
-          </div>
-        </div>
-
-        <div class="price-card">
-          <h2>砂生 明久</h2>
-          <p class="specialty">
-            自律神経にやさしい鍼施術
-          </p>
-
-          <div class="price-row">
-            <span>鍼灸＋マッサージ</span>
-            <strong>7,150円</strong>
-          </div>
-        </div>
-
-        <div class="price-card">
-          <h2>村田 医啓</h2>
-          <p class="specialty">
-            神経整体＋鍼灸
-          </p>
-
-          <div class="price-row">
-            <span>50分</span>
-            <strong>6,050円</strong>
-          </div>
-
-          <p class="price-note">
-            ※ 初診料として別途1,650円かかります。
-          </p>
-        </div>
-
-        <div class="price-card yajima-card">
-          <h2>矢島 実</h2>
-          <p class="specialty">
-            トータルサポート
-          </p>
-
-          <div class="price-row">
-            <span>初回：初診料・問診・治療 3時間</span>
-            <strong>55,000円</strong>
-          </div>
-
-          <p class="price-note">
-            2回目以降はサポート内容により異なります。
-            矢島の予約は電話受付となります。
-          </p>
-        </div>
-
+      <div class="payment-methods">
+        <span class="payment-chip">VISA</span>
+        <span class="payment-chip">Mastercard</span>
+        <span class="payment-chip">JCB</span>
+        <span class="payment-chip">交通系IC</span>
+        <span class="payment-chip">iD</span>
+        <span class="payment-chip">QUICPay</span>
+        <span class="payment-chip">Apple Pay</span>
+        <span class="payment-chip">PayPay</span>
+        <span class="payment-chip">楽天Pay</span>
+        <span class="payment-chip">au PAY</span>
+        <span class="payment-chip">d払い</span>
+        <span class="payment-chip">Alipay</span>
+        <span class="payment-chip">WeChat Pay</span>
       </div>
 
-      <div class="bottom-note">
-        <p>
-          施術時間や施術の組み合わせなど、お気軽にご相談ください。
-        </p>
-        <p>
-          症状やご希望に合わせて調整いたします。
-        </p>
-
-        <a href="/reservation.html" class="reservation-link">
-          ご予約・お問い合わせはこちら
-        </a>
+      <div class="payment-note">
+        対応ブランド・決済方法は変更になる場合があります。
+        ご希望の決済方法がある場合は、ご来院時にスタッフへお尋ねください。
       </div>
-
     </div>
-  </main>
+
+    <div class="payment-photo">
+      <img
+        src="/public/IMG_1999.jpg"
+        alt="aquaの受付・キャッシュレス決済案内"
+        onerror="if(!this.dataset.fallback){this.dataset.fallback='1';this.src='/public/images/IMG_1999.jpg';}">
+    </div>
+
+  </div>
+</section>
+
+<section class="guide">
+  <div class="guide-box">
+    <span class="kicker">RESERVATION</span>
+    <h2>どのメニューを選べばいいか分からない方へ</h2>
+    <p>
+      症状やご希望をお聞かせいただければ、施術内容や担当者についてご案内します。
+      ご予約・ご相談はLINEからのお問い合わせがスムーズです。
+    </p>
+
+    <div class="btns">
+      <a href="reservation.html" class="btn primary">ご予約・お問い合わせ</a>
+      <a href="index.html#staff" class="btn white">スタッフ紹介を見る</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  © 癒しと治療空間 aqua
+</footer>
+
+<a href="#top" class="back-to-top" id="backToTop" aria-label="ページ上部へ戻る"></a>
+
+<script>
+const backToTop=document.getElementById("backToTop");
+window.addEventListener("scroll",()=>{
+  if(window.scrollY>500) backToTop.classList.add("show");
+  else backToTop.classList.remove("show");
+});
+</script>
 
 </body>
 </html>
