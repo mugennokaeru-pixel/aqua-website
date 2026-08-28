@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>訪問マッサージ よくあるご質問 | 癒しと治療空間 aqua</title>
+
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{
+  margin:0;
+  font-family:"Yu Gothic","YuGothic","Hiragino Kaku Gothic ProN","Hiragino Sans","Noto Sans JP",sans-serif;
+  color:#2c2c2c;
+  background:#fff;
+  line-height:1.9;
+}
+a{color:inherit}
+.header{
+  position:sticky;top:0;z-index:30;
+  height:72px;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 34px;
+  background:rgba(255,255,255,.96);
+  border-bottom:1px solid #eee;
+  backdrop-filter:blur(10px);
+}
+.logo{
+  font-size:34px;
+  font-weight:700;
+  color:#5fc7a3;
+  text-decoration:none;
+}
+.back{
+  font-size:12px;
+  text-decoration:none;
+  color:#555;
+  letter-spacing:.08em;
+}
+
+.hero{
+  padding:100px 24px 74px;
+  background:#f4f2ee;
+  text-align:center;
+}
+.kicker{
+  color:#5fc7a3;
+  font-size:10px;
+  letter-spacing:.24em;
+}
+.hero h1{
+  margin:12px 0 16px;
+  font-size:clamp(40px,5vw,62px);
+  font-weight:500;
+  line-height:1.35;
+}
+.hero p{
+  max-width:760px;
+  margin:0 auto;
+  color:#666;
+  font-size:14px;
+  line-height:2;
+}
+
+.section{
+  padding:88px 22px 100px;
+}
+.inner{
+  max-width:920px;
+  margin:0 auto;
+}
+.section-title{
+  text-align:center;
+  margin-bottom:48px;
+}
+.section-title h2{
+  margin:8px 0 10px;
+  font-size:30px;
+  font-weight:500;
+}
+.section-title p{
+  margin:0;
+  color:#777;
+  font-size:13px;
+}
+
+.faq-list{
+  display:grid;
+  gap:18px;
+}
+.faq-item{
+  background:#f7f6f3;
+  border-top:2px solid #5fc7a3;
+  padding:30px 34px;
+}
+.faq-q{
+  display:grid;
+  grid-template-columns:44px 1fr;
+  gap:16px;
+  align-items:start;
+}
+.faq-mark{
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#5fc7a3;
+  color:#fff;
+  font-size:18px;
+  font-weight:500;
+}
+.faq-q h3{
+  margin:3px 0 0;
+  font-size:20px;
+  font-weight:500;
+  line-height:1.6;
+}
+.faq-a{
+  margin:20px 0 0 60px;
+  padding-top:18px;
+  border-top:1px solid #ddd;
+}
+.faq-a p{
+  margin:0 0 12px;
+  color:#555;
+  font-size:14px;
+  line-height:2;
+}
+.faq-a strong{
+  color:#2c2c2c;
+}
+.faq-note{
+  margin-top:16px;
+  padding:16px 18px;
+  background:#fff;
+  border-left:3px solid #5fc7a3;
+  color:#666;
+  font-size:12px;
+  line-height:1.9;
+}
+.inline-link{
+  display:inline-block;
+  margin-top:10px;
+  color:#3f9d7d;
+  text-decoration:none;
+  font-size:12px;
+  border-bottom:1px solid #5fc7a3;
+}
+
+.contact-box{
+  margin-top:54px;
+  padding:40px 32px;
+  background:#2f3b37;
+  color:#fff;
+  text-align:center;
+}
+.contact-box h2{
+  margin:8px 0 12px;
+  font-size:28px;
+  font-weight:500;
+}
+.contact-box p{
+  margin:0 auto 24px;
+  max-width:680px;
+  color:rgba(255,255,255,.76);
+  font-size:14px;
+}
+.btns{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+}
+.btn{
+  display:inline-block;
+  padding:13px 24px;
+  text-decoration:none;
+  border:1px solid #5fc7a3;
+  font-size:12px;
+}
+.btn.primary{
+  background:#5fc7a3;
+  color:#fff;
+}
+.btn.white{
+  color:#fff;
+  border-color:rgba(255,255,255,.6);
+}
+
+.footer{
+  padding:24px;
+  background:#222;
+  color:#aaa;
+  text-align:center;
+  font-size:11px;
+}
+
+.back-to-top{
+  position:fixed;
+  right:22px;
+  bottom:22px;
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  border:1px solid rgba(255,255,255,.85);
+  background:rgba(190,190,190,.74);
+  opacity:0;
+  visibility:hidden;
+  transition:.25s ease;
+  z-index:40;
+}
+.back-to-top.show{
+  opacity:1;
+  visibility:visible;
+}
+.back-to-top::before{
+  content:"";
+  position:absolute;
+  left:14px;
+  top:16px;
+  width:15px;
+  height:15px;
+  border-top:2px solid #fff;
+  border-left:2px solid #fff;
+  transform:rotate(45deg);
+}
+
+@media(max-width:760px){
+  .header{height:64px;padding:0 18px}
+  .logo{font-size:28px}
+  .hero{padding:76px 18px 52px}
+  .section{padding:64px 18px 76px}
+  .faq-item{padding:24px 20px}
+  .faq-q{grid-template-columns:38px 1fr;gap:12px}
+  .faq-mark{width:34px;height:34px;font-size:16px}
+  .faq-q h3{font-size:18px}
+  .faq-a{margin-left:50px}
+  .contact-box{padding:34px 22px}
+}
+</style>
+</head>
+
+<body id="top">
+
+<header class="header">
+  <a href="index.html" class="logo">aqua</a>
+  <a href="houmonmassage.html" class="back">訪問マッサージへ戻る →</a>
+</header>
+
+<section class="hero">
+  <span class="kicker">VISITING MASSAGE FAQ</span>
+  <h1>訪問マッサージ<br>よくあるご質問</h1>
+  <p>
+    ご利用前によくいただくご質問をまとめています。
+    分からないことがありましたら、どうぞお気軽にお問い合わせください。
+  </p>
+</section>
+
+<section class="section">
+  <div class="inner">
+
+    <div class="section-title">
+      <span class="kicker">Q & A</span>
+      <h2>よくあるご質問</h2>
+      <p>ご本人様・ご家族・ケアマネージャー様からのご相談も承っています。</p>
+    </div>
+
+    <div class="faq-list">
+
+      <article class="faq-item">
+        <div class="faq-q">
+          <div class="faq-mark">Q</div>
+          <h3>訪問マッサージやリハビリを受けたいときは、どうしたらいいですか？</h3>
+        </div>
+        <div class="faq-a">
+          <p><strong>まずはお気軽にお問い合わせください。</strong></p>
+          <p>
+            実際にどのような施術を行うのか、保険が利用できるかどうか、
+            必要な書類や手続きなども含めてご説明します。
+          </p>
+          <p>
+            ご本人様だけでなく、ご家族やケアマネージャー様からのご相談も可能です。
+          </p>
+          <a class="inline-link" href="massage-flow.html">訪問マッサージの流れを見る →</a>
+        </div>
+      </article>
+
+      <article class="faq-item">
+        <div class="faq-q">
+          <div class="faq-mark">Q</div>
+          <h3>どれくらいの頻度で来てもらえますか？</h3>
+        </div>
+        <div class="faq-a">
+          <p>
+            お身体の状態や医師の同意内容などに応じて、
+            <strong>週1回〜数回程度</strong>を目安に訪問回数をご相談します。
+          </p>
+          <p>
+            寝たきり予防の訓練や歩行訓練など、
+            日常生活の状態に合わせた内容をご案内します。
+          </p>
+          <p>
+            痛みをやわらげることや、身体の状態を整えることを目的とした
+            マッサージ・はり・きゅうの施術を行う場合もあります。
+          </p>
+        </div>
+      </article>
+
+      <article class="faq-item">
+        <div class="faq-q">
+          <div class="faq-mark">Q</div>
+          <h3>料金はいくらくらいかかりますか？</h3>
+        </div>
+        <div class="faq-a">
+          <p>
+            健康保険が適用される場合は、保険の自己負担割合に応じた金額になります。
+          </p>
+          <p>
+            旧ページでは、保険適用時の自己負担の目安として
+            <strong>1回300〜500円程度</strong>をご案内していました。
+          </p>
+          <p>
+            実際の料金は、負担割合・施術部位・訪問距離・医師の同意内容などによって異なります。
+          </p>
+          <div class="faq-note">
+            現在の具体的な料金は、お身体の状態と保険の負担割合を確認したうえでご案内します。
+          </div>
+          <a class="inline-link" href="massage-flow.html#price">訪問マッサージ料金を見る →</a>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="contact-box">
+      <span class="kicker">CONTACT</span>
+      <h2>掲載されていないこともお気軽にご相談ください</h2>
+      <p>
+        「自宅まで来てもらえる？」「施設でも利用できる？」
+        「保険が使えるか分からない」など、どんなことでも大丈夫です。
+      </p>
+
+      <div class="btns">
+        <a href="reservation.html" class="btn primary">お問い合わせ・ご相談</a>
+        <a href="houmonmassage.html" class="btn white">訪問マッサージについて</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  © 癒しと治療空間 aqua
+</footer>
+
+<a href="#top" class="back-to-top" id="backToTop" aria-label="ページ上部へ戻る"></a>
+
+<script>
+const backToTop=document.getElementById("backToTop");
+window.addEventListener("scroll",()=>{
+  if(window.scrollY>500) backToTop.classList.add("show");
+  else backToTop.classList.remove("show");
+});
+</script>
+
+</body>
+</html>
