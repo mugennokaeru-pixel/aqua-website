@@ -1355,6 +1355,29 @@ nav a:hover {
     display: none !important;
 }
 
+
+.staff-photo-placeholder{
+    width:100%;
+    height:260px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    gap:8px;
+    background:#f3f6f4;
+    color:#7b8b84;
+    border:1px solid #e4ebe7;
+    font-size:12px;
+    letter-spacing:.12em;
+    text-align:center;
+}
+.staff-photo-placeholder strong{
+    color:#5fc7a3;
+    font-size:15px;
+    font-weight:500;
+    letter-spacing:.08em;
+}
+
 /* ===== スタッフ写真リンク ===== */
 
 .staff-link {
@@ -2871,9 +2894,10 @@ body {
                 <div class="staff-card reveal reveal-left reveal-delay-1">
 
     <a href="/sunao.html" class="staff-link">
-        <img src="/public/images/img_0322.jpg"
-             alt="砂生明久"
-             class="staff-image">
+        <div class="staff-photo-placeholder" role="img" aria-label="砂生明久 写真準備中">
+            <strong>砂生 明久</strong>
+            <span>PHOTO COMING SOON</span>
+        </div>
 
         <span class="staff-learn-more">
             Learn more
@@ -3297,6 +3321,123 @@ body {
     }
 }
 
+
+/* ===== ACCESS 基本情報：視認性アップ ===== */
+/* 既存の !important 指定を上書きするため、ここも !important を使用 */
+.access-basic-info h3{
+    font-size: 18px !important;
+    line-height: 1.5 !important;
+}
+.access-basic-info p{
+    font-size: 19px !important;
+    line-height: 1.9 !important;
+}
+.access-basic-info p strong{
+    display:block !important;
+    margin-bottom: 12px !important;
+    font-size: 22px !important;
+    line-height: 1.5 !important;
+    font-weight: 600 !important;
+    letter-spacing: .04em !important;
+}
+.access-basic-info a[href^="tel:"]{
+    font-size: 30px !important;
+    line-height: 1.4 !important;
+}
+.access-basic-info a[href^="https://lin.ee/"]{
+    font-size: 18px !important;
+}
+
+@media (max-width: 768px){
+    .access-basic-info p{
+        font-size: 17px !important;
+    }
+    .access-basic-info p strong{
+        font-size: 20px !important;
+    }
+    .access-basic-info a[href^="tel:"]{
+        font-size: 26px !important;
+    }
+}
+
+
+/* ===== ACCESS 基本情報 見出しを診療時間と同等サイズに ===== */
+.access-basic-info .access-basic-row{
+    padding: 0 0 24px !important;
+    margin: 0 0 24px !important;
+    border-bottom: 1px solid #d7d5d0 !important;
+}
+.access-basic-info .access-basic-row h4{
+    margin: 0 0 18px !important;
+    padding: 0 !important;
+    color: #222 !important;
+    font-size: 24px !important;
+    line-height: 1.5 !important;
+    font-weight: 600 !important;
+    letter-spacing: .02em !important;
+}
+.access-basic-info .access-basic-row p{
+    border: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    font-size: 19px !important;
+    line-height: 1.9 !important;
+}
+.access-basic-info .access-basic-row a[href^="tel:"]{
+    font-size: 30px !important;
+}
+@media(max-width:768px){
+    .access-basic-info .access-basic-row h4{
+        font-size: 22px !important;
+    }
+    .access-basic-info .access-basic-row p{
+        font-size: 17px !important;
+    }
+    .access-basic-info .access-basic-row a[href^="tel:"]{
+        font-size: 26px !important;
+    }
+}
+
+
+/* ===== ACCESS 基本情報：診療時間に合わせた最終調整 ===== */
+.access-basic-info .access-basic-row h4{
+    font-size: 18px !important;
+    line-height: 1.5 !important;
+    font-weight: 700 !important;
+    letter-spacing: 0 !important;
+    margin-bottom: 12px !important;
+}
+.access-basic-info .access-basic-row p{
+    font-size: 16px !important;
+    line-height: 1.8 !important;
+    font-weight: 400 !important;
+}
+.access-basic-info .access-basic-row a[href^="tel:"]{
+    font-size: 27px !important;
+    font-weight: 400 !important;
+}
+.access-basic-info .access-basic-row a[href^="https://lin.ee/"]{
+    font-size: 18px !important;
+    line-height: 1.6 !important;
+    font-weight: 700 !important;
+    color: #5fc7a3 !important;
+}
+@media(max-width:768px){
+    .access-basic-info .access-basic-row h4{
+        font-size: 18px !important;
+    }
+    .access-basic-info .access-basic-row p{
+        font-size: 16px !important;
+    }
+    .access-basic-info .access-basic-row a[href^="tel:"]{
+        font-size: 25px !important;
+    }
+    .access-basic-info .access-basic-row a[href^="https://lin.ee/"]{
+        font-size: 18px !important;
+        font-weight: 700 !important;
+    }
+}
+
 </style>
 
 
@@ -3434,11 +3575,28 @@ body {
 
                 <!-- 情報 -->
                 <div>
-                    <div class="access-info">
+                    <div class="access-info access-basic-info">
                         <h3>基本情報</h3>
-                        <p><strong>住所</strong><br>千葉市稲毛区園生町873-4</p>
-                        <p><strong>電話</strong><br><a href="tel:04320799800">043-207-9800</a></p>
-                        <p><strong>駐車場</strong><br>院の前に4台分、第2駐車場に4台分（計8台）</p>
+
+                        <div class="access-basic-row">
+                            <h4>住所</h4>
+                            <p>千葉市稲毛区園生町873-4</p>
+                        </div>
+
+                        <div class="access-basic-row">
+                            <h4>電話</h4>
+                            <p><a href="tel:04320799800">043-207-9800</a></p>
+                        </div>
+
+                        <div class="access-basic-row">
+                            <h4>公式LINE</h4>
+                            <p><a href="https://lin.ee/8JPfflt" target="_blank" rel="noopener noreferrer">LINEでお問い合わせ</a></p>
+                        </div>
+
+                        <div class="access-basic-row">
+                            <h4>駐車場</h4>
+                            <p>院の前に4台分、第2駐車場に4台分（計8台）</p>
+                        </div>
                     </div>
 
                     <div class="access-time-section">
@@ -3485,19 +3643,19 @@ body {
                       <p style="margin-top: 12px;"><strong>ランドマーク</strong></p>
                       <p>穴川交差点より花見川方面へ。園生交差点から80m先の信号を右折、約500m先の右側</p>
                       <p style="color: #999; margin-top: 8px;">（旧出井金物店さんのところです）</p>`,
-                train: `<p><strong>最寄駅</strong></p>
-                        <p>JR総武線「稲毛駅」下車<br>東出口より徒歩10分程度</p>`,
-                bus: `<p><strong>JR総武線「稲毛駅」より</strong></p>
+                train: `<p><strong>電車</strong></p>
+                        <p>千葉都市モノレール「穴川駅」下車　徒歩12分</p>`,
+                bus: `<p><strong>JR総武線「稲毛駅」東口より</strong></p>
                       <p style="margin-top: 12px;"><strong>行き方①</strong></p>
-                      <p>バス乗り場：ファミールハイツ行き又は草野車庫行き<br>
-                      <span style="font-size: 13px; color: #999;">（ミスタードーナツの前の停留所）</span><br>
-                      下車場所：第二あやめ入口<br>
-                      ウエルシア薬局と鮎澤商店の間の道に行き、川沿いを左方向に直進（徒歩5分）</p>
-                      <p style="margin-top: 12px;"><strong>行き方②</strong></p>
-                      <p>バス乗り場：さつきが丘団地行き<br>
-                      <span style="font-size: 13px; color: #999;">（稲毛駅 東口を出て目の前）</span><br>
-                      下車場所：園生<br>
-                      幸楽苑を左に曲がり、川と団地の間の道をまっすぐ直進（徒歩5分）</p>`
+                      <p>穴川十字路経由ファミールハイツ折返場行き（稲21）又は、穴川十字路経由草野車庫行き（稲12・稲22）の<strong>4番乗り場</strong>に乗車<br>
+                      →「第二あやめ入口」で下車<br>
+                      ウエルシア薬局と鮎澤商店の間の道に入り、川沿いを左方向に直進（徒歩5分）</p>
+                      <p style="font-size: 13px; color: #999;">※4番乗り場は、稲毛駅東口を出て左に進んだ、ミスタードーナツの目の前です。</p>
+                      <p style="margin-top: 16px;"><strong>行き方②</strong></p>
+                      <p>さつきが丘団地行き（稲41）の<strong>2番乗り場</strong>に乗車<br>
+                      →「園生口」で下車<br>
+                      幸楽苑を左に曲がり、川と団地の間の道をまっすぐ直進（徒歩5分）</p>
+                      <p style="font-size: 13px; color: #999;">※2番乗り場は、稲毛駅東口を出て目の前です。</p>`
             };
 
             content.innerHTML = transportData[type];
