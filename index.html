@@ -3360,6 +3360,44 @@ body {
     }
 }
 
+
+/* ===== ACCESS 基本情報 見出しを診療時間と同等サイズに ===== */
+.access-basic-info .access-basic-row{
+    padding: 0 0 24px !important;
+    margin: 0 0 24px !important;
+    border-bottom: 1px solid #d7d5d0 !important;
+}
+.access-basic-info .access-basic-row h4{
+    margin: 0 0 18px !important;
+    padding: 0 !important;
+    color: #222 !important;
+    font-size: 24px !important;
+    line-height: 1.5 !important;
+    font-weight: 600 !important;
+    letter-spacing: .02em !important;
+}
+.access-basic-info .access-basic-row p{
+    border: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    font-size: 19px !important;
+    line-height: 1.9 !important;
+}
+.access-basic-info .access-basic-row a[href^="tel:"]{
+    font-size: 30px !important;
+}
+@media(max-width:768px){
+    .access-basic-info .access-basic-row h4{
+        font-size: 22px !important;
+    }
+    .access-basic-info .access-basic-row p{
+        font-size: 17px !important;
+    }
+    .access-basic-info .access-basic-row a[href^="tel:"]{
+        font-size: 26px !important;
+    }
+}
+
 </style>
 
 
@@ -3499,10 +3537,26 @@ body {
                 <div>
                     <div class="access-info access-basic-info">
                         <h3>基本情報</h3>
-                        <p><strong>住所</strong><br>千葉市稲毛区園生町873-4</p>
-                        <p><strong>電話</strong><br><a href="tel:04320799800">043-207-9800</a></p>
-                        <p><strong>公式LINE</strong><br><a href="https://lin.ee/8JPfflt" target="_blank" rel="noopener noreferrer">LINEでお問い合わせ</a></p>
-                        <p><strong>駐車場</strong><br>院の前に4台分、第2駐車場に4台分（計8台）</p>
+
+                        <div class="access-basic-row">
+                            <h4>住所</h4>
+                            <p>千葉市稲毛区園生町873-4</p>
+                        </div>
+
+                        <div class="access-basic-row">
+                            <h4>電話</h4>
+                            <p><a href="tel:04320799800">043-207-9800</a></p>
+                        </div>
+
+                        <div class="access-basic-row">
+                            <h4>公式LINE</h4>
+                            <p><a href="https://lin.ee/8JPfflt" target="_blank" rel="noopener noreferrer">LINEでお問い合わせ</a></p>
+                        </div>
+
+                        <div class="access-basic-row">
+                            <h4>駐車場</h4>
+                            <p>院の前に4台分、第2駐車場に4台分（計8台）</p>
+                        </div>
                     </div>
 
                     <div class="access-time-section">
