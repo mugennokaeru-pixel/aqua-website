@@ -3321,6 +3321,39 @@ body {
     }
 }
 
+
+/* ===== ACCESS 基本情報：視認性アップ ===== */
+.access-basic-info h3,
+.access-basic-info .info-title{
+    font-size: 22px;
+    line-height: 1.5;
+}
+.access-basic-info p{
+    font-size: 18px;
+    line-height: 1.9;
+}
+.access-basic-info p strong{
+    display:block;
+    margin-bottom: 8px;
+    font-size: 18px;
+    font-weight: 600;
+}
+.access-basic-info a[href^="tel:"]{
+    font-size: 28px;
+    line-height: 1.4;
+}
+@media (max-width: 768px){
+    .access-basic-info p{
+        font-size: 16px;
+    }
+    .access-basic-info p strong{
+        font-size: 16px;
+    }
+    .access-basic-info a[href^="tel:"]{
+        font-size: 24px;
+    }
+}
+
 </style>
 
 
@@ -3458,7 +3491,7 @@ body {
 
                 <!-- 情報 -->
                 <div>
-                    <div class="access-info">
+                    <div class="access-info access-basic-info">
                         <h3>基本情報</h3>
                         <p><strong>住所</strong><br>千葉市稲毛区園生町873-4</p>
                         <p><strong>電話</strong><br><a href="tel:04320799800">043-207-9800</a></p>
