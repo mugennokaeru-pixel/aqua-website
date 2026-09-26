@@ -3323,34 +3323,40 @@ body {
 
 
 /* ===== ACCESS 基本情報：視認性アップ ===== */
-.access-basic-info h3,
-.access-basic-info .info-title{
-    font-size: 22px;
-    line-height: 1.5;
+/* 既存の !important 指定を上書きするため、ここも !important を使用 */
+.access-basic-info h3{
+    font-size: 18px !important;
+    line-height: 1.5 !important;
 }
 .access-basic-info p{
-    font-size: 18px;
-    line-height: 1.9;
+    font-size: 19px !important;
+    line-height: 1.9 !important;
 }
 .access-basic-info p strong{
-    display:block;
-    margin-bottom: 8px;
-    font-size: 18px;
-    font-weight: 600;
+    display:block !important;
+    margin-bottom: 12px !important;
+    font-size: 22px !important;
+    line-height: 1.5 !important;
+    font-weight: 600 !important;
+    letter-spacing: .04em !important;
 }
 .access-basic-info a[href^="tel:"]{
-    font-size: 28px;
-    line-height: 1.4;
+    font-size: 30px !important;
+    line-height: 1.4 !important;
 }
+.access-basic-info a[href^="https://lin.ee/"]{
+    font-size: 18px !important;
+}
+
 @media (max-width: 768px){
     .access-basic-info p{
-        font-size: 16px;
+        font-size: 17px !important;
     }
     .access-basic-info p strong{
-        font-size: 16px;
+        font-size: 20px !important;
     }
     .access-basic-info a[href^="tel:"]{
-        font-size: 24px;
+        font-size: 26px !important;
     }
 }
 
